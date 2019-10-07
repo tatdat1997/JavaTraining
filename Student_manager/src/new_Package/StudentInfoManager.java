@@ -18,23 +18,26 @@ public class StudentInfoManager extends StudentInfo {
 	
 	public void add(String link) {
 		StudentInfoDAO fst = new StudentInfoDAO();
-		Scanner scanner = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		int info_id, student_id;
     	String add,birth;
     	Double score;
     	System.out.println("Nhập thông tin sinh viên: ");
 		System.out.print("Mã số thông tin: ");
-		info_id = scanner.nextInt();
+		info_id = scan.nextInt();
 		System.out.print("Mã số sinh viên: ");
-		student_id = scanner.nextInt();
-		scanner.nextLine();
+		student_id = scan.nextInt();
+		scan.nextLine();
 		System.out.print("Địa chỉ: ");
-		add = scanner.nextLine();
+		add = scan.nextLine();
 		System.out.print("Điểm trung bình: ");
-		score = scanner.nextDouble();
-		scanner.nextLine();
-		System.out.print("Ngày sinh: ");
-		birth = scanner.nextLine();
+		score = scan.nextDouble();
+		scan.nextLine();
+		System.out.print("Ngày sinh (dd-MM-yyyy): ");
+		birth = scan.nextLine();
+		if(birth.contains("/")) {
+			birth =birth.replaceAll("/", "-");
+		}
 		try {
 			java.util.Date birth_day = format.parse(birth);
 			StudentInfo newstudent = new StudentInfo();
@@ -43,7 +46,6 @@ public class StudentInfoManager extends StudentInfo {
 		}catch(Exception e) {
             e.printStackTrace();
         }
-		scanner.close();
 	}
 	public void delete(String lines, String link) {
 		try {

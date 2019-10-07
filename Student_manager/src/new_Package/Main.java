@@ -31,7 +31,6 @@ public class Main {
     do {
     	System.out.println("Mời bạn chọn thao tác (0-6):");
         num = scanner.nextInt();
-//        String info;
 	    switch (num) { 
 	        case 1:
 	        	fst.add(link);
@@ -183,7 +182,7 @@ public class Main {
 					}
 					}while(check);
 				break;
-			case 6:
+			case 5:
 				System.out.println("Danh sách sinh viên: ");
 				for (StudentInfo list : student) {
 					list.printInfoPretty();
