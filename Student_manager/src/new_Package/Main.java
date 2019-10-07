@@ -3,7 +3,9 @@ package new_Package;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import new_Package.StudentInfo;
+
+import pkg_DAO.StudentInfoDAO;
+import pkg_Info.StudentInfo;
 
 public class Main {
 	public static void main(String args[]){
@@ -24,6 +26,7 @@ public class Main {
     System.out.println("");
     Integer num;
     Boolean end = true;
+    
     do {
     	System.out.println("Mời bạn chọn thao tác (0-6):");
         num = scanner.nextInt();
@@ -50,6 +53,7 @@ public class Main {
 				end = false;
 				break;	
 			default:
+				System.out.println("Vui lòng nhập số từ 0 - 6!");
 				break;
 			}
     	}while(end);

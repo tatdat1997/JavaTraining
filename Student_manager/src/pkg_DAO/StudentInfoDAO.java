@@ -1,4 +1,4 @@
-package new_Package;
+package pkg_DAO;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.PrintWriter;
@@ -6,7 +6,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.*; 
+import java.util.*;
+
+import pkg_Info.StudentInfo;
+
 import java.text.SimpleDateFormat;
 
 public class StudentInfoDAO{
