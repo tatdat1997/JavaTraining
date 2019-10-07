@@ -9,8 +9,8 @@ import java.io.IOException;
 import java.util.*; 
 import java.text.SimpleDateFormat;
 
-public class StudentInfoDAO extends StudentInfoManager{
-	public List<StudentInfo> newList(String link) {
+public class StudentInfoDAO{
+	public static List<StudentInfo> newList(String link) {
 		String linkFile = link;
         BufferedReader br = null;
         String line = "";
@@ -25,8 +25,7 @@ public class StudentInfoDAO extends StudentInfoManager{
                 try {
 	                java.util.Date birth = sdf.parse(info[4]); 
 	                
-	                StudentInfo student1 = new StudentInfo();
-	                student1.newStudent(Integer.parseInt(info[0]),Integer.parseInt(info[1]),info[2],
+	                StudentInfo student1 = new StudentInfo(Integer.parseInt(info[0]),Integer.parseInt(info[1]),info[2],
 	                		Double.parseDouble(info[3]),birth);
 	                student.add(student1);
                 }catch(Exception e) {
