@@ -1,13 +1,6 @@
 package new_Package;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -82,12 +75,12 @@ public class StudentInfoManager {
 
 	      //Xoa file
 	      if (!inFile.delete()) {
-	        System.out.println("Could not delete file");
+	        System.out.println("Không thể xóa file");
 	        return;
 	      } 
 	      //Doi ten file
 	      if (!tempFile.renameTo(inFile))
-	        System.out.println("Could not rename file");
+	        System.out.println("Không thể đổi tên file");
 	    }
 	    catch (FileNotFoundException ex) {
 	    	ex.printStackTrace();
@@ -97,13 +90,14 @@ public class StudentInfoManager {
 	    }
 	}
 	public void edit(String link) {
-		List<StudentInfo> student = new ArrayList<StudentInfo>();
-		student = StudentInfoDAO.newList(link);
+		this.listStudent = StudentInfoDAO.loadStudent(link);
 		Integer student_id;
 		System.out.println("Nhập mã số sinh viên: ");
     	student_id = scanner.nextInt();
-    	for (StudentInfo list : student) {
-			if (list.get_Student_Id() == student_id) {
+    	boolean check = true;
+    	for (StudentInfo list : this.listStudent) {
+			if (list.getStudentId() == student_id) {
+				check = false;
 				String info = list.printInfo();
 				list.printInfoPretty();
 				Boolean c = true;
@@ -122,20 +116,18 @@ public class StudentInfoManager {
 					number = scanner.nextInt();
 					switch (number) {
 					case 1:
-						String info_id_change;
+						Integer info_id_change;
 						System.out.print("Mã số thông tin: ");
 						scanner.nextLine();
-						info_id_change = scanner.nextLine();
-						list.editInfo_id(Integer.parseInt(info_id_change));
-						System.out.println();
+						info_id_change = scanner.nextInt();
+						list.editInfoId(info_id_change);
 						break;
 					case 2:
 						String student_id_change;
 						System.out.print("Mã số sinh viên: ");
 						scanner.nextLine();
 						student_id_change = scanner.nextLine();
-						list.editStudent_id(Integer.parseInt(student_id_change));
-						System.out.println();
+						list.editStudentId(Integer.parseInt(student_id_change));
 						break;
 					case 3:
 						String address_id_change;
@@ -150,7 +142,6 @@ public class StudentInfoManager {
 						scanner.nextLine();
 						score_id_change = scanner.nextLine();
 						list.editScore(Double.parseDouble(score_id_change));
-						System.out.println();
 						break;
 					case 5:
 						String birth_day_old;
@@ -161,7 +152,6 @@ public class StudentInfoManager {
 							
 							Date birth_change = format.parse(birth_day_old);
 							list.editBirth(birth_change);
-							System.out.println();
 						}catch(Exception e) {
 		                    e.printStackTrace();
 		                }
@@ -176,20 +166,26 @@ public class StudentInfoManager {
 						c = false;
 						break;
 					default:
+						System.out.println("Vui lòng nhập số từ 0 - 6!");
 						break;
 					}
 				}while(c);
 			}
 		}
+    	if(check) {
+    		System.out.println("Sinh viên có mã số "+student_id+" không tồn tại!");
+    	}
 	}
 	public void remove(String link) {
 		List<StudentInfo> student = new ArrayList<StudentInfo>();
-		student = StudentInfoDAO.newList(link);
+		student = StudentInfoDAO.loadStudent(link);
 		Integer id;
 		System.out.println("Nhập mã số sinh viên muốn xóa: ");
     	id = scanner.nextInt();
+    	boolean check = true;
     	for (StudentInfo list : student) {
-			if (list.get_Student_Id() == id) {
+			if (list.getStudentId() == id) {
+				check = false;
 				String key;
 				System.out.println("Bạn muốn xóa sinh viên có mã "+id+": Y/N");
 				scanner.nextLine();
@@ -202,16 +198,20 @@ public class StudentInfoManager {
 				case "N":
 					break;
 				default:
+					System.out.println("Vui lòng xác nhận Y hoặc N!");
 					break;
 				}
 			}
+    	}
+    	if(check) {
+    		System.out.println("Sinh viên có mã số "+id+" không tồn tại!");
     	}
 	}
 	public void sortGPA(List<StudentInfo> student) {
 		StudentInfo temp;
 		for (int i = 0; i < student.size(); i++) {
 			for (int j = 0; j < student.size(); j++) {
-				if(student.get(i).get_Avegare_score() > student.get(j).get_Avegare_score()) {
+				if(student.get(i).getAvegareScore() > student.get(j).getAvegareScore()) {
 					temp =student.get(i);
 					student.set(i, student.get(j));
 					student.set(j, temp);
@@ -226,7 +226,7 @@ public class StudentInfoManager {
 		StudentInfo temp;
 		for (int i = 0; i < student.size(); i++) {
 			for (int j = 0; j < student.size(); j++) {
-				if(student.get(i).get_Student_Id() > student.get(j).get_Student_Id()) {
+				if(student.get(i).getStudentId() > student.get(j).getStudentId()) {
 					temp =student.get(i);
 					student.set(i, student.get(j));
 					student.set(j, temp);

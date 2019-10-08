@@ -1,27 +1,48 @@
 package pkg_Info;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class HumanInfo {
-	private Integer info_id;
-	private String address;
-	private Date day_of_birth;
-	public int get_Info_Id() {
-		return info_id;
+	Integer infoId;
+	String address;
+	Date dayOfBirth;
+	public int getInfoId() {
+		return infoId;
 	}
-	public void setInfo_Id(Integer info_id) {
-		this.info_id = info_id;
+	public void setInfoId(Integer infoId) {
+		this.infoId = infoId;
 	}
-	public String get_Address() {
+	public String getAddress() {
 		return address;
 	}
-	public void set_Address(String address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
-	public Date get_Day_of_birth() {
-		return day_of_birth;
+	public Date getDayOfBirth() {
+		return dayOfBirth;
 	}
 	public void set_Day_of_birth(Date day_of_birth) {
-		this.day_of_birth = day_of_birth;
+		this.dayOfBirth = day_of_birth;
+	}
+	public void editInfoId(int infoId_new) {
+		this.infoId = infoId_new;
+	}
+	public void editAddress(String address_new) {
+		this.address = address_new;
+	}
+	public void editBirth(Date birth_new) {
+		this.dayOfBirth = birth_new;
+	}
+	public String printInfo() {
+		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+		String info = this.infoId+","+this.address+","+format.format(this.dayOfBirth);
+		return info;
+	}
+	public void printInfoPretty() {
+		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+		String info = "infoId: "+this.infoId+", Address: "+this.address
+				+ ",Day of birth: "+format.format(this.dayOfBirth);
+		System.out.println(info);
 	}
 }

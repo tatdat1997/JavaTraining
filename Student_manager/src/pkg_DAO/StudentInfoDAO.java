@@ -13,7 +13,7 @@ import pkg_Info.StudentInfo;
 import java.text.SimpleDateFormat;
 
 public class StudentInfoDAO{
-	public static List<StudentInfo> newList(String link) {
+	public static List<StudentInfo> loadStudent(String link) {
 		String linkFile = link;
         BufferedReader br = null;
         String line = "";

@@ -11,8 +11,9 @@ public class Main {
 	public static void main(String args[]){
 	String link ="E:/Bài Tập/StudentInfoDAO.txt";
 	StudentInfoManager fst = new StudentInfoManager();
+	
 	List<StudentInfo> student = new ArrayList<StudentInfo>();
-	student = StudentInfoDAO.newList(link);
+	student = StudentInfoDAO.loadStudent(link);
 	Scanner scanner = new Scanner(System.in);
     System.out.println("======== Quản lý thông tin sinh viên ========");
     System.out.println("=     1. Tạo mới sinh viên.                 =");
