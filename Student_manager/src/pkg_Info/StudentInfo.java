@@ -5,16 +5,16 @@ import java.util.*;
 
 public class StudentInfo extends HumanInfo{
 	private Integer studentId;
-	private Double avegareScore;
-
-	public StudentInfo(Integer infoId, Integer student_id, String address, Double avegare_score, Date day_of_birth) {
+	private Double avegareScore;	
+	public StudentInfo() {
 		super();
-		this.infoId = infoId;
-		this.studentId = student_id;
-		this.address = address;
-		this.avegareScore = avegare_score;
-		this.dayOfBirth = day_of_birth;
 	}
+	public StudentInfo(Integer infoId, Integer studentId, String address, Double avegareScore, Date dayOfBirth) {
+		super(infoId, address, dayOfBirth);
+		this.studentId = studentId;
+		this.avegareScore = avegareScore;
+	}
+
 	public int getStudentId() {
 		return studentId;
 	}
@@ -33,14 +33,18 @@ public class StudentInfo extends HumanInfo{
 	public void editScore(Double scoreNew) {
 		this.avegareScore = scoreNew;
 	}
+	@Override
 	public String printInfo() {
+		// TODO Auto-generated method stub
 		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-		String info = this.infoId+","+this.studentId+","+this.address+","+this.avegareScore+ ","+format.format(this.dayOfBirth);
+		String info = this.infoId+"&"+this.studentId+"&"+this.address+"&"+this.avegareScore+ "&"+format.format(this.dayOfBirth);
 		return info;
 	}
+	@Override
 	public void printInfoPretty() {
+		// TODO Auto-generated method stub
 		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-		String info = "infoId: "+this.infoId+", Student_ID: "+this.studentId+", Address: "+this.address
+		String info = "Info_Id: "+this.infoId+", Student_ID: "+this.studentId+", Address: "+this.address
 				+", Avegare score: "+this.avegareScore+ ",Day of birth: "+format.format(this.dayOfBirth);
 		System.out.println(info);
 	}

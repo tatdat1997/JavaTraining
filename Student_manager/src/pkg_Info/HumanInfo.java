@@ -7,6 +7,15 @@ public class HumanInfo {
 	Integer infoId;
 	String address;
 	Date dayOfBirth;
+	public HumanInfo() {
+		super();
+	}
+	public HumanInfo(Integer infoId, String address, Date dayOfBirth) {
+		super();
+		this.infoId = infoId;
+		this.address = address;
+		this.dayOfBirth = dayOfBirth;
+	}
 	public int getInfoId() {
 		return infoId;
 	}
@@ -22,7 +31,7 @@ public class HumanInfo {
 	public Date getDayOfBirth() {
 		return dayOfBirth;
 	}
-	public void set_Day_of_birth(Date day_of_birth) {
+	public void setDayOfBirth(Date day_of_birth) {
 		this.dayOfBirth = day_of_birth;
 	}
 	public void editInfoId(int infoId_new) {

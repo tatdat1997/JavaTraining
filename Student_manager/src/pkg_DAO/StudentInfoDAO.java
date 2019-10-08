@@ -23,13 +23,12 @@ public class StudentInfoDAO{
             while ((line = br.readLine()) != null) {
                 // use comma as separator
             	
-                String[] info = line.split(",");
+                String[] info = line.split("&");
                 SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
                 try {
 	                java.util.Date birth = sdf.parse(info[4]); 
-	                
-	                StudentInfo student1 = new StudentInfo(Integer.parseInt(info[0]),Integer.parseInt(info[1]),info[2],
-	                		Double.parseDouble(info[3]),birth);
+	                StudentInfo student1 = new StudentInfo(Integer.parseInt(info[0]), Integer.parseInt(info[1]),
+	                		info[2], Double.parseDouble(info[3]), birth);
 	                student.add(student1);
                 }catch(Exception e) {
                     e.printStackTrace();

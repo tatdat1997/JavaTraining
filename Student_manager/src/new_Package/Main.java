@@ -5,13 +5,15 @@ import java.util.List;
 import java.util.Scanner;
 
 import pkg_DAO.StudentInfoDAO;
+import pkg_Info.HumanInfo;
 import pkg_Info.StudentInfo;
 
 public class Main {
 	public static void main(String args[]){
+	HumanInfo person = new StudentInfo();
+	person.setInfoId(1145);
 	String link ="E:/Bài Tập/StudentInfoDAO.txt";
 	StudentInfoManager fst = new StudentInfoManager();
-	
 	List<StudentInfo> student = new ArrayList<StudentInfo>();
 	student = StudentInfoDAO.loadStudent(link);
 	Scanner scanner = new Scanner(System.in);
@@ -24,10 +26,8 @@ public class Main {
     System.out.println("=     6. Xem danh sách sinh viên.           =");
     System.out.println("=     0. Thoát                              =");
     System.out.println("=============================================");
-    System.out.println("");
     Integer num;
     Boolean end = true;
-    
     do {
     	System.out.println("Mời bạn chọn thao tác (0-6):");
         num = scanner.nextInt();
@@ -42,10 +42,10 @@ public class Main {
 	        	fst.remove(link);
 				break;
 	        case 4:
-	        	fst.sortGPA(student);
+	        	fst.sortBy(SortBy.GPA);
 				break;
 	        case 5:
-	        	fst.sortByName(student);
+	        	fst.sortBy(SortBy.Name);
 	        	break;
 			case 6:
 				fst.show(student);

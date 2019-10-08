@@ -3,10 +3,9 @@ package new_Package;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
 import pkg_DAO.StudentInfoDAO;
 import pkg_Info.StudentInfo;
-
+import new_Package.SortBy;
 
 
 public class StudentInfoManager {
@@ -41,8 +40,10 @@ public class StudentInfoManager {
 		}
 		try {
 			java.util.Date birth_day = format.parse(birth);
-			StudentInfo newstudent = new StudentInfo(info_id,student_id,add,score,birth_day);
-			this.save(newstudent.printInfo(), link);
+			StudentInfo newStudent = new StudentInfo(info_id, student_id, add, score, birth_day);
+			this.save(newStudent.printInfo(), link);
+			newStudent.printInfoPretty();
+			System.out.println("Sinh viên được tạo mới thành công");
 		}catch(Exception e) {
             e.printStackTrace();
         }
@@ -207,7 +208,39 @@ public class StudentInfoManager {
     		System.out.println("Sinh viên có mã số "+id+" không tồn tại!");
     	}
 	}
-	public void sortGPA(List<StudentInfo> student) {
+	
+	public void sortBy(SortBy type) {
+		List<StudentInfo> student = new ArrayList<StudentInfo>();
+		student = StudentInfoDAO.loadStudent("E:/Bài Tập/StudentInfoDAO.txt");
+		StudentInfo temp;
+		if(type == SortBy.GPA) {
+			for (int i = 0; i < student.size(); i++) {
+				for (int j = 0; j < student.size(); j++) {
+					if(student.get(i).getAvegareScore() > student.get(j).getAvegareScore()) {
+						temp =student.get(i);
+						student.set(i, student.get(j));
+						student.set(j, temp);
+					}
+				}
+			}
+		}else {
+			if(type == SortBy.Name) {
+				for (int i = 0; i < student.size(); i++) {
+					for (int j = 0; j < student.size(); j++) {
+						if(student.get(i).getStudentId() > student.get(j).getStudentId()) {
+							temp =student.get(i);
+							student.set(i, student.get(j));
+							student.set(j, temp);
+						}
+					}
+				}
+			}
+		}
+		for (StudentInfo list : student) {
+			list.printInfoPretty();
+		}
+	}
+	public void sortByGPA(List<StudentInfo> student) {
 		StudentInfo temp;
 		for (int i = 0; i < student.size(); i++) {
 			for (int j = 0; j < student.size(); j++) {
