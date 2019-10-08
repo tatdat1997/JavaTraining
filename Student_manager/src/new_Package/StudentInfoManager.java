@@ -70,7 +70,6 @@ public class StudentInfoManager {
 		    	boolean check_id = true;
 		    	for (StudentInfo list : this.listStudent) {
 					if (list.getStudentId() == student_id) {
-						int index = this.listStudent.indexOf(list);
 						check_id = false;
 						String info = list.printInfo();
 						list.printInfoPretty();
@@ -133,13 +132,13 @@ public class StudentInfoManager {
 							case 6:
 								System.out.println("Thay đổi thông tin thành công: ");
 								list.printInfoPretty();
-								this.listStudent.set(index, list);
 								this.deleteLine(info, link);
 								this.saveToFile(list.printInfo(), link);
 								check = false;
 								break;
 							case 0:
 								c = false;
+								check = false;
 								break;
 							default:
 								System.out.println("Vui lòng nhập số từ 0 - 6!");
@@ -158,35 +157,49 @@ public class StudentInfoManager {
 	    }while(check);
 	}
 	public void removeStudent(String link) {
-		List<StudentInfo> student = new ArrayList<StudentInfo>();
-		student = StudentInfoDAO.loadStudent(link);
+		this.listStudent = StudentInfoDAO.loadStudent(link);
 		Integer id;
-		System.out.println("Nhập mã số sinh viên muốn xóa: ");
-    	id = scanner.nextInt();
-    	boolean check = true;
-    	for (StudentInfo list : student) {
-			if (list.getStudentId() == id) {
-				check = false;
-				String key;
-				System.out.println("Bạn muốn xóa sinh viên có mã "+id+": Y/N");
+		Boolean check = true;
+	    do {
+	    	try{
+				System.out.println("Nhập mã số sinh viên muốn xóa: ");
+		    	id = scanner.nextInt();
+		    	boolean check_id = true;
+		    	boolean check1 = true;
+		    	for (StudentInfo list : this.listStudent) {
+					if (list.getStudentId() == id) {
+						check_id = false;
+						String key;
+						scanner.nextLine();
+
+						do {
+							System.out.println("Bạn muốn xóa sinh viên có mã "+id+": Y/N");
+							key = scanner.nextLine();
+							switch (key) {
+							case "Y":
+								this.deleteLine(list.printInfo(), link);
+								System.out.println("Xóa thành công");
+								check1 = false;
+								check = false;
+								break;
+							case "N":
+								break;
+							default:
+								check= true;
+								System.out.println("Vui lòng xác nhận Y hoặc N!");
+								break;
+							}
+						}while(check1);
+					}
+		    	}
+		    	if(check_id) {
+		    		System.out.println("Sinh viên có mã số "+id+" không tồn tại!");
+		    	}
+	    	}catch(Exception e){
+				System.out.println("Cú pháp không chính xác vui lòng thao tác lại.");
 				scanner.nextLine();
-				key = scanner.nextLine();
-				switch (key) {
-				case "Y":
-					this.deleteLine(list.printInfo(), link);
-					System.out.println("Xóa thành công");
-					break;
-				case "N":
-					break;
-				default:
-					System.out.println("Vui lòng xác nhận Y hoặc N!");
-					break;
-				}
 			}
-    	}
-    	if(check) {
-    		System.out.println("Sinh viên có mã số "+id+" không tồn tại!");
-    	}
+	    }while(check);
 	}
 	
 	public void sortBy(SortBy type) {
