@@ -17,7 +17,7 @@ public class StudentInfoDAO{
 		String linkFile = link;
         BufferedReader br = null;
         String line = "";
-		List<StudentInfo> student = new ArrayList<StudentInfo>();
+		List<StudentInfo> studentList = new ArrayList<StudentInfo>();
 		try {
         	br = new BufferedReader(new FileReader(linkFile));
             while ((line = br.readLine()) != null) {
@@ -29,7 +29,7 @@ public class StudentInfoDAO{
 	                java.util.Date birth = sdf.parse(info[4]); 
 	                StudentInfo student1 = new StudentInfo(Integer.parseInt(info[0]), Integer.parseInt(info[1]),
 	                		info[2], Double.parseDouble(info[3]), birth);
-	                student.add(student1);
+	                studentList.add(student1);
                 }catch(Exception e) {
                     e.printStackTrace();
                 }
@@ -50,9 +50,9 @@ public class StudentInfoDAO{
                 }
             }
         }
-		return student;
+		return studentList;
 	}
-	public void save(String info, String link) {
+	public void saveToFile(String info, String link) {
 		String File = link; // link file will write info
 		try(FileWriter fw = new FileWriter(File, true);
 		    BufferedWriter bw = new BufferedWriter(fw);
