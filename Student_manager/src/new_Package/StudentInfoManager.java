@@ -213,6 +213,7 @@ public class StudentInfoManager {
 		List<StudentInfo> student = new ArrayList<StudentInfo>();
 		student = StudentInfoDAO.loadStudent("E:/Bài Tập/StudentInfoDAO.txt");
 		StudentInfo temp;
+		
 		if(type == SortBy.GPA) {
 			for (int i = 0; i < student.size(); i++) {
 				for (int j = 0; j < student.size(); j++) {
