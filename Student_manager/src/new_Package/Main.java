@@ -6,13 +6,14 @@ import pkg_Info.HumanInfo;
 import pkg_Info.StudentInfo;
 
 public class Main {
+	
 	public static void main(String args[]){
+		
 	HumanInfo person = new StudentInfo();
 	person.setInfoId(1145);
 	person.setDateOfBirth("26-1-1997");
 	person.setAddress("LA");
-	person.printInfoPretty();
-
+	
 	String link ="E:/JavaTraining/Student_manager/StudentInfoDAO.txt";
 	StudentInfoManager fst = new StudentInfoManager();
 	Scanner scanner = new Scanner(System.in);

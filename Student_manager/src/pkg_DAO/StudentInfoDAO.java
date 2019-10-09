@@ -34,8 +34,8 @@ public class StudentInfoDAO{
 		try {
         	br = new BufferedReader(new FileReader(linkFile));
             while ((line = br.readLine()) != null) {
-                // Use comma as separator
-                String[] info = line.split("&");
+                //Split at | to get info
+                String[] info = line.split("\\|");
                 //Create new StudentInfo
                 StudentInfo student1 = new StudentInfo(Integer.parseInt(info[0]), Integer.parseInt(info[1]),
                 						info[2], Double.parseDouble(info[3]), info[4]);

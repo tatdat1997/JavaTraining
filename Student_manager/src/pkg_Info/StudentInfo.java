@@ -1,5 +1,6 @@
 package pkg_Info;
 
+import java.text.DecimalFormat;
 import java.util.Date;
 
 /*
@@ -15,6 +16,7 @@ import java.util.Date;
 public class StudentInfo extends HumanInfo{
 	private Integer studentId;
 	private Double avegareScore;	
+	private static DecimalFormat df2 = new DecimalFormat("#.00");
 	//Create new StudentInfo
 	public StudentInfo() {
 		super();
@@ -54,19 +56,21 @@ public class StudentInfo extends HumanInfo{
 	 */
 	public String printInfo() {
 		// TODO Auto-generated method stub
-		String info = this.infoId + "&" + this.studentId + "&" + this.address + "&" + this.avegareScore
-						+ "&" + this.format.format(this.dateOfBirth);
+		String info = this.infoId + "|" + this.studentId + "|" + this.address + "|" + this.avegareScore
+						+ "|" + this.format.format(this.dateOfBirth);
 		return info;
 	}
+	
 	@Override
 	/*
 	 *Override printInfoPretty in HunmanInfo
 	 *Print Info of student to show.
 	 */
 	public void printInfoPretty() {
+		Double score = this.getAverageScore();
 		// TODO Auto-generated method stub
-		String info = "Info_Id: " + this.infoId + ", Student_ID: " + this.studentId+", Address: " + this.address
-				        + ", Avegare score: " + this.avegareScore +  ",Day of birth: " + this.format.format(this.dateOfBirth);
+		String info = "Info_Id: " + this.infoId + ", Student_ID: " + this.studentId+ ", Avegare score: " 
+		+ df2.format(score) +  ", Day of birth: " + this.format.format(this.dateOfBirth)+", Address: " + this.address;
 		System.out.println(info);
 	}
 }
