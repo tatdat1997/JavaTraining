@@ -1,5 +1,6 @@
 package new_Package;
 
+
 import java.util.Scanner;
 import pkg_Info.HumanInfo;
 import pkg_Info.StudentInfo;
@@ -8,6 +9,10 @@ public class Main {
 	public static void main(String args[]){
 	HumanInfo person = new StudentInfo();
 	person.setInfoId(1145);
+	person.setDateOfBirth("26-1-1997");
+	person.setAddress("LA");
+	person.printInfoPretty();
+
 	String link ="E:/JavaTraining/Student_manager/StudentInfoDAO.txt";
 	StudentInfoManager fst = new StudentInfoManager();
 	Scanner scanner = new Scanner(System.in);
@@ -37,10 +42,10 @@ public class Main {
 	        	fst.removeStudent(link);
 				break;
 	        case 4:
-	        	fst.sortBy(SortBy.GPA);
+	        	fst.sortBy(SortBy.GPA);        //sort by GPA
 				break;
 	        case 5:
-	        	fst.sortBy(SortBy.Name);
+	        	fst.sortBy(SortBy.Name);       //sort by Name
 	        	break;
 			case 6:
 				fst.showStudent(link);
@@ -52,11 +57,11 @@ public class Main {
 				System.out.println("Vui lòng nhập số từ 0 - 6!");
 				break;
 			}
-    	}catch (Exception e) {
-    		System.out.println("Vui lòng nhập số từ 0 - 6!");
+    	} catch (Exception e) {
+    		System.out.println("Cú pháp không chính xác!?! Vui lòng nhập số từ 0 - 6!");
     		scanner.nextLine();
     	}
-    	}while(end);
+	} while (end);
     scanner.close();
 	}
 }

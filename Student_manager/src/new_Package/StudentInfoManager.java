@@ -7,7 +7,16 @@ import pkg_DAO.StudentInfoDAO;
 import pkg_Info.StudentInfo;
 import new_Package.SortBy;
 
-
+/*
+ * Copyright (C) 2015 by GMO Runsystem Company
+ *
+ * Create StudentInfoManager class
+ *
+ * @version 1.0
+ *
+ * @author DatNT
+ *
+ */
 public class StudentInfoManager {
 	private List<StudentInfo> listStudent;
 	public void setStudentInfo(List<StudentInfo> ListStudent) {
@@ -22,14 +31,14 @@ public class StudentInfoManager {
 		Boolean check = true;
 	    do {
 			try {
-				int info_id, student_id;
+				int infoId, studentId;
 		    	String add,birth;
 		    	Double score;
 		    	System.out.println("Nhập thông tin sinh viên: ");
 				System.out.print("Mã số thông tin: ");
-				info_id = scanner.nextInt();
+				infoId = scanner.nextInt();
 				System.out.print("Mã số sinh viên: ");
-				student_id = scanner.nextInt();
+				studentId = scanner.nextInt();
 				scanner.nextLine();
 				System.out.print("Địa chỉ: ");
 				add = scanner.nextLine();
@@ -39,18 +48,16 @@ public class StudentInfoManager {
 				System.out.print("Ngày sinh (dd-MM-yyyy): ");
 				birth = scanner.nextLine();
 				if(birth.contains("/")) {
-					birth =birth.replaceAll("/", "-");
-				}
-				try {
-					java.util.Date birth_day = format.parse(birth);
-					StudentInfo newStudent = new StudentInfo(info_id, student_id, add, score, birth_day);
-					this.saveToFile(newStudent.printInfo(), link);
-					newStudent.printInfoPretty();
-					System.out.println("Sinh viên được tạo mới thành công");
-					check = false;
-				}catch(Exception e) {
-		            e.printStackTrace();
-		        }
+					birth = birth.replaceAll("/", "-");
+				}	
+				//Create new StudentInfo
+				StudentInfo newStudent = new StudentInfo(infoId, studentId, add, score, birth);
+				//Save info student in file.
+				this.saveToFile(newStudent.printInfo(), link); 		
+				//Show info student.
+				newStudent.printInfoPretty();							
+				System.out.println("Sinh viên được tạo mới thành công");
+				check = false;
 			}catch(Exception e){
 				System.out.println("Cú pháp không chính xác vui lòng thao tác lại.");
 				scanner.nextLine();
@@ -59,18 +66,24 @@ public class StudentInfoManager {
 		while (check);
 	}
 	
+	/*
+	 * EditStudent edit info student by student_id in list StudentInfo 
+	 * and save it again in file.
+	 * Use editInfoId,.. to edit info in StudentInfo.
+	 */
 	public void editStudent(String link) {
 		Boolean check = true;
 	    do {
 			try {
+				//Get list StudentInfo from file
 				this.listStudent = StudentInfoDAO.loadStudent(link);
-				Integer student_id;
+				Integer studentId;
 				System.out.println("Nhập mã số sinh viên: ");
-		    	student_id = scanner.nextInt();
-		    	boolean check_id = true;
+				studentId = scanner.nextInt();
+		    	boolean checkId = true;
 		    	for (StudentInfo list : this.listStudent) {
-					if (list.getStudentId() == student_id) {
-						check_id = false;
+					if (list.getStudentId() == studentId) {	//find Student by student_id
+						checkId = false;
 						String info = list.printInfo();
 						list.printInfoPretty();
 						Boolean c = true;
@@ -89,51 +102,47 @@ public class StudentInfoManager {
 							number = scanner.nextInt();
 							switch (number) {
 							case 1:
-								Integer info_id_change;
+								Integer infoIdChange;
 								System.out.print("Mã số thông tin: ");
 								scanner.nextLine();
-								info_id_change = scanner.nextInt();
-								list.editInfoId(info_id_change);
+								infoIdChange = scanner.nextInt();
+								list.editInfoId(infoIdChange);							//edit Info id
 								break;
 							case 2:
-								String student_id_change;
+								String studentIdChange;
 								System.out.print("Mã số sinh viên: ");
 								scanner.nextLine();
-								student_id_change = scanner.nextLine();
-								list.editStudentId(Integer.parseInt(student_id_change));
+								studentIdChange = scanner.nextLine();
+								list.editStudentId(Integer.parseInt(studentIdChange));	//edit Student id
 								break;
 							case 3:
-								String address_id_change;
+								String addressIdChange;
 								System.out.print("Địa chỉ: ");
 								scanner.nextLine();
-								address_id_change = scanner.nextLine();
-								list.editAddress(address_id_change);
+								addressIdChange = scanner.nextLine();
+								list.editAddress(addressIdChange);						//edit Address
 								break;
 							case 4:
-								String score_id_change;
+								String scoreIdChange;
 								System.out.print("Điểm trung bình: ");
 								scanner.nextLine();
-								score_id_change = scanner.nextLine();
-								list.editScore(Double.parseDouble(score_id_change));
+								scoreIdChange = scanner.nextLine();
+								list.editScore(Double.parseDouble(scoreIdChange));		//edit Average score
 								break;
 							case 5:
-								String birth_day_old;
+								String birthDayChange;
 								System.out.print("Ngày sinh: ");
 								scanner.nextLine();
-								birth_day_old = scanner.nextLine();
-								try {
-									
-									Date birth_change = format.parse(birth_day_old);
-									list.editBirth(birth_change);
-								}catch(Exception e) {
-				                    e.printStackTrace();
-				                }
+								birthDayChange = scanner.nextLine();
+								list.editBirth(birthDayChange);							//edit day of birth
 								break;
 							case 6:
 								System.out.println("Thay đổi thông tin thành công: ");
 								list.printInfoPretty();
+								//Delete student info of this student in file
 								this.deleteLine(info, link);
-								this.saveToFile(list.printInfo(), link);
+								//Save new student info of this student in file
+								this.saveToFile(list.printInfo(), link);	
 								check = false;
 								break;
 							case 0:
@@ -144,73 +153,86 @@ public class StudentInfoManager {
 								System.out.println("Vui lòng nhập số từ 0 - 6!");
 								break;
 							}
-						}while(c);
+						} while (c);
 					}
 				}
-		    	if(check_id) {
-		    		System.out.println("Sinh viên có mã số "+student_id+" không tồn tại!");
+		    	if(checkId) {
+		    		System.out.println("Sinh viên có mã số "+studentId+" không tồn tại!");
 		    	}
 			}catch(Exception e){
 				System.out.println("Cú pháp không chính xác vui lòng thao tác lại.");
 				scanner.nextLine();
 			}
-	    }while(check);
+	    } while (check);
 	}
+	
+	/*
+ 	* Remove student from file by Student id
+ 	*/
 	public void removeStudent(String link) {
+		//Get list StudentInfo from file
 		this.listStudent = StudentInfoDAO.loadStudent(link);
-		Integer id;
+		Integer studentId;
 		Boolean check = true;
 	    do {
 	    	try{
 				System.out.println("Nhập mã số sinh viên muốn xóa: ");
-		    	id = scanner.nextInt();
-		    	boolean check_id = true;
+				studentId = scanner.nextInt();
+		    	boolean checkId = true;
 		    	boolean check1 = true;
 		    	for (StudentInfo list : this.listStudent) {
-					if (list.getStudentId() == id) {
-						check_id = false;
+					if (list.getStudentId() == studentId) {		//find Student by student_id
+						checkId = false;
 						String key;
 						scanner.nextLine();
-
 						do {
-							System.out.println("Bạn muốn xóa sinh viên có mã "+id+": Y/N");
+							System.out.println("Bạn muốn xóa sinh viên có mã " + studentId + ": Y/N");
 							key = scanner.nextLine();
 							switch (key) {
 							case "Y":
+								//Delete line have info student in file
 								this.deleteLine(list.printInfo(), link);
 								System.out.println("Xóa thành công");
 								check1 = false;
 								check = false;
 								break;
 							case "N":
+								check1 = false;
+								check = false;
 								break;
 							default:
 								check= true;
 								System.out.println("Vui lòng xác nhận Y hoặc N!");
 								break;
 							}
-						}while(check1);
+						} while (check1);
 					}
 		    	}
-		    	if(check_id) {
-		    		System.out.println("Sinh viên có mã số "+id+" không tồn tại!");
+		    	if(checkId) {
+		    		System.out.println("Sinh viên có mã số " + studentId + " không tồn tại!");
 		    	}
 	    	}catch(Exception e){
 				System.out.println("Cú pháp không chính xác vui lòng thao tác lại.");
 				scanner.nextLine();
 			}
-	    }while(check);
+	    } while (check);
 	}
 	
+	/*
+	 * Sort list StudentInfo from file
+	 * Sort by GPA and Sort by Name
+	 * Use enum SortBy
+	 */
 	public void sortBy(SortBy type) {
 		List<StudentInfo> studentList = new ArrayList<StudentInfo>();
+		//Get list StudentInfo from file
 		studentList = StudentInfoDAO.loadStudent("E:\\JavaTraining\\Student_manager\\StudentInfoDAO.txt");
 		StudentInfo temp;
-		
-		if(type == SortBy.GPA) {
+		if(type == SortBy.GPA) {		//Sort by GPA
 			for (int i = 0; i < studentList.size(); i++) {
-				for (int j = 0; j < studentList.size(); j++) {
-					if(studentList.get(i).getAvegareScore() > studentList.get(j).getAvegareScore()) {
+				for (int j = i + 1; j < studentList.size(); j++) {
+					if(studentList.get(j).getAverageScore() > studentList.get(i).getAverageScore()) {
+						//Swap two element in list StudentInfo
 						temp =studentList.get(i);
 						studentList.set(i, studentList.get(j));
 						studentList.set(j, temp);
@@ -218,10 +240,11 @@ public class StudentInfoManager {
 				}
 			}
 		}else {
-			if(type == SortBy.Name) {
+			if(type == SortBy.Name) {		//Sort by Name
 				for (int i = 0; i < studentList.size(); i++) {
-					for (int j = 0; j < studentList.size(); j++) {
-						if(studentList.get(i).getStudentId() > studentList.get(j).getStudentId()) {
+					for (int j = i+1; j < studentList.size(); j++) {
+						if(studentList.get(j).getStudentId() > studentList.get(i).getStudentId()) {
+							//Swap two element in list StudentInfo
 							temp =studentList.get(i);
 							studentList.set(i, studentList.get(j));
 							studentList.set(j, temp);
@@ -237,8 +260,8 @@ public class StudentInfoManager {
 	public void sortByGPA(List<StudentInfo> studentList) {
 		StudentInfo temp;
 		for (int i = 0; i < studentList.size(); i++) {
-			for (int j = 0; j < studentList.size(); j++) {
-				if(studentList.get(i).getAvegareScore() > studentList.get(j).getAvegareScore()) {
+			for (int j = i+1; j < studentList.size(); j++) {
+				if (studentList.get(i).getAverageScore() < studentList.get(j).getAverageScore()) {
 					temp =studentList.get(i);
 					studentList.set(i, studentList.get(j));
 					studentList.set(j, temp);
@@ -252,8 +275,8 @@ public class StudentInfoManager {
 	public void sortByName(List<StudentInfo> studentList) {
 		StudentInfo temp;
 		for (int i = 0; i < studentList.size(); i++) {
-			for (int j = 0; j < studentList.size(); j++) {
-				if(studentList.get(i).getStudentId() > studentList.get(j).getStudentId()) {
+			for (int j = i+1; j < studentList.size(); j++) {
+				if(studentList.get(i).getStudentId() < studentList.get(j).getStudentId()) {
 					temp =studentList.get(i);
 					studentList.set(i, studentList.get(j));
 					studentList.set(j, temp);
@@ -266,21 +289,20 @@ public class StudentInfoManager {
 	}
 	public void saveToFile(String info, String link) {
 		String File = link; // link file will write info
-		try(FileWriter fw = new FileWriter(File, true);
+		try (FileWriter fw = new FileWriter(File, true);
 		    BufferedWriter bw = new BufferedWriter(fw);
-		    PrintWriter out = new PrintWriter(bw))
-		{
+		    PrintWriter out = new PrintWriter(bw)) {
 		    out.println(info);
-		  
 		} catch (IOException e) {
 		    //exception handling left as an exercise for the reader
+			e.printStackTrace();
 		}
 	}
 	public void showStudent(String link) {
-		List<StudentInfo> studentList = new ArrayList<StudentInfo>();
-		studentList = StudentInfoDAO.loadStudent(link);
-		for (StudentInfo list : studentList) {
-			list.printInfoPretty();
+		//Load list StudentInfo from file
+		this.listStudent = StudentInfoDAO.loadStudent(link);
+		for (StudentInfo list : listStudent) {
+			list.printInfoPretty();		//Show list StudentInfo
 		}
 	}
 	public void deleteLine(String lines, String link) {
@@ -290,38 +312,32 @@ public class StudentInfoManager {
 	        System.out.println("Đây không phải file");
 	        return;
 	      }
-	      // Construct the new file that will later be renamed
-	      // to the original filename. 
+	      // Construct the new file that will later be renamed to the original filename. 
 	      File tempFile = new File(inFile.getAbsolutePath() + ".tmp");
 	      BufferedReader br = new BufferedReader(new FileReader(link));
 	      PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
 	      String line = null;
 	      //Read from the original file and write to the new 
-	      //unless content matches data to be removed.
+	      //Unless content matches data to be removed.
 	      while ((line = br.readLine()) != null) {
-
 	        if (!line.trim().equals(lines)) {
-
 	          pw.println(line);
 	          pw.flush();
 	        }
 	      }
 	      pw.close();
 	      br.close();
-
-	      //Xoa file
+	      //Delete file
 	      if (!inFile.delete()) {
 	        System.out.println("Không thể xóa file");
 	        return;
 	      } 
-	      //Doi ten file
+	      //Rename file
 	      if (!tempFile.renameTo(inFile))
 	        System.out.println("Không thể đổi tên file");
-	    }
-	    catch (FileNotFoundException ex) {
+	    } catch (FileNotFoundException ex) {
 	    	ex.printStackTrace();
-	    }
-	    catch (IOException ex) {
+	    } catch (IOException ex) {
 	    	ex.printStackTrace();
 	    }
 	}

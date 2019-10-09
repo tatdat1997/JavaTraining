@@ -3,55 +3,92 @@ package pkg_Info;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/*
+ * Copyright (C) 2015 by GMO Runsystem Company
+ *
+ * Create HumanInfo class
+ *
+ * @version 1.0
+ *
+ * @author DatNT
+ *
+ */
+
 public class HumanInfo {
 	Integer infoId;
 	String address;
-	Date dayOfBirth;
+	Date dateOfBirth;
+	SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+	//Create new HumanInfo
 	public HumanInfo() {
 		super();
 	}
-	public HumanInfo(Integer infoId, String address, Date dayOfBirth) {
+	public HumanInfo(Integer infoId, String address, String dateOfBirth) {
 		super();
 		this.infoId = infoId;
 		this.address = address;
-		this.dayOfBirth = dayOfBirth;
+		//Format date of birth
+		try {
+			java.util.Date birthDay = format.parse(dateOfBirth); 
+			this.dateOfBirth = birthDay;
+		}catch(Exception e) {
+	        e.printStackTrace();
+	    }
 	}
-	public int getInfoId() {
+	public HumanInfo(Integer infoId, String address, Date dateOfBirth) {
+		super();
+		this.infoId = infoId;
+		this.address = address;
+		this.dateOfBirth = dateOfBirth;
+	}
+	public int getInfoId() {						//Get info id
 		return infoId;
 	}
-	public void setInfoId(Integer infoId) {
+	public void setInfoId(Integer infoId) {			//Set info id
 		this.infoId = infoId;
 	}
-	public String getAddress() {
+	public String getAddress() {					
 		return address;
 	}
-	public void setAddress(String address) {
+	public void setAddress(String address) {		
 		this.address = address;
 	}
-	public Date getDayOfBirth() {
-		return dayOfBirth;
+	public Date getDayOfBirth() {				
+		return dateOfBirth;
 	}
-	public void setDayOfBirth(Date day_of_birth) {
-		this.dayOfBirth = day_of_birth;
+	public void setDateOfBirth(String dateOfBirth) {
+		try {
+			java.util.Date birthDay = format.parse(dateOfBirth);
+			this.dateOfBirth = birthDay;
+		}catch(Exception e) {
+	        e.printStackTrace();
+	    }
 	}
-	public void editInfoId(int infoId_new) {
-		this.infoId = infoId_new;
+	public void editInfoId(int infoIdNew) {		//Edit info id
+		this.infoId = infoIdNew;
 	}
-	public void editAddress(String address_new) {
-		this.address = address_new;
+	public void editAddress(String addressNew) {	
+		this.address = addressNew;
 	}
-	public void editBirth(Date birth_new) {
-		this.dayOfBirth = birth_new;
+	public void editBirth(String birthNew) {			
+		try {
+			java.util.Date birthDay = format.parse(birthNew);
+			this.dateOfBirth = birthDay;
+		}catch(Exception e) {
+	        e.printStackTrace();
+	    }
 	}
+	//Print Info of student to save in file 
 	public String printInfo() {
 		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-		String info = this.infoId+","+this.address+","+format.format(this.dayOfBirth);
+		String info = this.infoId + "," + this.address + "," + format.format(this.dateOfBirth);
 		return info;
 	}
+	//print Info of student to show.
 	public void printInfoPretty() {
 		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-		String info = "infoId: "+this.infoId+", Address: "+this.address
-				+ ",Day of birth: "+format.format(this.dayOfBirth);
+		String info = "infoId: " + this.infoId + ", Address: " + this.address
+						+ ",Day of birth: " + format.format(this.dateOfBirth);
 		System.out.println(info);
 	}
 }
