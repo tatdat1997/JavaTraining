@@ -226,10 +226,10 @@ public class StudentInfoManager {
 	public void sortBy(String type) {
 		//Get list StudentInfo from file
 		this.listStudent = StudentInfoDAO.loadStudent("E:\\JavaTraining\\Student_manager\\StudentInfoDAO.txt");
-		if(type == SortBy.SortbyGPA.getvalue()) {		//Sort by GPA
+		if(type.equals(SortBy.SortbyGPA.getvalue())) {		//Sort by GPA
 			this.sortByGPA(this.listStudent);
 		}else {
-			if(type == SortBy.SortByName.getvalue()) {		//Sort by Name
+			if(type.equals(SortBy.SortByName.getvalue())) {		//Sort by Name
 				this.sortByName(this.listStudent);
 			}
 		}
