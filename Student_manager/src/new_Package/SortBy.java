@@ -12,6 +12,16 @@ package new_Package;
  */
 
 public enum SortBy {
-	GPA,
-	Name;
+	SortbyGPA ("GPA"),
+	SortByName ("Name");
+	
+    private String value;
+ 
+    SortBy(String sorttype) {
+        this.value = sorttype;
+    }
+ 
+    public String getvalue() {
+        return value;
+    }
 }

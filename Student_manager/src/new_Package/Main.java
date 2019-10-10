@@ -43,10 +43,10 @@ public class Main {
 	        	fst.removeStudent(link);
 				break;
 	        case 4:
-	        	fst.sortBy(SortBy.GPA);        //sort by GPA
+	        	fst.sortBy("GPA");        //sort by GPA
 				break;
 	        case 5:
-	        	fst.sortBy(SortBy.Name);       //sort by Name
+	        	fst.sortBy("Name");       //sort by Name
 	        	break;
 			case 6:
 				fst.showStudent(link);
