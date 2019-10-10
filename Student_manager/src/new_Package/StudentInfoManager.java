@@ -224,37 +224,14 @@ public class StudentInfoManager {
 	 * Use enum SortBy
 	 */
 	public void sortBy(SortBy type) {
-		List<StudentInfo> studentList = new ArrayList<StudentInfo>();
 		//Get list StudentInfo from file
-		studentList = StudentInfoDAO.loadStudent("E:\\JavaTraining\\Student_manager\\StudentInfoDAO.txt");
-		StudentInfo temp;
+		this.listStudent = StudentInfoDAO.loadStudent("E:\\JavaTraining\\Student_manager\\StudentInfoDAO.txt");
 		if(type == SortBy.GPA) {		//Sort by GPA
-			for (int i = 0; i < studentList.size(); i++) {
-				for (int j = i + 1; j < studentList.size(); j++) {
-					if(studentList.get(j).getAverageScore() > studentList.get(i).getAverageScore()) {
-						//Swap two element in list StudentInfo
-						temp =studentList.get(i);
-						studentList.set(i, studentList.get(j));
-						studentList.set(j, temp);
-					}
-				}
-			}
+			this.sortByGPA(this.listStudent);
 		}else {
 			if(type == SortBy.Name) {		//Sort by Name
-				for (int i = 0; i < studentList.size(); i++) {
-					for (int j = i+1; j < studentList.size(); j++) {
-						if(studentList.get(j).getStudentId() > studentList.get(i).getStudentId()) {
-							//Swap two element in list StudentInfo
-							temp =studentList.get(i);
-							studentList.set(i, studentList.get(j));
-							studentList.set(j, temp);
-						}
-					}
-				}
+				this.sortByName(this.listStudent);
 			}
-		}
-		for (StudentInfo list : studentList) {
-			list.printInfoPretty();
 		}
 	}
 	public void sortByGPA(List<StudentInfo> studentList) {
@@ -289,6 +266,7 @@ public class StudentInfoManager {
 	}
 	public void saveToFile(String info, String link) {
 		String File = link; // link file will write info
+		BufferedWriter br = null;
 		try (FileWriter fw = new FileWriter(File, true);
 		    BufferedWriter bw = new BufferedWriter(fw);
 		    PrintWriter out = new PrintWriter(bw)) {
@@ -296,7 +274,15 @@ public class StudentInfoManager {
 		} catch (IOException e) {
 		    //exception handling left as an exercise for the reader
 			e.printStackTrace();
-		}
+		}finally {
+        	if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
 	}
 	public void showStudent(String link) {
 		//Load list StudentInfo from file
@@ -306,6 +292,7 @@ public class StudentInfoManager {
 		}
 	}
 	public void deleteLine(String lines, String link) {
+		 BufferedReader br = null;
 		try {
 	      File inFile = new File(link);
 	      if (!inFile.isFile()) {
@@ -314,7 +301,7 @@ public class StudentInfoManager {
 	      }
 	      // Construct the new file that will later be renamed to the original filename. 
 	      File tempFile = new File(inFile.getAbsolutePath() + ".tmp");
-	      BufferedReader br = new BufferedReader(new FileReader(link));
+	      br = new BufferedReader(new FileReader(link));
 	      PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
 	      String line = null;
 	      //Read from the original file and write to the new 
@@ -339,6 +326,14 @@ public class StudentInfoManager {
 	    	ex.printStackTrace();
 	    } catch (IOException ex) {
 	    	ex.printStackTrace();
-	    }
+	    }finally {
+        	if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
 	}
 }
