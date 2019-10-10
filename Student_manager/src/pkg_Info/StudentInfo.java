@@ -1,6 +1,7 @@
 package pkg_Info;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /*
@@ -55,9 +56,10 @@ public class StudentInfo extends HumanInfo{
 	 *Print Info of student to save in file 
 	 */
 	public String printInfo() {
+		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 		// TODO Auto-generated method stub
 		String info = this.infoId + "|" + this.studentId + "|" + this.address + "|" + this.avegareScore
-						+ "|" + this.format.format(this.dateOfBirth);
+						+ "|" + format.format(this.dateOfBirth);
 		return info;
 	}
 	
@@ -67,10 +69,11 @@ public class StudentInfo extends HumanInfo{
 	 *Print Info of student to show.
 	 */
 	public void printInfoPretty() {
+		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 		Double score = this.getAverageScore();
 		// TODO Auto-generated method stub
 		String info = "Info_Id: " + this.infoId + ", Student_ID: " + this.studentId+ ", Avegare score: " 
-		+ df2.format(score) +  ", Day of birth: " + this.format.format(this.dateOfBirth)+", Address: " + this.address;
+		+ df2.format(score) +  ", Day of birth: " + format.format(this.dateOfBirth)+", Address: " + this.address;
 		System.out.println(info);
 	}
 }

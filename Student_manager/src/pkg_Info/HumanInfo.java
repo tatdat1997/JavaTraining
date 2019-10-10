@@ -18,13 +18,13 @@ public class HumanInfo {
 	Integer infoId;
 	String address;
 	Date dateOfBirth;
-	SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 	//Create new HumanInfo
 	public HumanInfo() {
 		super();
 	}
 	public HumanInfo(Integer infoId, String address, String dateOfBirth) {
 		super();
+		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 		this.infoId = infoId;
 		this.address = address;
 		//Format date of birth
@@ -57,6 +57,7 @@ public class HumanInfo {
 		return dateOfBirth;
 	}
 	public void setDateOfBirth(String dateOfBirth) {
+		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 		try {
 			java.util.Date birthDay = format.parse(dateOfBirth);
 			this.dateOfBirth = birthDay;
@@ -70,7 +71,8 @@ public class HumanInfo {
 	public void editAddress(String addressNew) {	
 		this.address = addressNew;
 	}
-	public void editBirth(String birthNew) {			
+	public void editBirth(String birthNew) {
+		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 		try {
 			java.util.Date birthDay = format.parse(birthNew);
 			this.dateOfBirth = birthDay;
