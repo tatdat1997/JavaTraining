@@ -8,6 +8,10 @@ import java.io.Serializable;
 @MappedSuperclass
 public class BaseModel implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
     @Column(name="ID", unique = true)
     private Integer id;
