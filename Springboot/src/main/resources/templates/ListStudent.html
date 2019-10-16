@@ -25,13 +25,13 @@
 		<div class="row content">
 			<div class="col-sm-8 offset-md-2">
 			<h2 class="text-center">List Student</h2>
-				<form method="POST" action="/newUser" enctype="multipart/form-data">
+				<form method="POST" action="/searchStudent" enctype="multipart/form-data">
 					<div class="form-group d-flex">
 						<div class="col-sm-3">
 							<label for="UserName">Student Code:</label>
 						</div>
 					    <div class="col-sm-7">
-							<input type="text" class="form-control" name="UserName">
+							<input type="text" class="form-control" name="StudentCode">
 						</div>
 					</div>
 				  	<div class="form-group d-flex">
@@ -39,7 +39,7 @@
 							<label for="UserName">Student Name:</label>
 						</div>
 					    <div class="col-sm-7">
-							<input type="text" class="form-control" name="UserName">
+							<input type="text" class="form-control" name="StudentName">
 						</div>
 						<div class="col-sm-2">
 						<input type="submit" value="Search" class="btn btn-info"  style="width:114px;">
@@ -54,7 +54,7 @@
 							<input type="date" class="form-control" name="UserName">
 						</div>
 						<div class="col-sm-2">
-							<a class="btn btn-info" href="/studentRepo">Add student</a>
+							<a class="btn btn-info" href="">Add student</a>
 						</div>
 				  	</div>
 				</form>
