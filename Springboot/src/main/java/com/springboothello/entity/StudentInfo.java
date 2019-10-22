@@ -1,61 +1,82 @@
 package com.springboothello.entity;
-
-import java.io.Serializable;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
-import org.hibernate.annotations.GenericGenerator;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 
 @Entity
-@Table(name = "STUDENT_INFO")
-public class StudentInfo implements Serializable{
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
+public class StudentInfo {
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO,generator="native")
-	@GenericGenerator(name = "native",strategy = "native")
-    @Column(name="info_id", unique = true)
-    private Integer infoId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long infoId;
 	
-	@Column(name = "student_id", nullable = false,unique = true)
-	private Integer studentId;
-
-    @Column(name = "address", nullable = true, length = 255)
-    private String address;
-    
-    @Column(name = "average_score", nullable = false)
-    private Double averageScore;
-
-    @Column(name = "date_of_birth", nullable = true)
-    private Date dateOfBirth;
-
+	@OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "student_id")
+    private Student studentBasic;
 	
+	private String address;
+	
+	@Max(value = 10, message = "Score cannot be greater than 10!")
+	@Min(value = 1, message = "Score cannot be less than 1")
+	private Double averageSore;
+	
+	
+	@DateTimeFormat(iso = ISO.DATE)
+	private Date dateOfBirth;
+	
+	public StudentInfo(Long infoId, Student studentBasic, String address, Double averageSore, String dateOfBirth) {
+		super();
+		this.infoId = infoId;
+		this.studentBasic = studentBasic;
+		this.address = address;
+		this.averageSore = averageSore;
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			java.util.Date birthDay = format.parse(dateOfBirth); 
+			this.dateOfBirth = birthDay;
+		}catch(Exception e) {
+	        e.printStackTrace();
+	    }
+	}
 
-	public Integer getInfoId() {
+	public StudentInfo(Student studentBasic, String address, Double average_sore, String date_of_birth) {
+		super();
+		this.studentBasic = studentBasic;
+		this.address = address;
+		this.averageSore = average_sore;
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			java.util.Date birthDay = format.parse(date_of_birth); 
+			this.dateOfBirth = birthDay;
+		}catch(Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+
+	public StudentInfo() {
+		super();
+	}
+
+	public Long getInfoId() {
 		return infoId;
 	}
 
-	public void setInfoId(Integer infoId) {
-		this.infoId = infoId;
+	public void setInfoId(Long id) {
+		this.infoId = id;
 	}
 
-	public Integer getStudentId() {
-		return studentId;
+	public Student getStudent() {
+		return studentBasic;
 	}
 
-	public void setStudentId(Integer studentId) {
-		this.studentId = studentId;
+	public void setStudent(Student studentBasic) {
+		this.studentBasic = studentBasic;
 	}
 
 	public String getAddress() {
@@ -66,59 +87,33 @@ public class StudentInfo implements Serializable{
 		this.address = address;
 	}
 
-	public Double getAverageScore() {
-		return averageScore;
+	public Double getAverageSore() {
+		return averageSore;
 	}
 
-	public void setAverageScore(Double averageScore) {
-		this.averageScore = averageScore;
+	public void setAverageSore(Double average_sore) {
+		this.averageSore = average_sore;
 	}
 
-	public Date getDateOfBirth() {
-		return dateOfBirth;
+	public String getDateOfBirth() {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		String date = format.format(this.dateOfBirth);
+		return date;
 	}
-
-	public void setDateOfBirth(String dateOfBirth) {
+	public String getDateOfBirthFormat() {
 		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+		String date = format.format(this.dateOfBirth);
+		return date;
+	}
+	public void setDateOfBirth(String date_of_birth) {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		try {
-			java.util.Date birthDay = format.parse(dateOfBirth); 
+			java.util.Date birthDay = format.parse(date_of_birth); 
 			this.dateOfBirth = birthDay;
 		}catch(Exception e) {
 	        e.printStackTrace();
 	    }
 	}
 	
-	public StudentInfo() {
-		super();
-	}
-	public StudentInfo(Integer infoId, Integer studentId, String address, Double averageScore, String dateOfBirth) {
-		super();
-		this.infoId = infoId;
-		this.studentId = studentId;
-		this.address = address;
-		this.averageScore = averageScore;
-		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-		try {
-			java.util.Date birthDay = format.parse(dateOfBirth); 
-			this.dateOfBirth = birthDay;
-		}catch(Exception e) {
-	        e.printStackTrace();
-	    }
-	}
-
-	public StudentInfo(Integer studentId, String address, Double averageScore, String dateOfBirth) {
-		super();
-		this.studentId = studentId;
-		this.address = address;
-		this.averageScore = averageScore;
-		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-		try {
-			java.util.Date birthDay = format.parse(dateOfBirth); 
-			this.dateOfBirth = birthDay;
-		}catch(Exception e) {
-	        e.printStackTrace();
-	    }
-	}
-    
-    
+	
 }

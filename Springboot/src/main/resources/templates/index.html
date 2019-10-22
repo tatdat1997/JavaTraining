@@ -19,7 +19,7 @@
 	    <ul class="navbar-brand mr-auto"></ul>
 	      <ul class="nav navbar-nav navbar-right">
 	      	<li class="pr-4"><a th:href="${session.user} ? ${session.user.User_name} : '/register'" th:text="${session.user} ? 'Welcome, '+${session.user.User_name} : 'Register'"></a></li>
-	      	<li class="pr-4"><a th:href="${session.user} ? '/studentinfo' : ''"href="" th:text="${session.user} ? 'Menu': ''"></a></li>
+	      	<li class="pr-4"><a th:href="${session.user} ? '/listStudent' : ''" th:text="${session.user} ? 'Menu': ''"></a></li>
 	      	<li><a th:href="${session.user} ? '/logout' : '/login'"href="" th:text="${session.user} ? 'Logout': 'Login'"></a></li>
 	      </ul>
 	    </div>

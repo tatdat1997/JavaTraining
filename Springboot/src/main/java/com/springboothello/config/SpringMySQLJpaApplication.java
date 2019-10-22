@@ -10,6 +10,7 @@ import org.springframework.context.support.ReloadableResourceBundleMessageSource
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
+
 @SpringBootApplication
 @ComponentScan({"com.springboothello"})
 @EntityScan("com.springboothello.entity")
@@ -35,4 +36,5 @@ public class SpringMySQLJpaApplication {
 		SpringApplication.run(SpringMySQLJpaApplication.class, args);
 
 	}
+
 }

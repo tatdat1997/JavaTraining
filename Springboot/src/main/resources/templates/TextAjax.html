@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="yourPanel" th:fragment="yourFragment">  
+        
+	        <div class="form-group">
+	            <label for="param1"></label>
+	            <input class="form-component" type="text" name=""/>
+	        </div>
+	        <div class="form-group">
+	            <label for="param2"></label>
+	            <input class="form-component" type="text" name="password"/>
+	        </div>
+	        <input type="submit" class="btn btn-success" value="Login">
+	        <a href='#' class="btn btn-default">Cancel</a>
+    </div>
+    <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+        <script>
+            function load_ajax(){
+                $.ajax({
+                    url : "/postForm",
+                    type : "post",
+                    dataType:"text",
+                    data : {
+                         tendangnhap : $('#tendangnhap').val(),
+                         matkhau : $('#matkhau').val()
+                    },
+                    success : function (dn){
+                        $('#dn').html(dn);
+                    }
+                });
+            }
+        </script>
+</body>
+</html>

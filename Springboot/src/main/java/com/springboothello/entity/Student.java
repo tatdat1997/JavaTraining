@@ -1,79 +1,80 @@
 package com.springboothello.entity;
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
+//import org.hibernate.validator.constraints;
 
 @Entity
-@Table(name = "STUDENT")
+@Table(name = "student")
 public class Student {
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO,generator="native")
-	@GenericGenerator(name = "native",strategy = "native")
-    @Column(name="student_id", unique = true)
-    private Integer studentId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long studentId;
 	
-	@Column(name = "student_name", nullable = false, length = 20)
+	@NotEmpty(message = "Student name must be not null!")
+	@Column(name = "student_name")
 	private String studentName;
 	
-	
-	@Column(name = "student_code", nullable = false, length = 10)
+
+	@Column(name = "student_code")
+	@NotEmpty(message = "Student name must be not null!")
 	private String studentCode;
+	
+	@OneToOne(mappedBy = "studentBasic")
+    private StudentInfo studentInfoBasic;
 
+	public Student() {
+		super();
+	}
 
-	public Integer getStudentId() {
+	public Student( String student_name, String student_code) {
+		super();
+		studentName = student_name;
+		studentCode = student_code;
+	}
+
+	public Student(Long studentId, String studentName, String studentCode) {
+		super();
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.studentCode = studentCode;
+	}
+
+	public Long getStudentId() {
 		return studentId;
 	}
 
-
-	public void setStudentId(Integer studentId) {
-		this.studentId = studentId;
+	public void setStudentId(Long student_id) {
+		studentId = student_id;
 	}
-
 
 	public String getStudentName() {
 		return studentName;
 	}
 
-
-	public void setStudentName(String studentName) {
-		this.studentName = studentName;
+	public void setStudentName(String student_name) {
+		studentName = student_name;
 	}
-
 
 	public String getStudentCode() {
 		return studentCode;
 	}
 
-
-	public void setStudentCode(String studentCode) {
-		this.studentCode = studentCode;
+	public void setStudenCode(String student_code) {
+		studentCode = student_code;
 	}
 
-
-	public Student(Integer studentId, String studentName, String studentCode) {
-		super();
-		this.studentId = studentId;
-		this.studentName = studentName;
-		this.studentCode = studentCode;
+	public StudentInfo getStudentInfoBasic() {
+		return studentInfoBasic;
 	}
 
-
-	public Student(String studentName, String studentCode) {
-		super();
-		this.studentName = studentName;
-		this.studentCode = studentCode;
-	}
-
-
-	public Student() {
-		super();
+	public void setStudentInfoBasic(StudentInfo studentInfoBasic) {
+		this.studentInfoBasic = studentInfoBasic;
 	}
 	
+	public String PrintInfo() {
+		return this.getStudentCode() + " | " + this.studentName + " | " + this.getStudentInfoBasic().getAddress() 
+				+ " | " + this.getStudentInfoBasic().getDateOfBirthFormat();
+	}
 	
 }
