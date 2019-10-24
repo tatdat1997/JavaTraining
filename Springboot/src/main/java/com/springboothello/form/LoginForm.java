@@ -2,11 +2,22 @@ package com.springboothello.form;
 
 import javax.validation.constraints.NotEmpty;
 
+/*
+ * Copyright (C) 2015 by GMO Runsystem Company
+ *
+ * Create LoginForm class
+ *
+ * @version 1.0
+ *
+ * @author DatNT
+ *
+ */
+
 public class LoginForm {
-	
+
 	@NotEmpty(message = "User Name must be not null!")
 	private String userName;
-	
+
 	@NotEmpty(message = "Password must be not null!")
 	private String password;
 
@@ -25,6 +36,5 @@ public class LoginForm {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
+
 }

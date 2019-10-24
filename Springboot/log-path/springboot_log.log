@@ -1,0 +1,416 @@
+[INFO ] 2019-10-24 10:38:05.792 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-24 10:38:05.802 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-24 10:38:16.815 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 12.788 seconds (JVM running for 13.546)
+[DEBUG] 2019-10-24 10:38:32.217 [http-nio-8888-exec-1] UserController - ===== Go to page Create new user =====
+[DEBUG] 2019-10-24 10:38:45.023 [http-nio-8888-exec-4] UserController - ===== Have error when create new user =====
+[DEBUG] 2019-10-24 10:38:51.235 [http-nio-8888-exec-6] UserController - ===== Create new user : dat114 =====
+[DEBUG] 2019-10-24 10:38:51.270 [http-nio-8888-exec-6] UserController - ===== User : dat114 is exist =====
+[DEBUG] 2019-10-24 10:39:08.743 [http-nio-8888-exec-9] UserController - ===== Create new user : admin2 =====
+[DEBUG] 2019-10-24 10:39:08.748 [http-nio-8888-exec-9] UserController - Create new user : admin2 success =====
+[DEBUG] 2019-10-24 10:39:12.004 [http-nio-8888-exec-1] LoginController - ===== Hello Login form =====
+[DEBUG] 2019-10-24 10:39:16.955 [http-nio-8888-exec-3] LoginController - ===== Login with User: admin2 =====
+[DEBUG] 2019-10-24 10:39:16.963 [http-nio-8888-exec-3] LoginController - ===== Login success with User: admin2 =====
+[DEBUG] 2019-10-24 10:39:17.041 [http-nio-8888-exec-4] ListStudentController - ===== Hello List Student =====
+[DEBUG] 2019-10-24 10:39:20.914 [http-nio-8888-exec-5] ListStudentController - ===== Search student =====
+[DEBUG] 2019-10-24 10:39:20.914 [http-nio-8888-exec-5] ListStudentController - ===== Have error when search student =====
+[DEBUG] 2019-10-24 10:39:30.069 [http-nio-8888-exec-6] ListStudentController - ===== Search student =====
+[DEBUG] 2019-10-24 10:39:30.069 [http-nio-8888-exec-6] ListStudentController - ===== Search student with student name: Leechman=====
+[DEBUG] 2019-10-24 10:39:30.263 [http-nio-8888-exec-6] ListStudentController - ===== Search student success =====
+[DEBUG] 2019-10-24 10:39:32.461 [http-nio-8888-exec-7] StudentManagerController - ===== Edit student have Student_Id: 22 =====
+[DEBUG] 2019-10-24 10:39:43.102 [http-nio-8888-exec-9] StudentManagerController - ===== Update student have Student_Id: 22 =====
+[DEBUG] 2019-10-24 10:39:43.189 [http-nio-8888-exec-10] StudentManagerController - ===== Edit student have Student_Id: 22 =====
+[DEBUG] 2019-10-24 10:39:45.052 [http-nio-8888-exec-2] ListStudentController - ===== Hello List Student =====
+[DEBUG] 2019-10-24 10:39:55.357 [http-nio-8888-exec-4] StudentManagerController - ===== Delete student have Info_Id: 113 =====
+[DEBUG] 2019-10-24 10:39:55.426 [http-nio-8888-exec-5] ListStudentController - ===== Hello List Student =====
+[DEBUG] 2019-10-24 10:40:20.257 [http-nio-8888-exec-7] LoginController - ===== Logout User: =====
+[DEBUG] 2019-10-24 10:40:20.282 [http-nio-8888-exec-8] LoginController - ===== Hello Login form =====
+[INFO ] 2019-10-24 10:41:27.540 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-24 10:41:27.541 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-24 10:41:29.608 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 2.187 seconds (JVM running for 206.339)
+2019-10-24 10:42:44,507 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:42:44,507 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:42:46,414 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.995 seconds (JVM running for 283.145)
+2019-10-24 10:42:52,760 DEBUG c.s.c.LoginController [http-nio-8888-exec-1] ===== Wellcome =====
+2019-10-24 10:43:34,953 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:43:34,954 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:43:36,564 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.688 seconds (JVM running for 333.295)
+2019-10-24 10:43:46,693 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:43:46,694 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:43:48,482 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.89 seconds (JVM running for 345.213)
+2019-10-24 10:44:09,666 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:44:09,667 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:44:11,226 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.617 seconds (JVM running for 367.957)
+2019-10-24 10:45:01,733 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:45:01,734 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:45:03,088 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.423 seconds (JVM running for 419.819)
+2019-10-24 10:45:11,150 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:45:11,151 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:45:12,587 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.488 seconds (JVM running for 429.318)
+2019-10-24 10:45:29,827 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:45:29,827 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:45:32,009 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 2.245 seconds (JVM running for 448.74)
+2019-10-24 10:45:50,158 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:45:50,158 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:45:51,437 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.341 seconds (JVM running for 468.168)
+2019-10-24 10:46:16,618 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:46:16,619 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:46:18,248 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.699 seconds (JVM running for 494.979)
+2019-10-24 10:47:00,024 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:47:00,024 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:47:01,449 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.761 seconds (JVM running for 538.18)
+2019-10-24 10:47:06,760 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:47:06,760 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:47:07,886 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.183 seconds (JVM running for 544.617)
+2019-10-24 10:47:19,021 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:47:19,022 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:47:20,366 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.43 seconds (JVM running for 557.096)
+2019-10-24 10:47:38,161 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:47:38,162 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:47:39,452 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.372 seconds (JVM running for 576.183)
+2019-10-24 10:47:58,706 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:47:58,706 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:47:59,921 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.27 seconds (JVM running for 596.652)
+2019-10-24 10:49:03,455 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:49:03,455 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:49:04,652 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.251 seconds (JVM running for 661.383)
+2019-10-24 10:50:08,253 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:50:08,253 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:50:09,415 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.223 seconds (JVM running for 726.147)
+2019-10-24 10:50:13,359 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:50:13,359 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:50:14,685 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.382 seconds (JVM running for 731.416)
+2019-10-24 10:50:23,633 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:50:23,634 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:50:24,772 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.192 seconds (JVM running for 741.503)
+2019-10-24 10:50:32,808 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:50:32,809 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:50:34,025 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.271 seconds (JVM running for 750.757)
+2019-10-24 10:50:48,032 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:50:48,033 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:50:49,130 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.147 seconds (JVM running for 765.86)
+2019-10-24 10:51:01,152 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:51:01,152 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:51:02,254 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.163 seconds (JVM running for 778.985)
+2019-10-24 10:51:32,430 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:51:32,430 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:51:33,600 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.217 seconds (JVM running for 810.331)
+2019-10-24 10:52:10,899 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:52:10,900 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:52:12,014 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.184 seconds (JVM running for 848.745)
+2019-10-24 10:52:16,967 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:52:16,968 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:52:18,166 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.245 seconds (JVM running for 854.897)
+2019-10-24 10:52:28,183 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:52:28,183 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:52:29,492 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.359 seconds (JVM running for 866.222)
+2019-10-24 10:52:32,374 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:52:32,374 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:52:33,630 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.306 seconds (JVM running for 870.36)
+2019-10-24 10:52:41,641 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:52:41,641 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:52:42,935 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.342 seconds (JVM running for 879.665)
+2019-10-24 10:52:47,037 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:52:47,037 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:52:48,103 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.14 seconds (JVM running for 884.834)
+2019-10-24 10:52:51,089 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:52:51,090 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:52:52,199 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.162 seconds (JVM running for 888.929)
+2019-10-24 10:53:12,324 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:53:12,325 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:53:13,479 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.207 seconds (JVM running for 910.21)
+2019-10-24 10:53:19,425 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:53:19,425 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:53:20,618 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.26 seconds (JVM running for 917.348)
+2019-10-24 10:53:49,755 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:53:49,755 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:53:50,982 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.267 seconds (JVM running for 947.713)
+2019-10-24 10:54:10,091 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:54:10,092 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:54:11,457 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.42 seconds (JVM running for 968.188)
+2019-10-24 10:54:24,501 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:54:24,501 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:54:25,601 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.142 seconds (JVM running for 982.332)
+2019-10-24 10:54:45,881 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:54:45,881 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:54:47,252 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.422 seconds (JVM running for 1003.984)
+2019-10-24 10:55:07,424 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:55:07,424 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:55:08,746 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.373 seconds (JVM running for 1025.476)
+2019-10-24 10:55:19,687 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:55:19,687 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:55:20,718 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.072 seconds (JVM running for 1037.449)
+2019-10-24 10:55:44,826 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:55:44,826 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:55:46,037 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.262 seconds (JVM running for 1062.768)
+2019-10-24 10:56:00,996 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:56:00,997 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:56:01,911 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 0.961 seconds (JVM running for 1078.642)
+2019-10-24 10:56:25,010 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 10:56:25,010 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 10:56:26,169 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.203 seconds (JVM running for 1102.9)
+2019-10-24 11:12:37,070 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:12:37,070 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:12:38,228 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.209 seconds (JVM running for 2074.959)
+2019-10-24 11:15:24,433 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:15:24,434 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:15:25,483 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.104 seconds (JVM running for 2242.213)
+2019-10-24 11:15:40,072 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:15:40,072 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:15:52,842 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:15:52,843 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:20:27,512 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:20:27,512 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:27:25,241 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:27:25,241 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:28:43,532 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 6996 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:28:43,533 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:29:54,673 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 808 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:29:54,683 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:31:46,558 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:31:46,568 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:31:57,839 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 12.986 seconds (JVM running for 13.616)
+2019-10-24 11:32:01,765 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:32:01,766 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:32:03,836 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 2.2 seconds (JVM running for 19.614)
+2019-10-24 11:32:10,879 DEBUG c.s.c.LoginController [http-nio-8888-exec-10] ===== Wellcome =====
+2019-10-24 11:32:15,078 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:32:15,079 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:32:17,076 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 2.107 seconds (JVM running for 32.854)
+2019-10-24 11:32:25,124 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:32:25,125 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:32:27,287 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 2.265 seconds (JVM running for 43.064)
+2019-10-24 11:32:30,771 DEBUG c.s.c.LoginController [http-nio-8888-exec-1] ===== Wellcome =====
+2019-10-24 11:32:35,414 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:32:35,415 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:32:36,865 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.535 seconds (JVM running for 52.643)
+2019-10-24 11:32:39,474 DEBUG c.s.c.LoginController [http-nio-8888-exec-10] ===== Wellcome =====
+2019-10-24 11:32:46,548 DEBUG c.s.c.ListStudentController [http-nio-8888-exec-5] ===== Search Ajax Form =====
+2019-10-24 11:32:48,204 DEBUG c.s.c.SearchController [http-nio-8888-exec-3] ===== Search with Ajax =====
+2019-10-24 11:32:48,205 DEBUG c.s.c.SearchController [http-nio-8888-exec-3] ===== Have error when search with Ajax= ====
+2019-10-24 11:32:51,184 DEBUG c.s.c.SearchController [http-nio-8888-exec-1] ===== Search with Ajax =====
+2019-10-24 11:32:51,184 DEBUG c.s.c.SearchController [http-nio-8888-exec-1] ===== Find student: Alex =====
+2019-10-24 11:32:51,524 DEBUG c.s.c.SearchController [http-nio-8888-exec-1] ===== Not found student: Alex =====
+2019-10-24 11:32:54,062 DEBUG c.s.c.SearchController [http-nio-8888-exec-10] ===== Search with Ajax =====
+2019-10-24 11:32:54,063 DEBUG c.s.c.SearchController [http-nio-8888-exec-10] ===== Find student: an =====
+2019-10-24 11:32:54,212 DEBUG c.s.c.SearchController [http-nio-8888-exec-10] ===== Find student: an success. =====
+2019-10-24 11:33:03,220 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:33:03,221 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:33:05,000 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.878 seconds (JVM running for 80.778)
+2019-10-24 11:33:08,767 DEBUG c.s.c.ListStudentController [http-nio-8888-exec-10] ===== Search Ajax Form =====
+2019-10-24 11:33:13,002 DEBUG c.s.c.SearchController [http-nio-8888-exec-6] ===== Search with Ajax =====
+2019-10-24 11:33:13,006 DEBUG c.s.c.SearchController [http-nio-8888-exec-6] ===== Find student: ad =====
+2019-10-24 11:33:13,166 DEBUG c.s.c.SearchController [http-nio-8888-exec-6] ===== Find student: ad success. =====
+2019-10-24 11:33:22,158 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:33:22,158 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:33:23,590 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.517 seconds (JVM running for 99.368)
+2019-10-24 11:33:40,092 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:33:40,093 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:33:41,496 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.49 seconds (JVM running for 117.274)
+2019-10-24 11:33:46,610 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:33:46,612 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:33:48,250 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.715 seconds (JVM running for 124.027)
+2019-10-24 11:33:50,492 DEBUG c.s.c.ListStudentController [http-nio-8888-exec-1] ===== Search Ajax Form =====
+2019-10-24 11:33:52,893 DEBUG c.s.c.SearchController [http-nio-8888-exec-5] ===== Search with Ajax =====
+2019-10-24 11:33:52,894 DEBUG c.s.c.SearchController [http-nio-8888-exec-5] ===== Find student: ad =====
+2019-10-24 11:33:53,022 DEBUG c.s.c.SearchController [http-nio-8888-exec-5] ===== Find student: ad success. =====
+2019-10-24 11:34:46,797 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:34:46,797 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:34:48,476 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.737 seconds (JVM running for 184.254)
+2019-10-24 11:34:54,854 DEBUG c.s.c.ListStudentController [http-nio-8888-exec-1] ===== Search Ajax Form =====
+2019-10-24 11:34:56,538 DEBUG c.s.c.LoginController [http-nio-8888-exec-3] ===== Wellcome =====
+2019-10-24 11:34:57,682 DEBUG c.s.c.LoginController [http-nio-8888-exec-6] ===== Wellcome =====
+2019-10-24 11:35:43,312 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:35:43,312 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:36:03,951 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:36:03,952 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:36:05,479 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.645 seconds (JVM running for 261.257)
+2019-10-24 11:36:09,858 DEBUG c.s.c.LoginController [http-nio-8888-exec-1] ===== Wellcome =====
+2019-10-24 11:37:06,345 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:37:06,345 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:37:07,546 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.27 seconds (JVM running for 323.324)
+2019-10-24 11:37:20,987 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:37:20,988 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:37:22,150 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.224 seconds (JVM running for 337.927)
+2019-10-24 11:37:28,822 DEBUG c.s.c.LoginController [http-nio-8888-exec-1] ===== Wellcome =====
+2019-10-24 11:37:46,827 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8888-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.springboothello.service.StudentInfoServiceImpl.save(StudentInfoServiceImpl.java:49) ~[classes/:?]
+	at com.springboothello.service.StudentInfoServiceImpl$$FastClassBySpringCGLIB$$71f1a44d.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746) ~[spring-aop-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at com.springboothello.service.StudentInfoServiceImpl$$EnhancerBySpringCGLIB$$90e93f71.save(<generated>) ~[classes/:?]
+	at com.springboothello.controller.TransactionController.logout(TransactionController.java:27) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:981) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:873) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:858) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:151) ~[spring-session-core-2.0.9.RELEASE.jar:2.0.9.RELEASE]
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:81) ~[spring-session-core-2.0.9.RELEASE.jar:2.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_201]
+2019-10-24 11:39:35,413 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:39:35,413 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:39:36,579 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.259 seconds (JVM running for 472.358)
+2019-10-24 11:40:35,068 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:40:35,069 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:40:36,184 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.177 seconds (JVM running for 531.961)
+2019-10-24 11:40:50,553 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:40:50,554 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:40:51,821 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.365 seconds (JVM running for 547.599)
+2019-10-24 11:41:13,336 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:41:13,337 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:41:14,447 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.161 seconds (JVM running for 570.225)
+2019-10-24 11:41:17,556 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:41:17,556 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:41:18,571 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.138 seconds (JVM running for 574.349)
+2019-10-24 11:43:12,480 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 11:43:12,480 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 11:43:13,576 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.145 seconds (JVM running for 689.354)
+2019-10-24 11:51:40,528 DEBUG c.s.c.LoginController [http-nio-8888-exec-9] ===== Wellcome =====
+2019-10-24 11:51:41,769 DEBUG c.s.c.LoginController [http-nio-8888-exec-8] ===== Hello Login form =====
+2019-10-24 13:34:47,743 DEBUG c.s.c.LoginController [http-nio-8888-exec-2] ===== Hello Login form =====
+2019-10-24 13:34:49,927 DEBUG c.s.c.LoginController [http-nio-8888-exec-10] ===== Hello Login form =====
+2019-10-24 13:35:13,777 DEBUG c.s.c.LoginController [http-nio-8888-exec-6] ===== Login with User: dat114 =====
+2019-10-24 13:35:13,806 DEBUG c.s.c.LoginController [http-nio-8888-exec-6] ===== Login success with User: dat114 =====
+2019-10-24 13:35:13,869 DEBUG c.s.c.ListStudentController [http-nio-8888-exec-4] ===== Hello List Student =====
+2019-10-24 13:35:36,068 DEBUG c.s.c.StudentManagerController [http-nio-8888-exec-2] ===== Edit student have Student_Id: 18 =====
+2019-10-24 13:36:02,712 DEBUG c.s.c.StudentManagerController [http-nio-8888-exec-10] ===== Edit student have Student_Id: 18 =====
+2019-10-24 13:36:29,666 DEBUG c.s.c.StudentManagerController [http-nio-8888-exec-7] ===== Update student have Student_Id: 18 =====
+2019-10-24 13:36:29,714 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8888-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.springboothello.service.StudentInfoServiceImpl.save(StudentInfoServiceImpl.java:53) ~[classes/:?]
+	at com.springboothello.service.StudentInfoServiceImpl$$FastClassBySpringCGLIB$$71f1a44d.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746) ~[spring-aop-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at com.springboothello.service.StudentInfoServiceImpl$$EnhancerBySpringCGLIB$$90e93f71.save(<generated>) ~[classes/:?]
+	at com.springboothello.controller.StudentManagerController.updateStudent(StudentManagerController.java:118) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:981) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:884) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:858) ~[spring-webmvc-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:151) ~[spring-session-core-2.0.9.RELEASE.jar:2.0.9.RELEASE]
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:81) ~[spring-session-core-2.0.9.RELEASE.jar:2.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.12.RELEASE.jar:5.0.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.37.jar:8.5.37]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_201]
+2019-10-24 13:37:52,469 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 13:37:52,469 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 13:37:53,962 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.583 seconds (JVM running for 7569.745)
+2019-10-24 13:37:57,100 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 7428 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+2019-10-24 13:37:57,101 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-24 13:37:58,267 INFO c.s.c.SpringMySQLJpaApplication [restartedMain] Started SpringMySQLJpaApplication in 1.254 seconds (JVM running for 7574.05)
+2019-10-24 13:38:09,463 DEBUG c.s.c.StudentManagerController [http-nio-8888-exec-2] ===== Edit student have Student_Id: 18 =====
+2019-10-24 13:39:04,061 DEBUG c.s.c.ListStudentController [http-nio-8888-exec-5] ===== Hello List Student =====
+2019-10-24 13:39:05,884 DEBUG c.s.c.StudentManagerController [http-nio-8888-exec-7] ===== Edit student have Student_Id: 18 =====
+2019-10-24 13:39:14,366 DEBUG c.s.c.StudentManagerController [http-nio-8888-exec-10] ===== Update student have Student_Id: 18 =====
+2019-10-24 13:39:14,466 DEBUG c.s.c.StudentManagerController [http-nio-8888-exec-1] ===== Edit student have Student_Id: 18 =====
+2019-10-24 13:39:16,771 DEBUG c.s.c.ListStudentController [http-nio-8888-exec-3] ===== Hello List Student =====

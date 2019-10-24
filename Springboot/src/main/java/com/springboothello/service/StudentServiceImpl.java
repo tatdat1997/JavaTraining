@@ -3,13 +3,22 @@ package com.springboothello.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.springboothello.entity.Student;
 import com.springboothello.repositories.StudentRepository;
+
+/*
+ * Copyright (C) 2015 by GMO Runsystem Company
+ *
+ * Create StudentServiceImpl class
+ *
+ * @version 1.0
+ *
+ * @author DatNT
+ *
+ */
 
 @Service
 public class StudentServiceImpl implements StudentService {
@@ -19,8 +28,6 @@ public class StudentServiceImpl implements StudentService {
 
 	@Autowired
 	StudentService studentService;
-
-	private List<Student> student = new ArrayList<Student>();
 
 	@Override
 	public List<Student> findAll() {
@@ -33,13 +40,13 @@ public class StudentServiceImpl implements StudentService {
 		// TODO Auto-generated method stub
 		return studentRepo.findAllByAsc();
 	}
-	
+
 	@Override
 	public List<Student> findAllByDesc() {
 		// TODO Auto-generated method stub
 		return studentRepo.findAllByDesc();
 	}
-	
+
 	@Override
 	public List<Student> findBystudentName(String studentName) {
 		// TODO Auto-generated method stub
@@ -71,12 +78,4 @@ public class StudentServiceImpl implements StudentService {
 		return findBystudentCode(studentCode);
 	}
 
-	@PostConstruct
-	private void iniDataForTesting() {
-//		student = this.findAll();
-		student.addAll(studentRepo.findAll());
-
-	}
-
-	
 }

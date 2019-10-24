@@ -6,9 +6,19 @@ import com.springboothello.entity.User;
 
 import java.util.List;
 
-public interface UserRepo extends JpaRepository<User,Integer>{
+/*
+ * Copyright (C) 2015 by GMO Runsystem Company
+ *
+ * Create UserRepo interface
+ *
+ * @version 1.0
+ *
+ * @author DatNT
+ *
+ */
+
+public interface UserRepo extends JpaRepository<User, Integer> {
 	User findByusername(String username);
-	
 
 	List<User> findAll();
 

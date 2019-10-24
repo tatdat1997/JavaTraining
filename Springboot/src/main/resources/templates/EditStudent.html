@@ -1,84 +1,96 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.springframework.org/schema/data/jaxb">
+	xmlns:th="http://www.springframework.org/schema/data/jaxb">
 <head>
-  	<title>Edit Student Page</title>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="/css/style.css">
+<title>Edit Student Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	    <a class="navbar-brand" href="/">
-	    	<img src="https://runsystem.net/wp-content/uploads/image_gmo/logo.png">
-	    </a>
-	    <div class="collapse navbar-collapse" id="myNavbar">
-	    	<ul class="navbar-brand mr-auto"></ul>
-	      	<ul class="nav navbar-nav navbar-right">
-	      		<li class="pr-4"><a th:href="${session.user} ? ${session.user.User_name} : '/register'" th:text="${session.user} ? 'Welcome, '+${session.user.User_name} : 'Register'"></a></li>
-	      		<li><a th:href="${session.user} ? '/logout' : '/login'"href="" th:text="${session.user} ? 'Logout': 'Login'"></a></li>
-	      	</ul>
-	    </div>
+		<a class="navbar-brand" href="/"> <img
+			src="https://runsystem.net/wp-content/uploads/image_gmo/logo.png">
+		</a>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="navbar-brand mr-auto"></ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="pr-4"><a
+					th:href="${session.user} ? ${session.user.User_name} : '/register'"
+					th:text="${session.user} ? 'Welcome, '+${session.user.User_name} : 'Register'"></a></li>
+				<li><a th:href="${session.user} ? '/logout' : '/login'" href=""
+					th:text="${session.user} ? 'Logout': 'Login'"></a></li>
+			</ul>
+		</div>
 	</nav>
-	<div class="container-fluid text-center">    
+	<div class="container-fluid text-center">
 		<div class="row content">
 			<div class="col-sm-6 offset-md-3 text-left">
 				<h2 class="text-center">Edit Student Form</h2>
-				<form method="POST" action="/" th:action="@{/updateStudent/id/{id}(id=${Student.StudentInfoBasic.InfoId})}" 
-				 onsubmit="return submitForm(this);" th:object="${studentForm}">
+				<form method="POST" action="/"
+					th:action="@{/updateStudent/id/{id}(id=${Student.StudentInfoBasic.InfoId})}"
+					onsubmit="return submitForm(this);" th:object="${studentForm}">
 					<div th:class="${msgError} ? 'alert alert-danger text-center' : ''">
 						<span th:text="${msgError}"></span>
 					</div>
-					<div th:class="${msgSuccess} ? 'alert alert-success text-center' : ''">
-						<span  th:text="${msgSuccess} ? ${msgSuccess} : ''"></span>
+					<div
+						th:class="${msgSuccess} ? 'alert alert-success text-center' : ''">
+						<span th:text="${msgSuccess} ? ${msgSuccess} : ''"></span>
 					</div>
-			  		<div class="form-group d-flex">
-					    <label class="col-sm-3" for="password">Student Code:</label>
-					    <input type="text" class="form-control col-sm-6" th:value="${Student.StudentCode}" disabled="disabled">
-					    <a id="generate" class="btn btn-info ml-4" onclick="create_UUID()">Generate Code</a>
-				  	</div>
-				  	<div class="form-group d-flex">
-					    <label class="col-sm-3" for="password">Student Name:</label>
-					    <input type="text" class="form-control col-sm-9"  name="studentName" th:value="${Student.StudentName}">
-				  	</div>
-				  	<div class="form-group d-flex">
-					    <label class="col-sm-3" for="password">Birthday:</label>
-					    <input type="date" class="form-control col-sm-9" name="dateOfBirth" th:value="${Student.StudentInfoBasic.DateOfBirth}">
-				  	</div>
-				  	<div class="form-group d-flex">
-					    <label class="col-sm-3" for="password">Address:</label>
-					    <input type="text" class="form-control col-sm-9" name="address" th:value="${Student.StudentInfoBasic.Address}">
-				  	</div>
-				  	<div class="form-group d-flex">
-					    <label class="col-sm-3" for="password">Score:</label>
-					    <input type="text" class="form-control col-sm-9" name="score" th:value="${Student.StudentInfoBasic.AverageSore}">
-				  	</div>
-				  	<div class="form-group" style="margin-left: 4%">
-				  		<a href="/listStudent" class="btn btn-info" style="width: 49%;">Back</a>
-				  		<button type="submit" class="btn btn-info" style="width: 49%;">Save</button>
-				  	</div>
+					<div class="form-group d-flex">
+						<label class="col-sm-3" for="password">Student Code:</label> 
+						<input type="text" class="form-control col-sm-6" th:value="${Student.StudentCode}" disabled="disabled">
+						<a id="generate" class="btn btn-info ml-4" onclick="create_UUID()">Generate Code</a>
+					</div>
+					<div class="form-group d-flex">
+						<label class="col-sm-3" for="password">Student Name:</label> 
+						<input type="text" class="form-control col-sm-9" name="studentName"
+							th:value="${Student.StudentName}">
+					</div>
+					<div class="form-group d-flex">
+						<label class="col-sm-3" for="password">Birthday:</label> 
+						<input type="date" class="form-control col-sm-9" name="dateOfBirth"
+							th:value="${Student.StudentInfoBasic.DateOfBirth}">
+					</div>
+					<div class="form-group d-flex">
+						<label class="col-sm-3" for="password">Address:</label> 
+						<input type="text" class="form-control col-sm-9" name="address"
+							th:value="${Student.StudentInfoBasic.Address}">
+					</div>
+					<div class="form-group d-flex">
+						<label class="col-sm-3" for="password">Score:</label> 
+						<input type="text" class="form-control col-sm-9" name="score"
+							th:value="${Student.StudentInfoBasic.AverageSore}">
+					</div>
+					<div class="form-group" style="margin-left: 4%">
+						<a href="/listStudent" class="btn btn-info" style="width: 49%;">Back</a>
+						<button type="submit" class="btn btn-info" style="width: 49%;">Save</button>
+					</div>
 				</form>
 			</div>
 		</div>
 	</div>
 	<script>
 		function submitForm() {
-			if(!confirm("Do you want to upadate this student?")) {
-			    return false;
-			  }
-			  this.form.submit();
+			if (!confirm("Do you want to upadate this student?")) {
+				return false;
+			}
+			this.form.submit();
 		}
-		function create_UUID(){
-		    var dt = new Date().getTime();
-		    var uuid = 'xxxxxx'.replace(/[xy]/g, function(c) {
-		        var r = (dt + Math.random()*15)%10 | 0;
-		        dt = Math.floor(dt/16);
-		        return (c=='x' ? r :(r&0x3|0x8));
-		    });
-		    document.getElementById("studentCode").value = uuid;
+		function create_UUID() {
+			var dt = new Date().getTime();
+			var uuid = 'xxxxxx'.replace(/[xy]/g, function(c) {
+				var r = (dt + Math.random() * 15) % 10 | 0;
+				dt = Math.floor(dt / 16);
+				return (c == 'x' ? r : (r & 0x3 | 0x8));
+			});
+			document.getElementById("studentCode").value = uuid;
 		}
 	</script>
 </body>

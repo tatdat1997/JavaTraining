@@ -8,12 +8,23 @@ import org.springframework.stereotype.Service;
 import com.springboothello.entity.StudentInfo;
 import com.springboothello.repositories.StudentInfoRepository;
 
+/*
+ * Copyright (C) 2015 by GMO Runsystem Company
+ *
+ * Create StudentInfoServiceImpl class
+ *
+ * @version 1.0
+ *
+ * @author DatNT
+ *
+ */
+
 @Service
-public class StudentInfoServiceImpl implements StudentInfoService{
+public class StudentInfoServiceImpl implements StudentInfoService {
 
 	@Autowired
 	StudentInfoRepository studentInfoRepo;
-	
+
 	@Override
 	public List<StudentInfo> findAll() {
 		// TODO Auto-generated method stub
@@ -25,7 +36,6 @@ public class StudentInfoServiceImpl implements StudentInfoService{
 		// TODO Auto-generated method stub
 		return studentInfoRepo.findByinfoId(infoid);
 	}
-
 
 	@Override
 	public StudentInfo save(StudentInfo studentInfo) {
@@ -39,7 +49,5 @@ public class StudentInfoServiceImpl implements StudentInfoService{
 		studentInfoRepo.delete(studentInfo);
 		return null;
 	}
-
-
 
 }

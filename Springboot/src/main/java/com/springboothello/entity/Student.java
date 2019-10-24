@@ -1,36 +1,44 @@
 package com.springboothello.entity;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
-
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
-//import org.hibernate.validator.constraints;
+/*
+ * Copyright (C) 2015 by GMO Runsystem Company
+ *
+ * Create Student class
+ *
+ * @version 1.0
+ *
+ * @author DatNT
+ *
+ */
 
 @Entity
 @Table(name = "student")
 public class Student {
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long studentId;
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long studentId;
+
 	@NotEmpty(message = "Student name must be not null!")
 	@Column(name = "student_name")
 	private String studentName;
-	
 
 	@Column(name = "student_code")
 	@NotEmpty(message = "Student name must be not null!")
 	private String studentCode;
-	
+
 	@OneToOne(mappedBy = "studentBasic")
-    private StudentInfo studentInfoBasic;
+	private StudentInfo studentInfoBasic;
 
 	public Student() {
 		super();
 	}
 
-	public Student( String student_name, String student_code) {
+	public Student(String student_name, String student_code) {
 		super();
 		studentName = student_name;
 		studentCode = student_code;
@@ -66,8 +74,8 @@ public class Student {
 	public void setStudenCode(String student_code) {
 		studentCode = student_code;
 	}
+
 	@JsonManagedReference
-	
 	public StudentInfo getStudentInfoBasic() {
 		return studentInfoBasic;
 	}
@@ -75,10 +83,10 @@ public class Student {
 	public void setStudentInfoBasic(StudentInfo studentInfoBasic) {
 		this.studentInfoBasic = studentInfoBasic;
 	}
-	
+
 	public String PrintInfo() {
-		return this.getStudentCode() + " | " + this.studentName + " | " + this.getStudentInfoBasic().getAddress() 
+		return this.getStudentCode() + " | " + this.studentName + " | " + this.getStudentInfoBasic().getAddress()
 				+ " | " + this.getStudentInfoBasic().getDateOfBirthFormat();
 	}
-	
+
 }
