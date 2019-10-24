@@ -2,6 +2,9 @@ package com.springboothello.entity;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 //import org.hibernate.validator.constraints;
 
 @Entity
@@ -63,7 +66,8 @@ public class Student {
 	public void setStudenCode(String student_code) {
 		studentCode = student_code;
 	}
-
+	@JsonManagedReference
+	
 	public StudentInfo getStudentInfoBasic() {
 		return studentInfoBasic;
 	}

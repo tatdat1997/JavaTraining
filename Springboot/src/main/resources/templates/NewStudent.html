@@ -49,7 +49,7 @@
 				  	<div class="form-group">
 					  	<div class="d-flex">
 						    <label class="col-sm-3" for="birthday">Birthday:</label>
-						    <input type="date" class="form-control col-sm-9" name="birthday">
+						    <input type="date" class="form-control col-sm-9" th:field="*{dateOfBirth}" th:value="${dateOfBirth}">
 					    </div>
 					    <span class="col-sm-8 offset-md-4" th:if="${#fields.hasErrors('dateOfBirth') }"th:errors="*{dateOfBirth}" style="color: red;"></span>					    
 				  	</div>

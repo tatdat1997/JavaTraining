@@ -9,6 +9,8 @@ import javax.validation.constraints.Min;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 
 @Entity
 public class StudentInfo {
@@ -70,7 +72,7 @@ public class StudentInfo {
 	public void setInfoId(Long id) {
 		this.infoId = id;
 	}
-
+	@JsonBackReference
 	public Student getStudent() {
 		return studentBasic;
 	}
@@ -115,5 +117,9 @@ public class StudentInfo {
 	    }
 	}
 	
-	
+	public String print() {
+		return this.studentBasic.getStudentId()+" | "+this.studentBasic.getStudentCode()+" | "
+				+this.studentBasic.getStudentName()+" | "+this.infoId
+				+" | "+this.address+" | "+this.averageSore;
+	}
 }

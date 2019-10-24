@@ -7,7 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.springboothello.entity.Student;
 
-public interface StudentRepo extends JpaRepository<Student, Integer>{
+
+public interface StudentRepository extends JpaRepository<Student, Integer>{
 	@Query(value = "SELECT * FROM student ORDER BY student_id ASC",nativeQuery = true)
 	List<Student> findAllByAsc();
 	

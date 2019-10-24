@@ -2,7 +2,6 @@ package com.springboothello.controller;
 
 
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -17,7 +16,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import com.springboothello.entity.User;
 import com.springboothello.form.LoginForm;
-import com.springboothello.repositories.UserRepo;
+import com.springboothello.service.UserService;
 
 /*
  * Copyright (C) 2015 by GMO Runsystem Company
@@ -33,14 +32,11 @@ import com.springboothello.repositories.UserRepo;
 public class LoginController {
 
 	@Autowired
-	private UserRepo userRepo;
+	private UserService userService;
+
 	/*
-	 * Show page login
+	 * Show page login page
 	 */
-	@RequestMapping("/")
-	public String index() {
-		return "Index";
-	}
 	@RequestMapping("/login")
 	public String login(Model model){
 		model.addAttribute("loginForm", new LoginForm());
@@ -48,22 +44,23 @@ public class LoginController {
 	}
 	/*
 	 * Get values from page login and check in database
-	 * Create sesseion
+	 * Create session
 	 */
 	@RequestMapping(value = "/checkLogin", method = RequestMethod.POST, headers = "Content-Type=multipart/form-data")
 	public String checkLogin(@Valid LoginForm loginForm, BindingResult result,
-			Model model, HttpServletRequest request, HttpSession http) {
-		
+			Model model, HttpSession http) {
+		// Check error for existence
 		if(result.hasErrors()) {
             return "Login";
         }else {
-        	String username = request.getParameter("userName");
-			String password = request.getParameter("password");
-        	User user = userRepo.findByusername(username);
-        	if(user != null) {
-        		if(password.equals(user.getPassword())) {
-        			http.setAttribute("user", user);
-        			return "redirect:/listStudent";
+        	String username = loginForm.getUserName();
+			String password = loginForm.getPassword();
+        	User user = userService.findByusername(username);
+        	// Check account for existence
+        	if (user != null) {
+        		if (password.equals(user.getPassword())) {
+        			http.setAttribute("user", user);   // Set session for user
+        			return "redirect:/listStudent";    // Go to list student page
         		}else {
         			model.addAttribute("msgError", "Password is incorrect!");
         			return "Login";

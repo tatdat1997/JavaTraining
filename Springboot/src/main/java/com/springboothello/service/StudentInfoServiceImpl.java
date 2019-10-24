@@ -3,14 +3,16 @@ package com.springboothello.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.springboothello.entity.StudentInfo;
-import com.springboothello.repositories.StudentInfoRepo;
+import com.springboothello.repositories.StudentInfoRepository;
 
+@Service
 public class StudentInfoServiceImpl implements StudentInfoService{
 
 	@Autowired
-	StudentInfoRepo studentInfoRepo;
+	StudentInfoRepository studentInfoRepo;
 	
 	@Override
 	public List<StudentInfo> findAll() {
@@ -21,13 +23,21 @@ public class StudentInfoServiceImpl implements StudentInfoService{
 	@Override
 	public StudentInfo findByinfoId(Long infoid) {
 		// TODO Auto-generated method stub
-		return findByinfoId(infoid);
+		return studentInfoRepo.findByinfoId(infoid);
+	}
+
+
+	@Override
+	public StudentInfo save(StudentInfo studentInfo) {
+		// TODO Auto-generated method stub
+		return studentInfoRepo.save(studentInfo);
 	}
 
 	@Override
-	public StudentInfo deleteByinfoId(Long infoid) {
+	public String delete(StudentInfo studentInfo) {
 		// TODO Auto-generated method stub
-		return studentInfoRepo.deleteByinfoId(infoid);
+		studentInfoRepo.delete(studentInfo);
+		return null;
 	}
 
 
