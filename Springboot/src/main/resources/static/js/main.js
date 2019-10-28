@@ -31,10 +31,10 @@ function fire_ajax_submit() {
         		tbhtml += "<table class='table table-striped table-bordered text-center'>";
         		tbhtml += "<tr>";  
     			tbhtml += "<th>No</th>";  
-				tbhtml += "<th>Code</th>";  
-				tbhtml += "<th>Name</th>";
-				tbhtml += "<th>Birthday</th>";
-				tbhtml += "<th>Address</th>";  
+				tbhtml += "<th>Name</th>";  
+				tbhtml += "<th>Code</th>";
+				tbhtml += "<th>Address</th>";
+				tbhtml += "<th>Birthday</th>";  
 				tbhtml += "<th>Score</th>";  
 				tbhtml += "<th>Edit</th>"; 
 				tbhtml += "</tr>";  
@@ -49,7 +49,7 @@ function fire_ajax_submit() {
 	                tbhtml += "<td>"+data.result[i].studentInfoBasic.averageSore+"</td>";
 	                tbhtml += "<td>";
 	                tbhtml += "<form action='/deleteStudent/id/"+data.result[i].studentInfoBasic.infoId+"' onsubmit='return submitForm(this);'>";
-	                tbhtml += "<a href='/infoStudent/id/"+data.result[i].studentId+"' class='btn btn-primary'>Edit</a>";
+	                tbhtml += "<a href='/infoStudent/id/"+data.result[i].studentId+"' class='btn btn-primary'>Edit</a>&nbsp";
                 	tbhtml += "<button class='btn btn-danger' >Delete</button></form></td>";
 	                tbhtml += "</tr>";
 	            }
@@ -120,10 +120,10 @@ function ajax_submit() {
         		tbhtml += "<table class='table table-striped table-bordered text-center'>";
         		tbhtml += "<tr>";  
     			tbhtml += "<th>No</th>";  
-				tbhtml += "<th>Code</th>";  
-				tbhtml += "<th>Name</th>";
-				tbhtml += "<th>Birthday</th>";
-				tbhtml += "<th>Address</th>";  
+				tbhtml += "<th>Name</th>";  
+				tbhtml += "<th>Code</th>";
+				tbhtml += "<th>Address</th>";
+				tbhtml += "<th>Birthday</th>";  
 				tbhtml += "<th>Score</th>";  
 				tbhtml += "<th>Edit</th>"; 
 				tbhtml += "</tr>";  
@@ -138,7 +138,7 @@ function ajax_submit() {
 	                tbhtml += "<td>"+data.result[i].studentInfoBasic.averageSore+"</td>";
 	                tbhtml += "<td>";
 	                tbhtml += "<form action='/deleteStudent/id/"+data.result[i].studentInfoBasic.infoId+"' onsubmit='return submitForm(this);'>";
-	                tbhtml += "<a href='/infoStudent/id/"+data.result[i].studentId+"' class='btn btn-primary'>Edit</a>";
+	                tbhtml += "<a href='/infoStudent/id/"+data.result[i].studentId+"' class='btn btn-primary'>Edit</a>&nbsp";
                 	tbhtml += "<button class='btn btn-danger' >Delete</button></form></td>";
 	                tbhtml += "</tr>";
 	            }

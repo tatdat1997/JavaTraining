@@ -3878,3 +3878,541 @@ java.lang.NullPointerException: null
 [DEBUG] 2019-10-26 19:35:30.050 [http-nio-8888-exec-4] ListStudentController - ===== Search Ajax Form =====
 [DEBUG] 2019-10-26 19:35:34.310 [http-nio-8888-exec-5] ListStudentController - ===== Search Ajax Form =====
 [DEBUG] 2019-10-26 19:35:47.581 [http-nio-8888-exec-8] ListStudentController - ===== Search Ajax Form =====
+[INFO ] 2019-10-28 08:37:13.776 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 12680 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 08:37:13.784 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 08:37:19.807 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 7.296 seconds (JVM running for 8.561)
+[DEBUG] 2019-10-28 08:37:44.737 [http-nio-8888-exec-1] LoginController - ===== Wellcome =====
+[DEBUG] 2019-10-28 08:38:14.942 [http-nio-8888-exec-4] LoginController - ===== Hello Login form =====
+[DEBUG] 2019-10-28 08:38:18.822 [http-nio-8888-exec-7] LoginController - ===== Login with User: dat114 =====
+[DEBUG] 2019-10-28 08:38:18.996 [http-nio-8888-exec-7] LoginController - ===== Login success with User: dat114 =====
+[DEBUG] 2019-10-28 08:38:19.047 [http-nio-8888-exec-8] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 08:38:21.917 [http-nio-8888-exec-10] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 08:38:21.918 [http-nio-8888-exec-10] SearchController - ===== Have error when search with Ajax= ====
+[DEBUG] 2019-10-28 08:38:22.986 [http-nio-8888-exec-1] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 08:38:22.986 [http-nio-8888-exec-1] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 08:38:27.476 [http-nio-8888-exec-2] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 08:38:42.814 [http-nio-8888-exec-5] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 08:38:42.814 [http-nio-8888-exec-5] StudentManagerController - ===== Create new student :740185 =====
+[INFO ] 2019-10-28 08:39:23.988 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 12680 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 08:39:23.989 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 08:39:26.205 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 2.395 seconds (JVM running for 134.958)
+[DEBUG] 2019-10-28 08:39:31.998 [http-nio-8888-exec-1] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 08:39:31.999 [http-nio-8888-exec-1] StudentManagerController - ===== Create new student :740185 =====
+[INFO ] 2019-10-28 08:40:24.142 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 12680 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 08:40:24.143 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 08:40:25.746 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.699 seconds (JVM running for 194.5)
+[INFO ] 2019-10-28 08:41:01.217 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 12680 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 08:41:01.217 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 08:41:02.581 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.431 seconds (JVM running for 231.336)
+[DEBUG] 2019-10-28 08:45:31.984 [http-nio-8888-exec-1] LoginController - ===== Wellcome =====
+[DEBUG] 2019-10-28 08:45:34.368 [http-nio-8888-exec-2] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 08:46:00.804 [http-nio-8888-exec-5] LoginController - ===== Wellcome =====
+[DEBUG] 2019-10-28 08:46:03.455 [http-nio-8888-exec-7] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 08:46:05.504 [http-nio-8888-exec-8] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 08:46:55.787 [http-nio-8888-exec-1] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 08:48:00.043 [http-nio-8888-exec-6] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 08:48:06.289 [http-nio-8888-exec-8] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 08:48:08.098 [http-nio-8888-exec-10] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 08:48:08.099 [http-nio-8888-exec-10] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 08:48:09.462 [http-nio-8888-exec-9] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 08:48:25.494 [http-nio-8888-exec-2] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 08:48:48.192 [http-nio-8888-exec-7] ListStudentController - ===== Hello List Student =====
+[DEBUG] 2019-10-28 08:48:52.669 [http-nio-8888-exec-8] ListStudentController - ===== Hello List Student =====
+[DEBUG] 2019-10-28 08:48:57.981 [http-nio-8888-exec-9] LoginController - ===== Wellcome =====
+[DEBUG] 2019-10-28 08:48:59.880 [http-nio-8888-exec-2] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 08:49:00.790 [http-nio-8888-exec-4] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 08:49:00.790 [http-nio-8888-exec-4] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 08:49:32.654 [http-nio-8888-exec-6] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 08:49:33.710 [http-nio-8888-exec-8] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 08:49:35.459 [http-nio-8888-exec-10] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 08:49:35.460 [http-nio-8888-exec-10] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 08:49:38.278 [http-nio-8888-exec-9] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 08:49:38.279 [http-nio-8888-exec-9] SearchController - ===== Have error when search with Ajax= ====
+[DEBUG] 2019-10-28 08:49:39.640 [http-nio-8888-exec-1] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 08:49:39.640 [http-nio-8888-exec-1] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 08:50:03.818 [http-nio-8888-exec-3] LoginController - ===== Wellcome =====
+[INFO ] 2019-10-28 08:57:48.858 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 12680 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 08:57:48.858 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 08:57:55.589 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 12680 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 08:57:55.590 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 08:57:56.906 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.406 seconds (JVM running for 1245.66)
+[DEBUG] 2019-10-28 08:58:14.049 [http-nio-8888-exec-1] LoginController - ===== Wellcome =====
+[INFO ] 2019-10-28 09:01:00.053 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 12680 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:01:00.053 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:01:01.324 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.337 seconds (JVM running for 1430.078)
+[INFO ] 2019-10-28 09:11:58.315 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 16180 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:11:58.323 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:12:04.063 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 7.109 seconds (JVM running for 8.19)
+[INFO ] 2019-10-28 09:14:26.463 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 16180 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:14:26.463 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:14:27.978 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.583 seconds (JVM running for 152.105)
+[INFO ] 2019-10-28 09:15:33.262 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 16180 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:15:33.262 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:15:34.592 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.389 seconds (JVM running for 218.72)
+[INFO ] 2019-10-28 09:15:37.579 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 16180 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:15:37.580 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:15:38.888 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.385 seconds (JVM running for 223.015)
+[INFO ] 2019-10-28 09:26:23.610 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 16180 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:26:23.610 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:26:25.442 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.9 seconds (JVM running for 869.569)
+[INFO ] 2019-10-28 09:27:03.895 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 16180 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:27:03.895 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:27:05.348 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.51 seconds (JVM running for 909.475)
+[INFO ] 2019-10-28 09:28:12.229 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 16180 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:28:12.230 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:28:13.553 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.404 seconds (JVM running for 977.681)
+[INFO ] 2019-10-28 09:28:31.732 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 16180 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:28:31.733 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:28:33.154 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.474 seconds (JVM running for 997.278)
+[INFO ] 2019-10-28 09:29:42.474 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 16180 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:29:42.474 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:29:43.852 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.426 seconds (JVM running for 1067.98)
+[INFO ] 2019-10-28 09:30:57.044 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:30:57.052 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:31:02.955 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 7.043 seconds (JVM running for 10.189)
+[DEBUG] 2019-10-28 09:31:06.650 [http-nio-8888-exec-4] LoginController - ===== Wellcome =====
+[DEBUG] 2019-10-28 09:31:08.326 [http-nio-8888-exec-7] LoginController - ===== Wellcome =====
+[DEBUG] 2019-10-28 09:31:10.995 [http-nio-8888-exec-9] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 09:31:12.139 [http-nio-8888-exec-1] StudentManagerController - ===== Go to page Create new student =====
+[INFO ] 2019-10-28 09:31:58.844 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:31:58.845 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:32:00.374 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.612 seconds (JVM running for 67.608)
+[INFO ] 2019-10-28 09:32:06.549 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:32:06.550 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:32:08.184 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.713 seconds (JVM running for 75.418)
+[DEBUG] 2019-10-28 09:32:08.371 [http-nio-8888-exec-1] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 09:32:21.115 [http-nio-8888-exec-6] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 09:32:21.116 [http-nio-8888-exec-6] StudentManagerController - ===== Create new student :469740 =====
+[INFO ] 2019-10-28 09:32:46.821 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:32:46.822 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:32:48.357 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.594 seconds (JVM running for 115.591)
+[DEBUG] 2019-10-28 09:32:51.452 [http-nio-8888-exec-1] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 09:32:59.050 [http-nio-8888-exec-4] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 09:32:59.050 [http-nio-8888-exec-4] StudentManagerController - ===== Create new student :254387 =====
+[INFO ] 2019-10-28 09:34:21.585 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:34:21.585 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:34:22.837 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.315 seconds (JVM running for 210.071)
+[INFO ] 2019-10-28 09:34:32.913 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:34:32.914 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:34:34.144 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.284 seconds (JVM running for 221.378)
+[DEBUG] 2019-10-28 09:36:25.987 [http-nio-8888-exec-1] LoginController - ===== Wellcome =====
+[INFO ] 2019-10-28 09:37:31.036 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:37:31.037 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:38:35.447 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:38:35.448 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:38:36.770 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.383 seconds (JVM running for 464.004)
+[INFO ] 2019-10-28 09:38:46.864 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:38:46.865 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:39:18.756 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:39:18.757 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:40:30.599 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:40:30.599 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:41:03.552 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:41:03.552 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:41:30.516 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:41:30.516 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:41:31.730 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.273 seconds (JVM running for 638.963)
+[INFO ] 2019-10-28 09:42:25.486 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:42:25.486 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:42:26.618 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.18 seconds (JVM running for 693.853)
+[INFO ] 2019-10-28 09:42:55.970 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:42:55.971 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:42:57.160 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.251 seconds (JVM running for 724.394)
+[DEBUG] 2019-10-28 09:45:59.787 [http-nio-8888-exec-7] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 09:46:00.923 [http-nio-8888-exec-8] StudentManagerController - ===== Go to page Create new student =====
+[INFO ] 2019-10-28 09:46:11.713 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:46:11.714 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:46:12.997 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.369 seconds (JVM running for 920.23)
+[DEBUG] 2019-10-28 09:46:23.676 [http-nio-8888-exec-1] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 09:46:23.676 [http-nio-8888-exec-1] StudentManagerController - ===== Create new student :371343 =====
+[INFO ] 2019-10-28 09:46:39.400 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:46:39.400 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:46:40.617 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.266 seconds (JVM running for 947.851)
+[INFO ] 2019-10-28 09:46:48.647 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:46:48.647 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:46:49.882 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.29 seconds (JVM running for 957.116)
+[DEBUG] 2019-10-28 09:53:29.000 [http-nio-8888-exec-4] LoginController - ===== Wellcome =====
+[DEBUG] 2019-10-28 09:53:31.287 [http-nio-8888-exec-2] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 09:53:45.629 [http-nio-8888-exec-6] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 09:53:45.630 [http-nio-8888-exec-6] StudentManagerController - ===== Create new student :371343 =====
+[DEBUG] 2019-10-28 09:54:08.532 [http-nio-8888-exec-1] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 09:54:09.574 [http-nio-8888-exec-4] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 09:54:09.575 [http-nio-8888-exec-4] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 09:54:27.970 [http-nio-8888-exec-7] ListStudentController - ===== Search Ajax Form =====
+[INFO ] 2019-10-28 09:55:12.891 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:55:12.892 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:55:14.126 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.289 seconds (JVM running for 1461.36)
+[INFO ] 2019-10-28 09:55:35.211 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:55:35.211 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:55:36.317 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.151 seconds (JVM running for 1483.551)
+[DEBUG] 2019-10-28 09:55:43.912 [http-nio-8888-exec-1] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 09:55:43.913 [http-nio-8888-exec-1] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 09:56:01.006 [http-nio-8888-exec-2] StudentManagerController - ===== Delete student have Info_Id: 135 =====
+[DEBUG] 2019-10-28 09:56:12.808 [http-nio-8888-exec-4] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 09:56:12.808 [http-nio-8888-exec-4] SearchController - ===== Find all student: =====
+[INFO ] 2019-10-28 09:56:22.935 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:56:22.936 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:56:24.225 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.348 seconds (JVM running for 1531.459)
+[DEBUG] 2019-10-28 09:56:24.247 [http-nio-8888-exec-1] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 09:56:42.893 [http-nio-8888-exec-5] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 09:56:44.363 [http-nio-8888-exec-9] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 09:56:46.620 [http-nio-8888-exec-8] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 09:56:46.621 [http-nio-8888-exec-8] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 09:56:47.405 [http-nio-8888-exec-10] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[INFO ] 2019-10-28 09:57:01.719 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:57:01.720 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:57:02.898 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.234 seconds (JVM running for 1570.132)
+[DEBUG] 2019-10-28 09:57:07.017 [http-nio-8888-exec-1] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[DEBUG] 2019-10-28 09:57:17.802 [http-nio-8888-exec-3] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 09:57:25.309 [http-nio-8888-exec-6] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 09:57:25.309 [http-nio-8888-exec-6] StudentManagerController - ===== Create new student :589769 =====
+[INFO ] 2019-10-28 09:58:04.723 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:58:04.723 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:58:06.043 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.383 seconds (JVM running for 1633.277)
+[INFO ] 2019-10-28 09:59:23.863 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:59:23.864 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:59:25.011 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.194 seconds (JVM running for 1712.245)
+[INFO ] 2019-10-28 09:59:34.999 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 09:59:34.999 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 09:59:36.138 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.183 seconds (JVM running for 1723.372)
+[INFO ] 2019-10-28 10:01:08.113 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:01:08.114 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:01:09.230 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.161 seconds (JVM running for 1816.464)
+[INFO ] 2019-10-28 10:01:15.172 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:01:15.172 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:01:16.288 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.162 seconds (JVM running for 1823.522)
+[DEBUG] 2019-10-28 10:01:21.115 [http-nio-8888-exec-1] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 10:01:21.115 [http-nio-8888-exec-1] StudentManagerController - ===== Create new student :589769 =====
+[DEBUG] 2019-10-28 10:01:21.135 [http-nio-8888-exec-1] StudentManagerController - ===== Have error when create student: 589769 =====
+[DEBUG] 2019-10-28 10:01:26.959 [http-nio-8888-exec-3] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 10:01:26.960 [http-nio-8888-exec-3] StudentManagerController - ===== Create new student :589769 =====
+[DEBUG] 2019-10-28 10:01:26.970 [http-nio-8888-exec-3] StudentManagerController - ===== Have error when create student: 589769 =====
+[DEBUG] 2019-10-28 10:01:47.295 [http-nio-8888-exec-6] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 10:01:47.295 [http-nio-8888-exec-6] StudentManagerController - ===== Create new student :589769 =====
+[DEBUG] 2019-10-28 10:01:47.305 [http-nio-8888-exec-6] StudentManagerController - ===== Have error when create student: 589769 =====
+[DEBUG] 2019-10-28 10:01:54.946 [http-nio-8888-exec-7] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:01:54.947 [http-nio-8888-exec-7] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:01:56.529 [http-nio-8888-exec-9] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:01:58.775 [http-nio-8888-exec-10] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:03:06.169 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:03:06.170 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:03:07.286 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.163 seconds (JVM running for 1934.52)
+[INFO ] 2019-10-28 10:04:26.466 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:04:26.466 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:04:27.870 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.453 seconds (JVM running for 2015.105)
+[DEBUG] 2019-10-28 10:04:28.231 [http-nio-8888-exec-1] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:04:31.126 [http-nio-8888-exec-4] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[DEBUG] 2019-10-28 10:04:46.734 [http-nio-8888-exec-8] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:04:49.050 [http-nio-8888-exec-1] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:05:01.183 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:05:01.183 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:05:02.263 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.123 seconds (JVM running for 2049.497)
+[INFO ] 2019-10-28 10:05:13.373 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:05:13.374 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:05:14.735 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.409 seconds (JVM running for 2061.969)
+[DEBUG] 2019-10-28 10:05:32.346 [http-nio-8888-exec-1] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:05:34.424 [http-nio-8888-exec-4] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:06:36.721 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:06:36.722 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:06:37.861 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.194 seconds (JVM running for 2145.094)
+[INFO ] 2019-10-28 10:07:27.348 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:07:27.348 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:07:28.417 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.114 seconds (JVM running for 2195.651)
+[DEBUG] 2019-10-28 10:07:37.644 [http-nio-8888-exec-2] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:07:40.192 [http-nio-8888-exec-5] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:07:58.777 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:07:58.777 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:08:00.307 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.586 seconds (JVM running for 2227.542)
+[DEBUG] 2019-10-28 10:08:02.326 [http-nio-8888-exec-1] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:08:04.399 [http-nio-8888-exec-4] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[DEBUG] 2019-10-28 10:08:25.564 [http-nio-8888-exec-8] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:10:12.931 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:10:12.931 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:10:14.051 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.167 seconds (JVM running for 2361.285)
+[INFO ] 2019-10-28 10:10:38.810 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 15868 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:10:38.810 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:10:39.939 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.177 seconds (JVM running for 2387.174)
+[INFO ] 2019-10-28 10:11:03.662 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:11:03.669 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:11:08.813 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 6.213 seconds (JVM running for 7.215)
+[DEBUG] 2019-10-28 10:11:15.363 [http-nio-8888-exec-1] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[DEBUG] 2019-10-28 10:11:20.084 [http-nio-8888-exec-3] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:11:50.271 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:11:50.273 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:11:51.621 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.423 seconds (JVM running for 50.023)
+[DEBUG] 2019-10-28 10:11:54.252 [http-nio-8888-exec-1] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:11:56.738 [http-nio-8888-exec-4] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[DEBUG] 2019-10-28 10:12:02.761 [http-nio-8888-exec-6] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:12:03.607 [http-nio-8888-exec-8] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 10:12:11.004 [http-nio-8888-exec-1] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 10:12:11.004 [http-nio-8888-exec-1] StudentManagerController - ===== Have error when create new student =====
+[DEBUG] 2019-10-28 10:12:15.843 [http-nio-8888-exec-3] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 10:12:15.844 [http-nio-8888-exec-3] StudentManagerController - ===== Create new student :340616 =====
+[INFO ] 2019-10-28 10:12:31.292 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:12:31.292 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:12:32.785 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.563 seconds (JVM running for 91.187)
+[DEBUG] 2019-10-28 10:12:35.629 [http-nio-8888-exec-3] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:12:36.473 [http-nio-8888-exec-5] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:12:36.474 [http-nio-8888-exec-5] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:12:38.640 [http-nio-8888-exec-6] StudentManagerController - ===== Edit student have Student_Id: 164 =====
+[DEBUG] 2019-10-28 10:12:40.627 [http-nio-8888-exec-8] StudentManagerController - ===== Update student have Student_Id: 163 =====
+[INFO ] 2019-10-28 10:13:02.281 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:13:02.282 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:13:03.579 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.43 seconds (JVM running for 121.981)
+[INFO ] 2019-10-28 10:13:13.816 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:13:13.816 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:13:15.186 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.425 seconds (JVM running for 133.588)
+[DEBUG] 2019-10-28 10:13:16.120 [http-nio-8888-exec-1] StudentManagerController - ===== Edit student have Student_Id: 164 =====
+[DEBUG] 2019-10-28 10:13:18.087 [http-nio-8888-exec-4] StudentManagerController - ===== Update student have Student_Id: 163 =====
+[DEBUG] 2019-10-28 10:13:25.966 [http-nio-8888-exec-6] StudentManagerController - ===== Update student have Student_Id: 163 =====
+[DEBUG] 2019-10-28 10:13:38.782 [http-nio-8888-exec-8] StudentManagerController - ===== Update student have Student_Id: 163 =====
+[DEBUG] 2019-10-28 10:13:42.268 [http-nio-8888-exec-9] StudentManagerController - ===== Edit student have Student_Id: 164 =====
+[INFO ] 2019-10-28 10:14:19.963 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:14:19.964 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:14:21.336 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.449 seconds (JVM running for 199.738)
+[INFO ] 2019-10-28 10:14:45.964 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:14:45.965 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:14:47.310 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.4 seconds (JVM running for 225.712)
+[DEBUG] 2019-10-28 10:14:57.536 [http-nio-8888-exec-1] StudentManagerController - ===== Update student have Student_Id: 163 =====
+[DEBUG] 2019-10-28 10:15:54.917 [http-nio-8888-exec-4] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:15:54.919 [http-nio-8888-exec-4] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:16:02.158 [http-nio-8888-exec-5] StudentManagerController - ===== Delete student have Info_Id: 163 =====
+[DEBUG] 2019-10-28 10:16:02.228 [http-nio-8888-exec-6] ListStudentController - ===== Hello List Student =====
+[INFO ] 2019-10-28 10:16:27.548 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:16:27.549 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:16:29.013 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.519 seconds (JVM running for 327.416)
+[DEBUG] 2019-10-28 10:16:29.194 [http-nio-8888-exec-1] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:16:29.194 [http-nio-8888-exec-2] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:16:29.195 [http-nio-8888-exec-2] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:16:29.854 [http-nio-8888-exec-4] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:16:29.854 [http-nio-8888-exec-4] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:16:37.083 [http-nio-8888-exec-5] LoginController - ===== Wellcome =====
+[DEBUG] 2019-10-28 10:16:38.882 [http-nio-8888-exec-7] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:16:41.518 [http-nio-8888-exec-10] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 10:16:42.879 [http-nio-8888-exec-2] ListStudentController - ===== Search Ajax Form =====
+[INFO ] 2019-10-28 10:17:01.378 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:17:01.378 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:17:02.553 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.229 seconds (JVM running for 360.955)
+[DEBUG] 2019-10-28 10:17:04.952 [http-nio-8888-exec-1] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:17:05.733 [http-nio-8888-exec-3] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:17:05.734 [http-nio-8888-exec-3] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:17:21.892 [http-nio-8888-exec-5] StudentManagerController - ===== Delete student have Info_Id: 135 =====
+[DEBUG] 2019-10-28 10:17:35.610 [http-nio-8888-exec-7] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:17:36.261 [http-nio-8888-exec-9] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:17:36.261 [http-nio-8888-exec-9] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:17:39.133 [http-nio-8888-exec-10] StudentManagerController - ===== Delete student have Info_Id: 135 =====
+[DEBUG] 2019-10-28 10:17:49.127 [http-nio-8888-exec-2] ListStudentController - ===== Search Ajax Form =====
+[INFO ] 2019-10-28 10:20:14.032 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:20:14.032 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:20:16.240 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 2.279 seconds (JVM running for 554.642)
+[DEBUG] 2019-10-28 10:20:59.660 [http-nio-8888-exec-1] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:20:59.662 [http-nio-8888-exec-1] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:21:00.539 [http-nio-8888-exec-2] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:21:02.734 [http-nio-8888-exec-4] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:21:37.603 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:21:37.604 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:21:39.182 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.642 seconds (JVM running for 637.584)
+[INFO ] 2019-10-28 10:22:25.666 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:22:25.666 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:22:26.918 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.317 seconds (JVM running for 685.321)
+[INFO ] 2019-10-28 10:23:35.723 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:23:35.723 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:23:37.004 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.34 seconds (JVM running for 755.406)
+[INFO ] 2019-10-28 10:25:15.853 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:25:15.853 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:25:17.014 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.207 seconds (JVM running for 855.416)
+[INFO ] 2019-10-28 10:25:41.214 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:25:41.214 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:25:42.417 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.259 seconds (JVM running for 880.819)
+[DEBUG] 2019-10-28 10:25:45.353 [http-nio-8888-exec-1] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:25:47.444 [http-nio-8888-exec-4] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[DEBUG] 2019-10-28 10:25:53.354 [http-nio-8888-exec-6] StudentManagerController - ===== Edit student have Student_Id: 1367 =====
+[DEBUG] 2019-10-28 10:30:09.373 [http-nio-8888-exec-6] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:30:09.374 [http-nio-8888-exec-6] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:30:11.523 [http-nio-8888-exec-7] StudentManagerController - ===== Delete student have Info_Id: 135 =====
+[INFO ] 2019-10-28 10:31:52.267 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:31:52.268 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:31:53.833 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.62 seconds (JVM running for 1252.234)
+[DEBUG] 2019-10-28 10:31:53.925 [http-nio-8888-exec-1] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:31:57.142 [http-nio-8888-exec-3] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:31:57.143 [http-nio-8888-exec-3] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:31:57.926 [http-nio-8888-exec-4] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:31:59.934 [http-nio-8888-exec-6] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:32:18.228 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:32:18.229 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:32:19.438 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.265 seconds (JVM running for 1277.841)
+[INFO ] 2019-10-28 10:32:31.478 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:32:31.479 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:32:32.684 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.255 seconds (JVM running for 1291.086)
+[INFO ] 2019-10-28 10:32:36.570 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:32:36.571 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:32:37.698 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.173 seconds (JVM running for 1296.1)
+[DEBUG] 2019-10-28 10:32:41.732 [http-nio-8888-exec-1] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:32:43.548 [http-nio-8888-exec-4] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:33:04.995 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:33:04.995 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:33:06.163 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.235 seconds (JVM running for 1324.565)
+[DEBUG] 2019-10-28 10:33:07.255 [http-nio-8888-exec-2] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:33:09.713 [http-nio-8888-exec-4] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:33:53.708 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:33:53.708 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:33:54.846 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.188 seconds (JVM running for 1373.248)
+[INFO ] 2019-10-28 10:33:57.719 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:33:57.720 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:33:58.941 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.269 seconds (JVM running for 1377.343)
+[INFO ] 2019-10-28 10:34:06.054 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:34:06.055 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:34:07.425 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.441 seconds (JVM running for 1385.827)
+[DEBUG] 2019-10-28 10:34:11.754 [http-nio-8888-exec-1] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:34:13.676 [http-nio-8888-exec-5] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:34:53.963 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:34:53.963 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:34:55.354 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.446 seconds (JVM running for 1433.755)
+[INFO ] 2019-10-28 10:35:17.547 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:35:17.547 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:35:18.871 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.385 seconds (JVM running for 1457.273)
+[DEBUG] 2019-10-28 10:35:22.536 [http-nio-8888-exec-2] StudentManagerController - ===== Edit student have Student_Id: 136 =====
+[DEBUG] 2019-10-28 10:35:24.692 [http-nio-8888-exec-4] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:35:52.300 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:35:52.301 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:35:53.669 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.421 seconds (JVM running for 1492.071)
+[DEBUG] 2019-10-28 10:35:54.660 [http-nio-8888-exec-1] StudentManagerController - ===== Update student have Student_Id: 135 =====
+[INFO ] 2019-10-28 10:36:23.935 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:36:23.935 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:36:25.056 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.168 seconds (JVM running for 1523.458)
+[INFO ] 2019-10-28 10:36:48.213 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:36:48.214 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:36:49.295 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.126 seconds (JVM running for 1547.698)
+[DEBUG] 2019-10-28 10:36:54.196 [http-nio-8888-exec-1] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:36:55.550 [http-nio-8888-exec-3] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:36:55.551 [http-nio-8888-exec-3] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:36:57.822 [http-nio-8888-exec-4] StudentManagerController - ===== Delete student have Info_Id: 135 =====
+[DEBUG] 2019-10-28 10:36:57.859 [http-nio-8888-exec-5] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:37:03.419 [http-nio-8888-exec-7] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:37:03.419 [http-nio-8888-exec-7] SearchController - ===== Find all student: =====
+[INFO ] 2019-10-28 10:37:36.932 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:37:36.932 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:37:38.266 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.398 seconds (JVM running for 1596.668)
+[DEBUG] 2019-10-28 10:37:41.211 [http-nio-8888-exec-1] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:37:42.271 [http-nio-8888-exec-3] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:37:42.272 [http-nio-8888-exec-3] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:37:44.557 [http-nio-8888-exec-4] StudentManagerController - ===== Delete student have Info_Id: 139 =====
+[DEBUG] 2019-10-28 10:37:44.592 [http-nio-8888-exec-5] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:37:46.167 [http-nio-8888-exec-6] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:37:46.168 [http-nio-8888-exec-6] SearchController - ===== Find all student: =====
+[INFO ] 2019-10-28 10:38:24.940 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:38:24.941 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:38:26.530 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.655 seconds (JVM running for 1644.932)
+[DEBUG] 2019-10-28 10:38:26.556 [http-nio-8888-exec-1] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:38:28.287 [http-nio-8888-exec-3] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:38:28.288 [http-nio-8888-exec-3] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:38:30.046 [http-nio-8888-exec-4] StudentManagerController - ===== Delete student have Info_Id: 145 =====
+[DEBUG] 2019-10-28 10:38:30.079 [http-nio-8888-exec-5] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:38:31.174 [http-nio-8888-exec-6] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:38:31.174 [http-nio-8888-exec-6] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:38:37.366 [http-nio-8888-exec-10] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 10:39:18.554 [http-nio-8888-exec-2] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 10:39:18.554 [http-nio-8888-exec-2] StudentManagerController - ===== Create new student :591785 =====
+[DEBUG] 2019-10-28 10:39:23.232 [http-nio-8888-exec-4] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:39:33.107 [http-nio-8888-exec-6] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:39:33.107 [http-nio-8888-exec-6] SearchController - ===== Find all student: =====
+[INFO ] 2019-10-28 10:39:48.620 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:39:48.621 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:39:49.912 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.343 seconds (JVM running for 1728.314)
+[DEBUG] 2019-10-28 10:39:49.922 [http-nio-8888-exec-1] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 10:39:57.165 [http-nio-8888-exec-3] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 10:39:57.165 [http-nio-8888-exec-3] StudentManagerController - ===== Create new student :132053 =====
+[DEBUG] 2019-10-28 10:39:57.188 [http-nio-8888-exec-3] StudentManagerController - ===== Have error when create student: 132053 =====
+[DEBUG] 2019-10-28 10:48:59.355 [http-nio-8888-exec-8] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:49:00.583 [http-nio-8888-exec-9] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:49:00.584 [http-nio-8888-exec-9] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:50:09.726 [http-nio-8888-exec-2] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:50:09.726 [http-nio-8888-exec-2] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:50:27.586 [http-nio-8888-exec-3] ListStudentController - ===== Hello List Student =====
+[DEBUG] 2019-10-28 10:51:00.585 [http-nio-8888-exec-5] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:51:01.645 [http-nio-8888-exec-7] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:51:01.646 [http-nio-8888-exec-7] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:51:05.237 [http-nio-8888-exec-8] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:51:06.249 [http-nio-8888-exec-1] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:51:06.249 [http-nio-8888-exec-1] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:51:51.586 [http-nio-8888-exec-3] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:51:51.586 [http-nio-8888-exec-3] SearchController - ===== Find student: Harlen =====
+[DEBUG] 2019-10-28 10:51:51.638 [http-nio-8888-exec-3] SearchController - ===== Find student: Harlen success. =====
+[DEBUG] 2019-10-28 10:51:54.958 [http-nio-8888-exec-4] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:51:54.958 [http-nio-8888-exec-4] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:52:25.669 [http-nio-8888-exec-5] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:52:26.963 [http-nio-8888-exec-8] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:52:26.963 [http-nio-8888-exec-8] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:53:08.646 [http-nio-8888-exec-10] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:53:10.524 [http-nio-8888-exec-3] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:53:10.525 [http-nio-8888-exec-3] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:53:32.656 [http-nio-8888-exec-5] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:53:32.656 [http-nio-8888-exec-5] SearchController - ===== Find student: Harlen =====
+[DEBUG] 2019-10-28 10:53:32.707 [http-nio-8888-exec-5] SearchController - ===== Find student: Harlen success. =====
+[DEBUG] 2019-10-28 10:53:36.119 [http-nio-8888-exec-6] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:53:39.213 [http-nio-8888-exec-9] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:53:39.213 [http-nio-8888-exec-9] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:53:39.418 [http-nio-8888-exec-10] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:53:39.418 [http-nio-8888-exec-10] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:53:41.072 [http-nio-8888-exec-1] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:53:41.072 [http-nio-8888-exec-1] SearchController - ===== Find student: Harlen =====
+[DEBUG] 2019-10-28 10:53:41.120 [http-nio-8888-exec-1] SearchController - ===== Find student: Harlen success. =====
+[DEBUG] 2019-10-28 10:53:46.659 [http-nio-8888-exec-3] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:53:46.659 [http-nio-8888-exec-3] SearchController - ===== Find student: len =====
+[DEBUG] 2019-10-28 10:53:46.706 [http-nio-8888-exec-3] SearchController - ===== Find student: len success. =====
+[DEBUG] 2019-10-28 10:53:47.716 [http-nio-8888-exec-4] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:53:47.716 [http-nio-8888-exec-4] SearchController - ===== Find student: len =====
+[DEBUG] 2019-10-28 10:53:47.762 [http-nio-8888-exec-4] SearchController - ===== Find student: len success. =====
+[DEBUG] 2019-10-28 10:53:50.943 [http-nio-8888-exec-5] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:53:50.943 [http-nio-8888-exec-5] SearchController - ===== Find student: en =====
+[DEBUG] 2019-10-28 10:53:50.990 [http-nio-8888-exec-5] SearchController - ===== Find student: en success. =====
+[DEBUG] 2019-10-28 10:54:29.078 [http-nio-8888-exec-6] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:54:35.330 [http-nio-8888-exec-9] StudentManagerController - ===== Go to page Create new student =====
+[DEBUG] 2019-10-28 10:54:37.238 [http-nio-8888-exec-2] ListStudentController - ===== Search Ajax Form =====
+[INFO ] 2019-10-28 10:54:56.874 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:54:56.875 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:54:58.032 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.207 seconds (JVM running for 2636.434)
+[INFO ] 2019-10-28 10:55:11.390 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:55:11.390 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:55:13.507 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 2.183 seconds (JVM running for 2651.909)
+[DEBUG] 2019-10-28 10:56:11.521 [http-nio-8888-exec-1] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:56:24.042 [http-nio-8888-exec-6] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:56:24.043 [http-nio-8888-exec-6] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:56:41.081 [http-nio-8888-exec-8] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:56:41.081 [http-nio-8888-exec-8] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:56:44.122 [http-nio-8888-exec-9] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:56:45.185 [http-nio-8888-exec-3] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:56:45.185 [http-nio-8888-exec-3] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:57:59.712 [http-nio-8888-exec-5] ListStudentController - ===== Search Ajax Form =====
+[DEBUG] 2019-10-28 10:58:01.026 [http-nio-8888-exec-8] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:58:01.026 [http-nio-8888-exec-8] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:58:06.031 [http-nio-8888-exec-9] StudentManagerController - ===== Delete student have Info_Id: 100 =====
+[DEBUG] 2019-10-28 10:58:06.066 [http-nio-8888-exec-10] ListStudentController - ===== Search Ajax Form =====
+[INFO ] 2019-10-28 10:58:27.413 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:58:27.414 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:58:28.916 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.55 seconds (JVM running for 2847.318)
+[DEBUG] 2019-10-28 10:58:31.638 [http-nio-8888-exec-1] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-10-28 10:58:31.639 [http-nio-8888-exec-1] SearchController - ===== Find all student: =====
+[DEBUG] 2019-10-28 10:58:36.326 [http-nio-8888-exec-2] StudentManagerController - ===== Delete student have Info_Id: 99 =====
+[DEBUG] 2019-10-28 10:58:47.688 [http-nio-8888-exec-4] StudentManagerController - ===== Go to page Create new student =====
+[INFO ] 2019-10-28 10:58:58.271 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:58:58.271 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:58:59.518 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.306 seconds (JVM running for 2877.92)
+[DEBUG] 2019-10-28 10:59:04.996 [http-nio-8888-exec-1] StudentManagerController - ===== Create new student =====
+[DEBUG] 2019-10-28 10:59:04.996 [http-nio-8888-exec-1] StudentManagerController - ===== Create new student :469833 =====
+[DEBUG] 2019-10-28 10:59:05.012 [http-nio-8888-exec-1] StudentManagerController - ===== Have error when create student: 469833 =====
+[DEBUG] 2019-10-28 10:59:11.948 [http-nio-8888-exec-3] ListStudentController - ===== Search Ajax Form =====
+[INFO ] 2019-10-28 10:59:21.646 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:59:21.647 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:59:22.759 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.156 seconds (JVM running for 2901.161)
+[INFO ] 2019-10-28 10:59:38.861 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:59:38.862 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:59:42.419 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:59:42.419 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:59:47.810 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:59:47.810 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:59:52.182 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:59:52.182 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:59:55.600 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 3728 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-10-28 10:59:55.600 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-28 10:59:56.708 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.161 seconds (JVM running for 2935.111)

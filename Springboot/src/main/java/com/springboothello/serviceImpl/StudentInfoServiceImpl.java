@@ -2,7 +2,6 @@ package com.springboothello.serviceImpl;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,21 +37,20 @@ public class StudentInfoServiceImpl implements StudentInfoService {
 	public StudentInfo findByinfoId(Long infoid) {
 		// TODO Auto-generated method stub
 		return studentInfoRepo.findByinfoId(infoid);
-		
+
 	}
 
-	@Transactional(rollbackFor = {Exception.class})
-	public void saveStudent(StudentInfo studentInfo) {
-		studentInfoRepo.save(studentInfo);
-		Integer.parseInt("");
-	}
-
-	@Override
-	public String delete(StudentInfo studentInfo) {
-		// TODO Auto-generated method stub
-		studentInfoRepo.delete(studentInfo);
+	@Transactional(rollbackFor = { Exception.class })
+	public String saveStudent(StudentInfo studentInfo) {
+			studentInfoRepo.save(studentInfo);
 		return null;
 	}
 
+	@Transactional(rollbackFor = { Exception.class })
+	public String delete(StudentInfo studentInfo) {
+		// TODO Auto-generated method stub
+			studentInfoRepo.delete(studentInfo);
+		return null;
+	}
 
 }

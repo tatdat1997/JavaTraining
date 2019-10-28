@@ -120,5 +120,5 @@ public class LoginController {
 		session.removeAttribute("user");
 		return new RedirectView("login");
 	}
-
+	
 }

@@ -24,7 +24,7 @@ public interface StudentInfoService {
 
 	StudentInfo findByinfoId(Long infoid);
 
-	public void saveStudent(StudentInfo studentInfo);
+	public String saveStudent(StudentInfo studentInfo);
 
 	String delete(StudentInfo studentInfo);
 }

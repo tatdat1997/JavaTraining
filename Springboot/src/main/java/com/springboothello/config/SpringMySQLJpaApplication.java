@@ -31,7 +31,7 @@ public class SpringMySQLJpaApplication {
         bean.setValidationMessageSource(messageSource());
         return bean;
     }
-	
+    
 	public static void main(String[] args) {
 		SpringApplication.run(SpringMySQLJpaApplication.class, args);
 

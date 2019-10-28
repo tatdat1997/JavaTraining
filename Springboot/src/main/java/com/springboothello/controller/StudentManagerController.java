@@ -73,7 +73,17 @@ public class StudentManagerController {
 			Double score = Double.valueOf(studentForm.getScore());
 			StudentInfo newStudent = new StudentInfo(new Student(studentName, studentCode), address, score, birthday);
 			// Create student
-			studentInfoService.saveStudent(newStudent);
+			try {
+				studentInfoService.saveStudent(newStudent);
+			} catch (Exception e) {
+				// TODO: handle exception
+				if (logger.isDebugEnabled()) {
+					logger.debug("===== Have error when create student: " + studentForm.getStudentCode() + " =====");
+				}
+				return "/error500";
+			} finally {
+				
+			}
 			// Add message to model to print notify
 			model.addAttribute("msgSuccess", "Add student success!");
 			return "NewStudent";
@@ -115,7 +125,6 @@ public class StudentManagerController {
 		// create new info for student need update
 		StudentInfo newStudentInfo = new StudentInfo(InfoID, new Student(student_id, student_name, student_code),
 				address, score, day);
-
 		// Update student
 		studentInfoService.saveStudent(newStudentInfo);
 		model.addAttribute("msgSuccess", "Update success!");
@@ -132,8 +141,10 @@ public class StudentManagerController {
 			logger.debug("===== Delete student have Info_Id: " + id + " =====");
 		}
 		StudentInfo studentInfo = studentInfoService.findByinfoId(Long.valueOf(id));
+
 		studentInfoService.delete(studentInfo);
-		return "redirect:/listStudent";
+
+		return "redirect:/search";
 	}
 	@RequestMapping(value = "/savetest")
 	public String testStudent() throws Exception{

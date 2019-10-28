@@ -78,7 +78,14 @@ public class UserController {
 						logger.debug("Create new user : " + registerForm.getUserName() + " success =====");
 					}
 					User user = new User(username, password);
+					try {
 					userService.save(user);
+					} catch (Exception e) {
+						// TODO: handle exception
+						return "Error";
+					} finally {
+						
+					}
 					model.addAttribute("msgSuccess", "Create User " + username + " success!");
 					return "Register";
 				} else {

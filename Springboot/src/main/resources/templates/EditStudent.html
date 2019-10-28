@@ -22,8 +22,8 @@
 			<ul class="navbar-brand mr-auto"></ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="pr-4"><a
-					th:href="${session.user} ? ${session.user} : '/register'"
-					th:text="${session.user} ? 'Welcome, '+${session.user} : 'Register'"></a></li>
+					th:href="${session.user} ? ${session.user.get('username')} : '/register'"
+					th:text="${session.user} ? 'Welcome, '+${session.user.get('username')} : 'Register'"></a></li>
 				<li><a th:href="${session.user} ? '/logout' : '/login'" href=""
 					th:text="${session.user} ? 'Logout': 'Login'"></a></li>
 			</ul>
@@ -69,7 +69,7 @@
 							th:value="${Student.StudentInfoBasic.AverageSore}">
 					</div>
 					<div class="form-group" style="margin-left: 4%">
-						<a href="/listStudent" class="btn btn-info" style="width: 49%;">Back</a>
+						<a href="/search" class="btn btn-info" style="width: 49%;">Back</a>
 						<button type="submit" class="btn btn-info" style="width: 49%;">Save</button>
 					</div>
 				</form>
