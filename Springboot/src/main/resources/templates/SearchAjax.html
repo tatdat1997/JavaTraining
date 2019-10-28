@@ -19,11 +19,8 @@
 			<ul class="navbar-brand mr-auto"></ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="pr-4"><a
-					th:href="${session.user} ? ${session.user.User_name} : '/register'"
-					th:text="${session.user} ? 'Welcome, '+${session.user.User_name} : 'Register'"></a></li>
-				<li class="pr-4"><a
-					th:href="${session.user} ? '/listStudent' : ''"
-					th:text="${session.user} ? 'Menu': ''"></a></li>
+					th:href="${session.user} ? ${session.user.get('username')} : '/register'"
+					th:text="${session.user} ? 'Welcome, '+${session.user.get('username')} : 'Register'"></a></li>
 				<li><a th:href="${session.user} ? '/logout' : '/login'" href=""
 					th:text="${session.user} ? 'Logout': 'Login'"></a></li>
 			</ul>
@@ -36,17 +33,37 @@
 				<h1 class="text-center">List Student</h1>
 				<form class="form-horizontal" id="search-form">
 					<div class="form-group form-group-lg d-flex">
-						<label class="col-sm-3 control-label">Student name</label>
+						<label class="col-sm-3 control-label">Student name:</label>
 						<div class="col-sm-7">
 							<input type="text" class="form-control" id="studentName" />
 						</div>
-						<button type="submit" id="bth-search" class=" col-sm-2 btn btn-primary">Search</button>
+						<button type="submit" id="bth-search" class="btn btn-primary"
+							style="width: 145px;">Search</button>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10"></div>
 					</div>
 				</form>
-				
+				<form class="form-horizontal" id="all-student">
+					<div class="form-group form-group-lg d-flex">
+						<div class="col-sm-6">
+							<label for="UserName">All Student:</label>
+						</div>
+						<div class="col-sm-2 offset-md-4">
+							<button type="submit" id="search" class="btn btn-primary"
+							style="width: 145px;margin-left: -15px;">All Student</button>
+						</div>
+					</div>
+					<div class="form-group d-flex">
+						<div class="col-sm-6">
+							<label for="UserName">New Student:</label>
+						</div>
+						<div class="col-sm-2 offset-md-4">
+							<a href="newStudent" class="btn btn-primary"
+								style="width: 145px; margin-left: -15px;">New Student</a>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 		<div class="row content">
@@ -60,10 +77,10 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	<script>
 		function submitForm() {
-			if(!confirm("Do you really want to delete this student?")) {
-			    return false;
-			  }
-			  this.form.submit();
+			if (!confirm("Do you really want to delete this student?")) {
+				return false;
+			}
+			this.form.submit();
 		}
 	</script>
 </body>

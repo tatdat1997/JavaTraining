@@ -1,9 +1,11 @@
 package com.springboothello.repositories;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.springboothello.entity.User;
 
+import java.io.Serializable;
 import java.util.List;
 
 /*
@@ -16,10 +18,10 @@ import java.util.List;
  * @author DatNT
  *
  */
-
-public interface UserRepo extends JpaRepository<User, Integer> {
+@Repository
+public interface UserRepository extends CrudRepository<User, Serializable> {
 	User findByusername(String username);
 
 	List<User> findAll();
-
+	
 }

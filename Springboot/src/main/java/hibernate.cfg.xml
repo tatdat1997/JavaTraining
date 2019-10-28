@@ -8,13 +8,13 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/springdemo?useSSL=false</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="hibernate.hibernate.current_session_context_class">thread</property>
         <property name="hibernate.connection.characterEncoding">utf8</property>
         <property name="hibernate.current_session_context_class">
         	org.hibernate.context.internal.ThreadLocalSessionContext
 		</property>
         
-        <mapping class="stackjava.com.hibernatedemo.model.Customer" />
+        <mapping class="com.springboothello.model.StudentInfo" />
     </session-factory>
 </hibernate-configuration>

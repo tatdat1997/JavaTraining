@@ -1,8 +1,10 @@
 package com.springboothello.repositories;
 
+import java.io.Serializable;
 import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.springboothello.entity.StudentInfo;
 
@@ -17,7 +19,8 @@ import com.springboothello.entity.StudentInfo;
  *
  */
 
-public interface StudentInfoRepository extends JpaRepository<StudentInfo, Integer> {
+@Repository
+public interface StudentInfoRepository extends CrudRepository<StudentInfo, Serializable> {
 
 	StudentInfo findByinfoId(Long info_id);
 

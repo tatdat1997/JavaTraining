@@ -87,5 +87,24 @@ public class SearchController {
 		return ResponseEntity.ok(result);
 
 	}
+	@PostMapping("/api/searchAll")
+	public ResponseEntity<?> getSearchAllResultViaAjax() {
+		// Create log
+		if (logger.isDebugEnabled()) {
+			logger.debug("===== Search with Ajax =====");
+		}
 
+		AjaxResponseBody result = new AjaxResponseBody();
+
+		if (logger.isDebugEnabled()) {
+			logger.debug("===== Find all student: =====");
+		}
+		List<Student> student = studentServiceImpl.findAll();
+
+		// Set result is list list student and return
+		result.setResult(student);
+
+		return ResponseEntity.ok(result);
+
+	}
 }

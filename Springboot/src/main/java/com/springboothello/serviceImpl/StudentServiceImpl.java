@@ -1,13 +1,15 @@
-package com.springboothello.service;
+package com.springboothello.serviceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.springboothello.entity.Student;
 import com.springboothello.repositories.StudentRepository;
+import com.springboothello.service.StudentService;
 
 /*
  * Copyright (C) 2015 by GMO Runsystem Company
@@ -21,6 +23,7 @@ import com.springboothello.repositories.StudentRepository;
  */
 
 @Service
+@Transactional
 public class StudentServiceImpl implements StudentService {
 
 	@Autowired
@@ -32,7 +35,7 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public List<Student> findAll() {
 		// TODO Auto-generated method stub
-		return studentRepo.findAll();
+		return studentRepo.findAllByAsc();
 	}
 
 	@Override

@@ -1,10 +1,13 @@
-package com.springboothello.service;
+package com.springboothello.serviceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.springboothello.entity.User;
-import com.springboothello.repositories.UserRepo;
+import com.springboothello.repositories.UserRepository;
+import com.springboothello.service.UserService;
+
 import java.util.List;
 
 /*
@@ -22,17 +25,24 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
 	@Autowired
-	UserRepo userRepo;
+	UserRepository userRepository;
 
 	@Override
 	public List<User> findAll() {
-		return userRepo.findAll();
+		return userRepository.findAll();
 	}
 
 	@Override
 	public User findByusername(String username) {
 		// TODO Auto-generated method stub
-		return userRepo.findByusername(username);
+		return userRepository.findByusername(username);
 	}
 
+	@Transactional(rollbackFor = {Exception.class})
+	public void save(User user) {
+		// TODO Auto-generated method stub
+		userRepository.save(user);
+	}
+	
+	
 }

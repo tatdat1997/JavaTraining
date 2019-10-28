@@ -2,6 +2,8 @@ package com.springboothello.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.springboothello.entity.StudentInfo;
 
 /*
@@ -15,13 +17,14 @@ import com.springboothello.entity.StudentInfo;
  *
  */
 
+@Component
 public interface StudentInfoService {
 
 	List<StudentInfo> findAll();
 
 	StudentInfo findByinfoId(Long infoid);
 
-	StudentInfo save(StudentInfo studentInfo);
+	public void saveStudent(StudentInfo studentInfo);
 
 	String delete(StudentInfo studentInfo);
 }

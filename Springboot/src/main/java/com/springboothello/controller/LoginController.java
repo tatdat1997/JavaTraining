@@ -87,8 +87,8 @@ public class LoginController {
 					if (logger.isDebugEnabled()) {
 						logger.debug("===== Login success with User: " + username + " =====");
 					}
-					http.setAttribute("user", user); // Set session for user
-					return "redirect:/listStudent"; // Go to list student page
+					http.setAttribute("user", user.toMap()); // Set session for user
+					return "redirect:/search"; // Go to list student page
 				} else {
 					if (logger.isDebugEnabled()) {
 						logger.debug("===== Login fail with User: " + username + " =====");

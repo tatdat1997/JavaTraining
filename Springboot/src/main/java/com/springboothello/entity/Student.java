@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Table(name = "student")
 public class Student {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long studentId;
 
 	@NotEmpty(message = "Student name must be not null!")
@@ -28,7 +28,7 @@ public class Student {
 	private String studentName;
 
 	@Column(name = "student_code")
-	@NotEmpty(message = "Student name must be not null!")
+	@NotEmpty(message = "Student code must be not null!")
 	private String studentCode;
 
 	@OneToOne(mappedBy = "studentBasic")

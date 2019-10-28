@@ -2,6 +2,8 @@ package com.springboothello.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.springboothello.entity.User;
 
 /*
@@ -15,9 +17,12 @@ import com.springboothello.entity.User;
  *
  */
 
+@Component
 public interface UserService {
 
 	User findByusername(String username);
 
 	List<User> findAll();
+
+	public void save(User user);
 }

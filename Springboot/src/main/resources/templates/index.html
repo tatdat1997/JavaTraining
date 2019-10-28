@@ -22,10 +22,10 @@
 			<ul class="navbar-brand mr-auto"></ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="pr-4"><a
-					th:href="${session.user} ? ${session.user.User_name} : '/register'"
-					th:text="${session.user} ? 'Welcome, '+${session.user.User_name} : 'Register'"></a></li>
+					th:href="${session.user} ? ${session.user} : '/register'"
+					th:text="${session.user} ? 'Welcome, '+${session.user} : 'Register'"></a></li>
 				<li class="pr-4"><a
-					th:href="${session.user} ? '/listStudent' : ''"
+					th:href="${session.user} ? '/search' : ''"
 					th:text="${session.user} ? 'Menu': ''"></a></li>
 				<li><a th:href="${session.user} ? '/logout' : '/login'" href=""
 					th:text="${session.user} ? 'Logout': 'Login'"></a></li>

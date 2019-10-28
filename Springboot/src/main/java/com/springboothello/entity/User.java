@@ -1,6 +1,7 @@
 package com.springboothello.entity;
 
-import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,8 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
-import org.hibernate.annotations.GenericGenerator;
 
 /*
  * Copyright (C) 2015 by GMO Runsystem Company
@@ -26,13 +25,11 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "USER")
-public class User implements Serializable {
+public class User {
 
-	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-	@GenericGenerator(name = "native", strategy = "native")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "user_id", unique = true)
 	private Long user_id;
 
@@ -92,4 +89,13 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
+	public Map<String, String> toMap() {
+		Map<String, String> userMapping = new HashMap<>();
+		
+		userMapping.put("userId",String.valueOf(user_id));
+		userMapping.put("username", this.username);
+		userMapping.put("password", this.password);
+	
+		return userMapping;
+	}
 }

@@ -1,5 +1,8 @@
 package com.springboothello.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -15,7 +18,7 @@ import org.springframework.validation.BindingResult;
 
 import com.springboothello.entity.User;
 import com.springboothello.form.RegisterForm;
-import com.springboothello.repositories.UserRepo;
+import com.springboothello.service.UserService;
 
 /*
  * Copyright (C) 2015 by GMO Runsystem Company
@@ -34,7 +37,7 @@ public class UserController {
 	private static final Logger logger = LogManager.getLogger(UserController.class);
 
 	@Autowired
-	private UserRepo userRepo;
+	private UserService userService;
 
 	@GetMapping("/register")
 	public String register(Model model) {
@@ -48,7 +51,7 @@ public class UserController {
 
 	@RequestMapping(value = "/registerUser", method = RequestMethod.POST, headers = "Content-Type=multipart/form-data")
 	public String registerUser(@Valid RegisterForm registerForm, BindingResult result, Model model,
-			HttpServletRequest request) {
+			HttpServletRequest request) throws Exception{
 		// Check error form
 		if (result.hasErrors()) {
 			if (logger.isDebugEnabled()) {
@@ -62,7 +65,7 @@ public class UserController {
 			String username = registerForm.getUserName();
 			String password = registerForm.getPassword();
 			String passwordConfirm = registerForm.getPasswordConfirm();
-			User checkuser = userRepo.findByusername(username);
+			User checkuser = userService.findByusername(username);
 			if (checkuser != null) {
 				if (logger.isDebugEnabled()) {
 					logger.debug("===== User : " + registerForm.getUserName() + " is exist =====");
@@ -75,7 +78,7 @@ public class UserController {
 						logger.debug("Create new user : " + registerForm.getUserName() + " success =====");
 					}
 					User user = new User(username, password);
-					userRepo.save(user);
+					userService.save(user);
 					model.addAttribute("msgSuccess", "Create User " + username + " success!");
 					return "Register";
 				} else {
@@ -90,5 +93,16 @@ public class UserController {
 		}
 
 	}
-
+	@RequestMapping(value = "/saveUser")
+	public User testUser(){
+		List<User> listUser = new ArrayList<User>();
+		User user1 = new User("1123213", "123123");
+		User user2 = new User("testUsea7", "123123");
+		User user3 = new User("testUser5", "123123");
+		listUser.add(user3);
+		listUser.add(user2);
+		listUser.add(user1);
+		userService.save(user1);
+		return user1;
+	}
 }

@@ -1,12 +1,15 @@
-package com.springboothello.service;
+package com.springboothello.serviceImpl;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.springboothello.entity.StudentInfo;
 import com.springboothello.repositories.StudentInfoRepository;
+import com.springboothello.service.StudentInfoService;
 
 /*
  * Copyright (C) 2015 by GMO Runsystem Company
@@ -23,7 +26,7 @@ import com.springboothello.repositories.StudentInfoRepository;
 public class StudentInfoServiceImpl implements StudentInfoService {
 
 	@Autowired
-	StudentInfoRepository studentInfoRepo;
+	private StudentInfoRepository studentInfoRepo;
 
 	@Override
 	public List<StudentInfo> findAll() {
@@ -35,12 +38,13 @@ public class StudentInfoServiceImpl implements StudentInfoService {
 	public StudentInfo findByinfoId(Long infoid) {
 		// TODO Auto-generated method stub
 		return studentInfoRepo.findByinfoId(infoid);
+		
 	}
 
-	@Override
-	public StudentInfo save(StudentInfo studentInfo) {
-		// TODO Auto-generated method stub
-		return studentInfoRepo.save(studentInfo);
+	@Transactional(rollbackFor = {Exception.class})
+	public void saveStudent(StudentInfo studentInfo) {
+		studentInfoRepo.save(studentInfo);
+		Integer.parseInt("");
 	}
 
 	@Override
@@ -49,5 +53,6 @@ public class StudentInfoServiceImpl implements StudentInfoService {
 		studentInfoRepo.delete(studentInfo);
 		return null;
 	}
+
 
 }

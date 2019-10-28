@@ -1,9 +1,11 @@
 package com.springboothello.repositories;
 
+import java.io.Serializable;
 import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.springboothello.entity.Student;
 
@@ -17,8 +19,8 @@ import com.springboothello.entity.Student;
  * @author DatNT
  *
  */
-
-public interface StudentRepository extends JpaRepository<Student, Integer> {
+@Repository
+public interface StudentRepository extends CrudRepository<Student, Serializable> {
 	@Query(value = "SELECT * FROM student ORDER BY student_id ASC", nativeQuery = true)
 	List<Student> findAllByAsc();
 

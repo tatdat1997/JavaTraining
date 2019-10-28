@@ -1,5 +1,6 @@
 package com.springboothello.controller;
 
+
 import javax.validation.Valid;
 
 import org.apache.logging.log4j.LogManager;
@@ -51,7 +52,8 @@ public class StudentManagerController {
 	}
 
 	@RequestMapping(value = "/saveStudent", method = RequestMethod.POST)
-	public String newStudent(@Valid StudentForm studentForm, BindingResult result, Model model) {
+	public String newStudent(@Valid StudentForm studentForm, BindingResult result,
+			Model model) throws Exception {
 		if (logger.isDebugEnabled()) {
 			logger.debug("===== Create new student =====");
 		}
@@ -71,7 +73,7 @@ public class StudentManagerController {
 			Double score = Double.valueOf(studentForm.getScore());
 			StudentInfo newStudent = new StudentInfo(new Student(studentName, studentCode), address, score, birthday);
 			// Create student
-			studentInfoService.save(newStudent);
+			studentInfoService.saveStudent(newStudent);
 			// Add message to model to print notify
 			model.addAttribute("msgSuccess", "Add student success!");
 			return "NewStudent";
@@ -97,7 +99,7 @@ public class StudentManagerController {
 	 */
 	@RequestMapping(value = "/updateStudent/id/{id}", method = RequestMethod.POST)
 	public String updateStudent(@PathVariable("id") String id, @Valid StudentForm studentForm, BindingResult result,
-			Model model) {
+			Model model) throws Exception {
 		if (logger.isDebugEnabled()) {
 			logger.debug("===== Update student have Student_Id: " + id + " =====");
 		}
@@ -115,7 +117,7 @@ public class StudentManagerController {
 				address, score, day);
 
 		// Update student
-		studentInfoService.save(newStudentInfo);
+		studentInfoService.saveStudent(newStudentInfo);
 		model.addAttribute("msgSuccess", "Update success!");
 		return "redirect:/infoStudent/id/" + id;
 	}
@@ -133,4 +135,12 @@ public class StudentManagerController {
 		studentInfoService.delete(studentInfo);
 		return "redirect:/listStudent";
 	}
+	@RequestMapping(value = "/savetest")
+	public String testStudent() throws Exception{
+		Student a = new Student("Student 3", "1501003");
+		StudentInfo st3 =new StudentInfo(a, "C123", 9.3, "1999-12-26");
+		studentInfoService.saveStudent(st3);
+		return "";
+	}
+	
 }
