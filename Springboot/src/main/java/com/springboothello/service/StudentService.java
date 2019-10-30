@@ -2,6 +2,7 @@ package com.springboothello.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 
 import com.springboothello.entity.Student;
@@ -33,4 +34,13 @@ public interface StudentService {
 	Student findBystudentCode(String studentCode);
 
 	Student deleteBystudentId(Long studentId);
+	
+	List<Student> findAllStudent(Pageable pageable);
+	
+	List<Student> findByStudentName(String name, Pageable pageable);
+	
+	Long count();
+	
+	@Query(value = "SELECT count(*) as 'total' FROM student WHERE student_name like %?1%", nativeQuery = true)
+	Long countByName(String name);
 }

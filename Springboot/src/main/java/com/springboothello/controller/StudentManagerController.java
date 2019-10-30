@@ -91,6 +91,7 @@ public class StudentManagerController {
 
 	}
 
+	
 	@RequestMapping(value = "/infoStudent/id/{id}", method = RequestMethod.GET)
 	public String editStudent(@PathVariable("id") String id, Model model) {
 		if (logger.isDebugEnabled()) {
@@ -99,7 +100,14 @@ public class StudentManagerController {
 		// Find student by info_id to edit
 		Student student = studentService.findBystudentId(Long.valueOf(id));
 		model.addAttribute("Student", student);
-		model.addAttribute("studentForm", new StudentForm());
+		StudentForm newStudent = new StudentForm();
+		newStudent.setStudentCode(student.getStudentCode());
+		newStudent.setStudentName(student.getStudentName());
+		newStudent.setAddress(student.getStudentInfoBasic().getAddress());
+		
+		newStudent.setScore(String.valueOf(student.getStudentInfoBasic().getAverageSore()));
+		newStudent.setDateOfBirth(student.getStudentInfoBasic().getDateOfBirth());
+		model.addAttribute("studentForm", newStudent);
 		return "EditStudent";
 	}
 

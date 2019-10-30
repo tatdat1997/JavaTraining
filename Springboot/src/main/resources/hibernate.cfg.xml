@@ -14,7 +14,10 @@
         <property name="hibernate.current_session_context_class">
         	org.hibernate.context.internal.ThreadLocalSessionContext
 		</property>
-        
-        <mapping class="com.springboothello.model.StudentInfo" />
+        <property name="hibernate.show_sql">true</property>
+		<mapping resource="named-queries.hbm.xml" />
+		<mapping class="com.springboothello.enity.User" />
+		<mapping class="com.springboothello.enity.Student" />
+        <mapping class="com.springboothello.enity.StudentInfo" />
     </session-factory>
 </hibernate-configuration>

@@ -1,9 +1,9 @@
 package com.springboothello.serviceImpl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -53,13 +53,7 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public List<Student> findBystudentName(String studentName) {
 		// TODO Auto-generated method stub
-		List<Student> list = (List<Student>) studentRepo.findAllByAsc();
-		List<Student> result = new ArrayList<Student>();
-		for (Student student : list) {
-			if (student.getStudentName().contains(studentName)) {
-				result.add(student);
-			}
-		}
+		List<Student> result = studentRepo.findBystudentName(studentName);
 		return result;
 	}
 
@@ -80,5 +74,33 @@ public class StudentServiceImpl implements StudentService {
 		// TODO Auto-generated method stub
 		return findBystudentCode(studentCode);
 	}
+
+	@Override
+	public List<Student> findAllStudent(Pageable pageable) {
+		// TODO Auto-generated method stub
+		List<Student> studentList =  studentRepo.findAllStudent(pageable);
+		return studentList;
+	}
+
+	@Override
+	public Long count() {
+		// TODO Auto-generated method stub
+		return studentRepo.count();
+	}
+
+	@Override
+	public Long countByName(String name) {
+		// TODO Auto-generated method stub
+		return studentRepo.countByName(name);
+	}
+
+	@Override
+	public List<Student> findByStudentName(String name, Pageable pageable) {
+		// TODO Auto-generated method stub
+		return studentRepo.findByStudentName(name, pageable);
+	}
+
+
+
 
 }

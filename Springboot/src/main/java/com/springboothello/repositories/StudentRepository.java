@@ -8,7 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.springboothello.entity.Student;
-
+import org.springframework.data.domain.Pageable;
 /*
  * Copyright (C) 2015 by GMO Runsystem Company
  *
@@ -38,5 +38,13 @@ public interface StudentRepository extends CrudRepository<Student, Serializable>
 	Student findBystudentCode(String studentCode);
 
 	Student deleteBystudentId(Long studentId);
+	
+	@Query(value = "SELECT * FROM student ORDER BY student_id ASC",nativeQuery = true)  
+	List<Student> findAllStudent(Pageable pageable);
+	
+	@Query(value = "SELECT * FROM student WHERE student_name like %?1%", nativeQuery = true)
+	List<Student> findByStudentName(String name, Pageable pageable);
 
+	@Query(value = "SELECT count(*) as 'total' FROM student WHERE student_name like %?1%", nativeQuery = true)
+	Long countByName(String name);
 }

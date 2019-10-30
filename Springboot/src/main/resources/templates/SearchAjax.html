@@ -50,8 +50,9 @@
 							<label for="UserName">All Student:</label>
 						</div>
 						<div class="col-sm-2 offset-md-4">
-							<button type="submit" id="search" class="btn btn-primary"
-							style="width: 145px;margin-left: -15px;">All Student</button>
+
+							<a href="/listStudent/page/1" class="btn btn-primary"
+								style="width: 145px; margin-left: -15px;">All Student</a>
 						</div>
 					</div>
 					<div class="form-group d-flex">
@@ -59,18 +60,25 @@
 							<label for="UserName">New Student:</label>
 						</div>
 						<div class="col-sm-2 offset-md-4">
-							<a href="newStudent" class="btn btn-primary"
+							<a href="/newStudent" class="btn btn-primary"
 								style="width: 145px; margin-left: -15px;">New Student</a>
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
+
 		<div class="row content">
 			<div class="col-sm-10 offset-sm-1" id="feedback"></div>
 		</div>
-	</div>
 
+	</div>
+	<div class="text-center" id="pagination">
+		<button type="button" id="btn-pre" style="width: 90px;"
+			class="btn btn-primary">Previous</button>
+		<button type="button" id="btn-next" style="width: 90px;"
+			class="btn btn-primary">Next</button>
+	</div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -82,6 +90,7 @@
 			}
 			this.form.submit();
 		}
+		document.getElementById("pagination").style.display = 'none';
 	</script>
 </body>
 </html>
