@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springboothello.entity.AjaxResponseBody;
@@ -140,5 +141,12 @@ public class SearchController {
 
 		return ResponseEntity.ok(result);
 
+	}
+	
+	@RequestMapping(value = "/text")
+	public String text() {
+		List<Student> A = (List<Student>) studentService.findAllByAsc();
+		System.out.print("Student=======================: "+A);
+		return "";
 	}
 }

@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "student_id")
 	private Long studentId;
 
 	@NotEmpty(message = "Student name must be not null!")

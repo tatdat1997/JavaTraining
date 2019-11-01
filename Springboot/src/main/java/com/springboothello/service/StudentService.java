@@ -28,7 +28,6 @@ public interface StudentService {
 
 	Student findBystudentId(Long studentId);
 
-	@Query(value = "SELECT * FROM student WHERE student_name like %?1%", nativeQuery = true)
 	List<Student> findBystudentName(String studentName);
 
 	Student findBystudentCode(String studentCode);
@@ -43,4 +42,5 @@ public interface StudentService {
 	
 	@Query(value = "SELECT count(*) as 'total' FROM student WHERE student_name like %?1%", nativeQuery = true)
 	Long countByName(String name);
+	
 }

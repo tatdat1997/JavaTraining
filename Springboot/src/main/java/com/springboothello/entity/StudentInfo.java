@@ -24,22 +24,27 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
  */
 
 @Entity
+@Table(name = "student_info")
 public class StudentInfo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "info_Id")
 	private Long infoId;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "student_id")
 	private Student studentBasic;
 
+	@Column(name = "address")
 	private String address;
 
 	@Max(value = 10, message = "Score cannot be greater than 10!")
 	@Min(value = 1, message = "Score cannot be less than 1")
+	@Column(name = "average_Sore")
 	private Double averageSore;
 
 	@DateTimeFormat(iso = ISO.DATE)
+	@Column(name = "date_Of_Birth")
 	private Date dateOfBirth;
 
 	public StudentInfo(Long infoId, Student studentBasic, String address, Double averageSore, String dateOfBirth) {

@@ -1,10 +1,18 @@
 package com.springboothello.controller;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
+import javax.persistence.TypedQuery;
 import javax.validation.Valid;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,20 +26,22 @@ import com.springboothello.entity.StudentInfo;
 import com.springboothello.form.StudentForm;
 import com.springboothello.service.StudentInfoService;
 import com.springboothello.service.StudentService;
-
-/*
- * Copyright (C) 2015 by GMO Runsystem Company
- *
- * Create StudentManagerController class
- *
- * @version 1.0
- *
- * @author DatNT
- *
- */
-
+//
+///*
+// * Copyright (C) 2015 by GMO Runsystem Company
+// *
+// * Create StudentManagerController class
+// *
+// * @version 1.0
+// *
+// * @author DatNT
+// *
+// */
+//
 @Controller
 public class StudentManagerController {
+private static final int ArrayList = 0;
+
 
 	private static final Logger logger = LogManager.getLogger(StudentManagerController.class);
 
@@ -52,8 +62,7 @@ public class StudentManagerController {
 	}
 
 	@RequestMapping(value = "/saveStudent", method = RequestMethod.POST)
-	public String newStudent(@Valid StudentForm studentForm, BindingResult result,
-			Model model) throws Exception {
+	public String newStudent(@Valid StudentForm studentForm, BindingResult result, Model model) throws Exception {
 		if (logger.isDebugEnabled()) {
 			logger.debug("===== Create new student =====");
 		}
@@ -82,7 +91,7 @@ public class StudentManagerController {
 				}
 				return "/error500";
 			} finally {
-				
+
 			}
 			// Add message to model to print notify
 			model.addAttribute("msgSuccess", "Add student success!");
@@ -91,7 +100,6 @@ public class StudentManagerController {
 
 	}
 
-	
 	@RequestMapping(value = "/infoStudent/id/{id}", method = RequestMethod.GET)
 	public String editStudent(@PathVariable("id") String id, Model model) {
 		if (logger.isDebugEnabled()) {
@@ -104,7 +112,7 @@ public class StudentManagerController {
 		newStudent.setStudentCode(student.getStudentCode());
 		newStudent.setStudentName(student.getStudentName());
 		newStudent.setAddress(student.getStudentInfoBasic().getAddress());
-		
+
 		newStudent.setScore(String.valueOf(student.getStudentInfoBasic().getAverageSore()));
 		newStudent.setDateOfBirth(student.getStudentInfoBasic().getDateOfBirth());
 		model.addAttribute("studentForm", newStudent);
@@ -154,12 +162,23 @@ public class StudentManagerController {
 
 		return "redirect:/search";
 	}
+//
+//	@RequestMapping(value = "/savetest")
+//	public String testStudent() throws Exception {
+//		Student a = new Student("Student 3", "1501003");
+//		StudentInfo st3 = new StudentInfo(a, "C123", 9.3, "1999-12-26");
+//		studentInfoService.saveStudent(st3);
+//		return "";
+//	}
+
 	@RequestMapping(value = "/savetest")
-	public String testStudent() throws Exception{
-		Student a = new Student("Student 3", "1501003");
-		StudentInfo st3 =new StudentInfo(a, "C123", 9.3, "1999-12-26");
-		studentInfoService.saveStudent(st3);
-		return "";
+	public String test(Model model) {
+
+		List<Student> studentList = studentService.findBystudentName("Alex");
+		model.addAttribute("studentList", studentList);
+
+		// rolling back to save the test data
+
+		return "NewFile1"; 
 	}
-	
 }

@@ -1,10 +1,21 @@
 package com.springboothello.controller;
 
+//import java.util.Arrays;
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+//import org.hibernate.Session;
+//import org.hibernate.SessionFactory;
+//import org.hibernate.Transaction;
+//import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -101,7 +112,6 @@ public class LoginController {
 			if (logger.isDebugEnabled()) {
 				logger.debug("===== Login fail with User: " + username + " =====");
 			}
-			// Return message notify error
 			model.addAttribute("msgError", "Account does not exist!");
 			return "Login";
 		}
@@ -120,5 +130,6 @@ public class LoginController {
 		session.removeAttribute("user");
 		return new RedirectView("login");
 	}
+	
 	
 }

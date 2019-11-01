@@ -51,7 +51,7 @@
 						<th>Score</th>
 						<th>Edit</th>
 					</tr>
-					<tr th:each="student, state  : ${listStudent}">
+					<tr th:each="student, state  : ${studentList}">
 						<td th:utext="${state.count}"></td>
 						<td th:text="${student.StudentCode}"></td>
 						<td th:text="${student.StudentName}"></td>

@@ -1,10 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
-   <bean id="queries" class="java.util.HashMap">
-      <constructor-arg>
-         <map>
-            <entry key="FIND_ALL_STUDENT" value="SELECT student_id, student_name, student_code FROM student" />
-         </map>
-      </constructor-arg>
-   </bean>
-</beans>
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!-- Student -->
+	<query name="HQL_GET_ALL_STUDENT">from Student</query>
+	<query name="HQL_GET_ALL_STUDENT_BY_NAME">
+		<![CDATA[FROM Student WHERE student_name like :name]]>
+	</query>
+	<!-- User -->
+	<query name="HQL_GET_USER_BY_NAME">
+		<![CDATA[from User where username = :uname]]>
+	</query>
+	
+</hibernate-mapping>
+ 
