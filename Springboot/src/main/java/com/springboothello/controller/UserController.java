@@ -1,7 +1,5 @@
 package com.springboothello.controller;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -9,6 +7,8 @@ import javax.validation.Valid;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -74,18 +74,16 @@ public class UserController {
 				return "Register";
 			} else {
 				if (password.equals(passwordConfirm)) {
+					PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+					String hashedPassword = passwordEncoder.encode(password);
 					if (logger.isDebugEnabled()) {
 						logger.debug("Create new user : " + registerForm.getUserName() + " success =====");
 					}
-					User user = new User(username, password);
-					try {
+					System.out.println(hashedPassword);
+					User user = new User(username, hashedPassword, "ROLE_MEMBER");
+
 					userService.save(user);
-					} catch (Exception e) {
-						// TODO: handle exception
-						return "Error";
-					} finally {
-						
-					}
+
 					model.addAttribute("msgSuccess", "Create User " + username + " success!");
 					return "Register";
 				} else {
@@ -100,16 +98,5 @@ public class UserController {
 		}
 
 	}
-	@RequestMapping(value = "/saveUser")
-	public User testUser(){
-		List<User> listUser = new ArrayList<User>();
-		User user1 = new User("1123213", "123123");
-		User user2 = new User("testUsea7", "123123");
-		User user3 = new User("testUser5", "123123");
-		listUser.add(user3);
-		listUser.add(user2);
-		listUser.add(user1);
-		userService.save(user1);
-		return user1;
-	}
+
 }

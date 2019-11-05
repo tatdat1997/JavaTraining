@@ -36,7 +36,8 @@
 		<div class="row content">
 			<div class="col-sm-8 offset-md-2">
 				<h2 class="text-center">List Student</h2>
-				<p class="text-center" th:text="'There are '+${total}+' students, dividedinto '+${sizeList}+' pages.'"></p>
+				<p class="text-center"
+					th:text="'There are '+${total}+' students, dividedinto '+${sizeList}+' pages.'"></p>
 			</div>
 		</div>
 		<div class="row content">
@@ -51,13 +52,14 @@
 						<th>Score</th>
 						<th>Edit</th>
 					</tr>
-					<tr th:each="student, state  : ${studentList}">
+					<tr th:each="student, state  : ${listStudent}">
 						<td th:utext="${state.count}"></td>
 						<td th:text="${student.StudentCode}"></td>
 						<td th:text="${student.StudentName}"></td>
 						<td th:text="${student.StudentInfoBasic.Address}"></td>
 						<td th:text="${student.StudentInfoBasic.AverageSore}"></td>
-						<td th:text="${student.StudentInfoBasic.DateOfBirthFormat}"></td>
+						<td
+							th:text="${student.StudentInfoBasic.DateOfBirthFormat} ? ${student.StudentInfoBasic.DateOfBirthFormat} : ''"></td>
 						<td>
 							<form
 								th:action="@{/deleteStudent/id/{id}(id=${student.StudentInfoBasic.InfoId})}"
@@ -69,7 +71,7 @@
 						</td>
 					</tr>
 				</table>
-				<div class="container">
+				<!-- 				<div class="container">
 					<div class="col-sm-12" style="text-align: center;">
 						<ul class="pagination" style="margin-left: 25%;">
 							<li th:class="${page} <= 1 ? 'page-item disabled' : 'page-item'"
@@ -79,12 +81,43 @@
 								style="width: 85px;"><a class="page-link"
 								th:href="@{/listStudent/page/{pageNumber}(pageNumber=${page}-1)}">Previous</a></li>
 
-							<li
-								th:class="${page}==${i} or  ${page}== ${sizeList} /2 + ${i}? 'page-item active' : 'page-item'"
-								th:each="i: ${#numbers.sequence(1, sizeList/2)}"><a
+							<li th:each="i: ${#numbers.sequence(1, sizeList/2)}"
+								th:class="${page}==${i} or  ${page}== ${sizeList} /2 + ${i}? 'page-item active' : 'page-item'"><a
 								th:class="@{page-link}"
 								th:text="${page} >= ${sizeList} / 2 +1 ? ${sizeList} / 2 + ${i}: ${i}"
-								th:href="@{/listStudent/page/{pageNumber}(pageNumber=${page} >= ${sizeList} / 2 +1 ? ${sizeList} / 2 + ${i} : ${i})}"></a></li>
+								th:href="@{/listStudent/page/{pageNumber}(pageNumber=${page} >= ${sizeList} / 2 +1 ? ${sizeList} / 2 + ${i} : ${i})}">
+								</a></li>
+							<li
+								th:class="${page} == ${sizeList} ? 'page-item disabled' : 'page-item'"
+								style="width: 85px;"><a class="page-link"
+								th:href="@{/listStudent/page/{pageNumber}(pageNumber=${page}+1)}">Next</a></li>
+							<li
+								th:class="${page} == ${sizeList} ? 'page-item disabled' : 'page-item'"
+								style="width: 85px;"><a class="page-link"
+								th:href="@{/listStudent/page/{pageNumber}(pageNumber=${sizeList})}">Last</a></li>
+						</ul>
+					</div>
+				</div> -->
+				<div class="container">
+					<div class="col-sm-12" style="text-align: center;">
+
+						<ul class="pagination" style="margin-left: 25%;">
+							<li th:class="${page} <= 1 ? 'page-item disabled' : 'page-item'"
+								style="width: 85px;"><a class="page-link"
+								th:href="@{/listStudent/page/1}">First</a></li>
+							<li th:class="${page} <= 1 ? 'page-item disabled' : 'page-item'"
+								style="width: 85px;"><a class="page-link"
+								th:href="@{/listStudent/page/{pageNumber}(pageNumber=${page}-1)}">Previous</a></li>
+
+							<li th:each="i: ${#numbers.sequence(1, 5)}"
+								th:class="${page}==${i} or ${page}== ${5*count +i}? 'page-item active' : 'page-item'"
+								>
+								<a th:class="@{page-link}"
+								th:text="${page} > ${5*count} ? ${count * 5 + i} : ${i}"
+								th:href="@{/listStudent/page/{pageNumber}(pageNumber=${page} > ${5*count} ? ${5*count +i} : ${i})}"
+								th:if="${count * 5 + i -1 &lt sizeList} ">				
+							</a>
+							</li>
 							<li
 								th:class="${page} == ${sizeList} ? 'page-item disabled' : 'page-item'"
 								style="width: 85px;"><a class="page-link"

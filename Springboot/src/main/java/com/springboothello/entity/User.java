@@ -38,11 +38,14 @@ public class User {
 	@Size(min = 5, max = 20, message = "User name must be 5-20 character")
 	private String username;
 
-	@Column(name = "password", nullable = true, length = 15)
+	@Column(name = "password", nullable = true, length = 255)
 	@NotNull(message = "Password cannot be null")
-	@Size(min = 5, max = 20, message = "Password must be 5-20 character")
+	@Size(min = 5, max = 255, message = "Password must be 5-255character")
 	private String password;
-
+	
+	@Column(name = "role")
+	private String role;
+	
 	public User() {
 		super();
 	}
@@ -76,17 +79,24 @@ public class User {
 		this.password = password;
 	}
 
-	public User(Long user_id, String user_name, String password) {
-		super();
-		this.user_id = user_id;
-		this.username = user_name;
-		this.password = password;
+	
+	public String getRole() {
+		return role;
 	}
 
-	public User(String user_name, String password) {
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public User(Long user_id, String user_name, String password) {
+		super();
+	}
+
+	public User(String user_name, String password, String role) {
 		super();
 		this.username = user_name;
 		this.password = password;
+		this.role = role;
 	}
 
 	public Map<String, String> toMap() {
@@ -94,8 +104,7 @@ public class User {
 		
 		userMapping.put("userId",String.valueOf(user_id));
 		userMapping.put("username", this.username);
-		userMapping.put("password", this.password);
-	
+		userMapping.put("role", this.role);
 		return userMapping;
 	}
 }

@@ -1,5 +1,6 @@
 package com.springboothello.controller;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -44,41 +45,56 @@ public class ListStudentController {
 	@GetMapping("/search")
 	public String index(HttpSession http) {
 		// Create log
-		if (logger.isDebugEnabled()) {
-			logger.debug("===== Search Ajax Form =====");
+		if (http.getAttribute("user") != null) {
+			HashMap<?, ?> A = (HashMap<?, ?>) http.getAttribute("user");
+			logger.debug("===== User " + A.get("username") + ": Search Ajax Form =====");
 		}
 		return "SearchAjax";
 	}
+
 	/*
-	 * Go to page load all student.
+	 * Go to page load all student. Page show all student and pagination
+	 * 10 student/page
 	 */
 	@RequestMapping(value = "listStudent/page/{pageNumber}", method = RequestMethod.GET)
-	public String inDexPage(Model model,@PathVariable("pageNumber") int pageNumber ) {
+	public String inDexPage(Model model, @PathVariable("pageNumber") int pageNumber, HttpSession http) {
 		// Find all student
 		long sizeList = studentService.count();
 		int size;
-		if(sizeList%10 == 0) {
-			size = (int)sizeList/10;
-		}else
-		{
-			size = (int)(sizeList/10) + 1;
+		// Find total page. One page have 10 record
+		if (sizeList % 10 == 0) {
+			size = (int) sizeList / 10;
+		} else {
+			size = (int) (sizeList / 10) + 1;
 		}
-		model.addAttribute("total",sizeList);
-		model.addAttribute("sizeList",size);
+		model.addAttribute("total", sizeList);
+		model.addAttribute("sizeList", size);
 		Pageable pageable;
-		if(pageNumber >0) {
-			pageable = PageRequest.of(pageNumber-1, 10);
-		}else {
+		// Page number > 0 then begin at Page number -1
+		if (pageNumber > 0) {
+			pageable = PageRequest.of(pageNumber - 1, 10);
+		} else {
 			pageable = PageRequest.of(0, 10);
 		}
-		if(pageNumber > size) {
-			pageable = PageRequest.of(size-1, 10);
+		// Page number > size then begin at size -1
+		if (pageNumber >= size) {
+			pageable = PageRequest.of(size - 1, 10);
+		}
+		int count = 0;
+		if (http.getAttribute("count") != null && pageNumber < 10) {
+			count = (int) http.getAttribute("count");
+		} else {
+			count = 1;
+		}
+		if ((pageNumber % 5 == 1) && (pageNumber != 6) && (pageNumber != 1)) {
+			count += 1;
 		}
 		List<Student> listStudent = studentService.findAllStudent(pageable);
+		model.addAttribute("count", count);
 		model.addAttribute("listStudent", listStudent);
 		model.addAttribute("page", pageNumber);
-        return "ListStudent";
+		return "ListStudent";
 
-    }
+	}
 
 }

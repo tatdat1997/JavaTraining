@@ -1,18 +1,12 @@
 package com.springboothello.controller;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-import javax.persistence.TypedQuery;
+import java.util.HashMap;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.query.Query;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,6 +20,7 @@ import com.springboothello.entity.StudentInfo;
 import com.springboothello.form.StudentForm;
 import com.springboothello.service.StudentInfoService;
 import com.springboothello.service.StudentService;
+
 //
 ///*
 // * Copyright (C) 2015 by GMO Runsystem Company
@@ -40,8 +35,6 @@ import com.springboothello.service.StudentService;
 //
 @Controller
 public class StudentManagerController {
-private static final int ArrayList = 0;
-
 
 	private static final Logger logger = LogManager.getLogger(StudentManagerController.class);
 
@@ -52,17 +45,20 @@ private static final int ArrayList = 0;
 	private StudentService studentService;
 
 	@RequestMapping(value = "/newStudent")
-	public String newFormStudent(Model model) {
+	public String newFormStudent(Model model, HttpSession http) {
 		// Create log
+		HashMap<?, ?> A = (HashMap<?, ?>) http.getAttribute("user");
 		if (logger.isDebugEnabled()) {
-			logger.debug("===== Go to page Create new student =====");
+			logger.debug("===== User " + A.get("username") + ": Go to page Create new student =====");
 		}
 		model.addAttribute("studentForm", new StudentForm());
 		return "NewStudent";
 	}
 
 	@RequestMapping(value = "/saveStudent", method = RequestMethod.POST)
-	public String newStudent(@Valid StudentForm studentForm, BindingResult result, Model model) throws Exception {
+	public String newStudent(@Valid StudentForm studentForm, BindingResult result, Model model, HttpSession http)
+			throws Exception {
+		HashMap<?, ?> user = (HashMap<?, ?>) http.getAttribute("user");
 		if (logger.isDebugEnabled()) {
 			logger.debug("===== Create new student =====");
 		}
@@ -73,7 +69,8 @@ private static final int ArrayList = 0;
 			return "NewStudent";
 		} else {
 			if (logger.isDebugEnabled()) {
-				logger.debug("===== Create new student :" + studentForm.getStudentCode() + " =====");
+				logger.debug("===== User " + user.get("username") + ": Create new student :"
+						+ studentForm.getStudentCode() + " =====");
 			}
 			String studentCode = studentForm.getStudentCode();
 			String studentName = studentForm.getStudentName();
@@ -102,9 +99,6 @@ private static final int ArrayList = 0;
 
 	@RequestMapping(value = "/infoStudent/id/{id}", method = RequestMethod.GET)
 	public String editStudent(@PathVariable("id") String id, Model model) {
-		if (logger.isDebugEnabled()) {
-			logger.debug("===== Edit student have Student_Id: " + id + " =====");
-		}
 		// Find student by info_id to edit
 		Student student = studentService.findBystudentId(Long.valueOf(id));
 		model.addAttribute("Student", student);
@@ -125,9 +119,10 @@ private static final int ArrayList = 0;
 	 */
 	@RequestMapping(value = "/updateStudent/id/{id}", method = RequestMethod.POST)
 	public String updateStudent(@PathVariable("id") String id, @Valid StudentForm studentForm, BindingResult result,
-			Model model) throws Exception {
+			Model model, HttpSession http) throws Exception {
+		HashMap<?, ?> user = (HashMap<?, ?>) http.getAttribute("user");
 		if (logger.isDebugEnabled()) {
-			logger.debug("===== Update student have Student_Id: " + id + " =====");
+			logger.debug("===== User " + user.get("username") + ": Update student have Student_Id: " + id + " =====");
 		}
 		// Find student by info_id to edit
 		Student student = studentService.findBystudentId(Long.valueOf(id));
@@ -152,33 +147,17 @@ private static final int ArrayList = 0;
 	 * StudentInfo
 	 */
 	@RequestMapping(value = "/deleteStudent/id/{id}", method = RequestMethod.GET)
-	public String deleteStudent(@PathVariable("id") String id, Model model) {
+	public String deleteStudent(@PathVariable("id") String id, Model model, HttpSession http) {
+		HashMap<?, ?> user = (HashMap<?, ?>) http.getAttribute("user");
 		if (logger.isDebugEnabled()) {
-			logger.debug("===== Delete student have Info_Id: " + id + " =====");
+			logger.debug("===== User " + user.get("username") + " Delete student have Info_Id: " + id + " =====");
 		}
+
 		StudentInfo studentInfo = studentInfoService.findByinfoId(Long.valueOf(id));
 
 		studentInfoService.delete(studentInfo);
 
 		return "redirect:/search";
 	}
-//
-//	@RequestMapping(value = "/savetest")
-//	public String testStudent() throws Exception {
-//		Student a = new Student("Student 3", "1501003");
-//		StudentInfo st3 = new StudentInfo(a, "C123", 9.3, "1999-12-26");
-//		studentInfoService.saveStudent(st3);
-//		return "";
-//	}
 
-	@RequestMapping(value = "/savetest")
-	public String test(Model model) {
-
-		List<Student> studentList = studentService.findBystudentName("Alex");
-		model.addAttribute("studentList", studentList);
-
-		// rolling back to save the test data
-
-		return "NewFile1"; 
-	}
 }

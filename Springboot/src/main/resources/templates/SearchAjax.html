@@ -4,10 +4,15 @@
 <head>
 <title>Spring Boot ajax example</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link
+	href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 
@@ -79,10 +84,7 @@
 		<button type="button" id="btn-next" style="width: 90px;"
 			class="btn btn-primary">Next</button>
 	</div>
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-	<script type="text/javascript" src="js/main.js"></script>
 	<script>
 		function submitForm() {
 			if (!confirm("Do you really want to delete this student?")) {
@@ -91,6 +93,9 @@
 			this.form.submit();
 		}
 		document.getElementById("pagination").style.display = 'none';
+		function myFunction() {
+			document.getElementById("ErrorMsg").style.display = 'none';
+		}
 	</script>
 </body>
 </html>

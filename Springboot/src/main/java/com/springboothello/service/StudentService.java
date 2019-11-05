@@ -35,7 +35,7 @@ public interface StudentService {
 	Student deleteBystudentId(Long studentId);
 	
 	List<Student> findAllStudent(Pageable pageable);
-	
+		
 	List<Student> findByStudentName(String name, Pageable pageable);
 	
 	Long count();

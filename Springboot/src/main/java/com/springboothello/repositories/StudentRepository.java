@@ -26,7 +26,7 @@ import org.springframework.data.domain.Pageable;
 public interface StudentRepository extends CrudRepository<Student, Serializable> {
 	
 	
-	@Query(value = "SELECT * FROM student ORDER BY student_id ASC", nativeQuery = true)
+	@Query(name = "HQL_GET_ALL_STUDENT", nativeQuery = true)
 	List<Student> findAllByAsc();
 
 	@Query(value = "SELECT * FROM student ORDER BY student_id DESC", nativeQuery = true)

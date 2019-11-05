@@ -4,7 +4,7 @@
 
 <hibernate-mapping>
 	<!-- Student -->
-	<query name="HQL_GET_ALL_STUDENT">from Student</query>
+	<query name="HQL_GET_ALL_STUDENT">from Student ORDER BY student_id ASC</query>
 	<query name="HQL_GET_ALL_STUDENT_BY_NAME">
 		<![CDATA[FROM Student WHERE student_name like :name]]>
 	</query>

@@ -17,7 +17,7 @@ function fire_ajax_submit() {
     search["studentName"] = $("#studentName").val();
 
     $("#btn-search").prop("disabled", true);
-
+    console.log(search);
     $.ajax({
         type: "POST",
         contentType: "application/json",
@@ -31,13 +31,13 @@ function fire_ajax_submit() {
 		        		 + "<p class='text-center'>There are "+data.totalStudent+" students, divided into "+data.totalPage+" pages</p>"
 		        		 + "<table class='table table-striped table-bordered text-center'>"
 		        		 + "<tr>"  
-		    			 + "<th>No</th>"  
-						 + "<th>Name</th>"  
-						 + "<th>Code</th>"
-						 + "<th>Address</th>"
-						 + "<th>Birthday</th>"  
-						 + "<th>Score</th>"  
-						 + "<th>Edit</th>" 
+		    			 + "<th style='width: 90px;'>No</th>"
+						 + "<th style='width: 190px;'>Name</th>"  
+						 + "<th style='width: 140px;'>Code</th>"
+						 + "<th style='width: 190px;'>Address</th>"
+						 + "<th style='width: 100px;'>Birthday</th>"  
+						 + "<th style='width: 90px;'>Score</th>" 
+						 + "<th style='width: 140px;'>Edit</th>"  
 						 + "</tr>";  
 	            for(var i = 0; i < data.result.length; i++) {
 	            	var j = i + 1 ;
@@ -55,15 +55,15 @@ function fire_ajax_submit() {
 	                 + "</tr>";
 	            }
 	            tbhtml += "<input type='hidden' id='totalPage' value="+data.totalPage+">";
-	            var json = "<h4>Ajax Response</h4><pre>"
-	                + JSON.stringify(data, null, 4) + "</pre>";
-	            
 	            if(data.result.length > 0){
 	            	$('#feedback').html(tbhtml);
 	            	document.getElementById("pagination").style.display = 'block';
 	            }else{
-	            	var error = "<div class='alert alert-warning alert-dismissible fade show col-sm-8 offset-md-2'>";
-	            	error += "<strong>Warning!</strong> "+data.msg+"</div>";
+	            	var error = "<div class='alert alert-warning fade show col-sm-8 offset-md-2'" +
+	            			"id='ErrorMsg'>";
+	            	error += "<strong>Warning!</strong> " + data.msg
+	            	+ "<a onclick='myFunction()' style='margin-left: 68%;'><i class='fa fa-times'></i></a>" 
+	            	+ "</div>";
 	            	$('#feedback').html(error);
 	            }
             
@@ -73,10 +73,11 @@ function fire_ajax_submit() {
         },
         error: function (e) {
         	var obj = JSON.parse(e.responseText);
-            var json = "<h4>Search reuslt warning</h4><pre>"
-                + obj.msg + "</pre>";
-            var error = "<div class='alert alert-warning alert-dismissible fade show col-sm-8 offset-md-2'>";
-        	error += "<strong>Warning! </strong>"+obj.msg;
+            var error = "<div class='alert alert-warning fade show col-sm-8 offset-md-2'" +
+            		"id='ErrorMsg'>";
+        	error += "<strong>Warning! </strong>"+obj.msg
+        	+ "<a onclick='myFunction()' style='margin-left: 44%;'><i class='fa fa-times'></i></a>" 
+        	+ "</div>";
         	error += '</div>';
         	$('#feedback').html(error);
 
@@ -101,17 +102,17 @@ function fire_ajax_next() {
         cache: false,
         timeout: 600000,
         success: function (data) {
-        	var tbhtml  = '<h4 class="text-center">Search reuslt</h4>';
-        		tbhtml += "<table class='table table-striped table-bordered text-center'>";
-        		tbhtml += "<tr>";  
-    			tbhtml += "<th>No</th>";  
-				tbhtml += "<th>Name</th>";  
-				tbhtml += "<th>Code</th>";
-				tbhtml += "<th>Address</th>";
-				tbhtml += "<th>Birthday</th>";  
-				tbhtml += "<th>Score</th>";  
-				tbhtml += "<th>Edit</th>"; 
-				tbhtml += "</tr>";  
+        	var tbhtml  = '<h4 class="text-center">Search reuslt</h4>'
+        		 + "<table class='table table-striped table-bordered text-center'>"
+        		 + "<tr>"
+    			 + "<th style='width: 90px;'>No</th>"
+				 + "<th style='width: 190px;'>Name</th>"  
+				 + "<th style='width: 140px;'>Code</th>"
+				 + "<th style='width: 190px;'>Address</th>"
+				 + "<th style='width: 100px;'>Birthday</th>"  
+				 + "<th style='width: 90px;'>Score</th>" 
+				 + "<th style='width: 140px;'>Edit</th>" 
+				 + "</tr>";  
 					var json2;
 
 	            for(var i = 0; i < data.result.length; i++) {
