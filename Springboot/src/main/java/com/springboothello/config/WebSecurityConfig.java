@@ -54,7 +54,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.and()
 		.exceptionHandling().accessDeniedPage("/error")
 		.and()
-		.csrf().ignoringAntMatchers("/api/search");
+		.csrf().ignoringAntMatchers("/api/search","/api/search/page/{page}");
 
 	}
 

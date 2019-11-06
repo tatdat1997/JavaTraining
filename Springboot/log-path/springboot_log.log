@@ -904,3 +904,76 @@
 [INFO ] 2019-11-05 17:14:22.526 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 13892 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
 [INFO ] 2019-11-05 17:14:22.535 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
 [INFO ] 2019-11-05 17:14:34.309 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 13.187 seconds (JVM running for 14.264)
+[DEBUG] 2019-11-05 17:16:56.559 [http-nio-8888-exec-2] LoginController - ===== Login Form!! =====
+[INFO ] 2019-11-06 09:28:42.815 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 4860 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-11-06 09:28:42.854 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-11-06 09:28:52.749 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 11.876 seconds (JVM running for 13.356)
+[DEBUG] 2019-11-06 09:28:59.908 [http-nio-8888-exec-1] LoginController - ===== Wellcome =====
+[DEBUG] 2019-11-06 09:29:00.531 [http-nio-8888-exec-2] LoginController - ===== Wellcome =====
+[DEBUG] 2019-11-06 09:29:02.403 [http-nio-8888-exec-6] LoginController - ===== Login Form!! =====
+[DEBUG] 2019-11-06 09:29:07.337 [http-nio-8888-exec-9] LoginController - ===== Login with username: dat114 =====
+[DEBUG] 2019-11-06 09:29:07.390 [http-nio-8888-exec-10] ListStudentController - ===== User dat114: Search Ajax Form =====
+[DEBUG] 2019-11-06 09:29:24.286 [http-nio-8888-exec-2] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:29:24.287 [http-nio-8888-exec-2] SearchController - ===== User dat114: Have error when search with Ajax =====
+[DEBUG] 2019-11-06 09:29:29.193 [http-nio-8888-exec-4] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:29:29.193 [http-nio-8888-exec-4] SearchController - ===== User dat114: Have error when search with Ajax =====
+[DEBUG] 2019-11-06 09:29:30.878 [http-nio-8888-exec-5] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:29:30.878 [http-nio-8888-exec-5] SearchController - ===== User dat114: Have error when search with Ajax =====
+[DEBUG] 2019-11-06 09:29:34.495 [http-nio-8888-exec-6] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:29:34.496 [http-nio-8888-exec-6] SearchController - ===== User dat114: Have error when search with Ajax =====
+[DEBUG] 2019-11-06 09:29:40.573 [http-nio-8888-exec-7] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:29:40.574 [http-nio-8888-exec-7] SearchController - ===== User dat114: Find student: an =====
+[DEBUG] 2019-11-06 09:29:58.607 [http-nio-8888-exec-8] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:29:58.607 [http-nio-8888-exec-8] SearchController - ===== User dat114: Find student: e =====
+[INFO ] 2019-11-06 09:30:50.339 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 4860 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-11-06 09:30:50.340 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-11-06 09:30:52.580 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 2.328 seconds (JVM running for 133.187)
+[DEBUG] 2019-11-06 09:30:55.744 [http-nio-8888-exec-1] ListStudentController - ===== User dat114: Search Ajax Form =====
+[DEBUG] 2019-11-06 09:30:56.898 [http-nio-8888-exec-4] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:30:56.899 [http-nio-8888-exec-4] SearchController - ===== User dat114: Have error when search with Ajax =====
+[DEBUG] 2019-11-06 09:30:59.287 [http-nio-8888-exec-5] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:30:59.287 [http-nio-8888-exec-5] SearchController - ===== User dat114: Find student: e =====
+[DEBUG] 2019-11-06 09:31:36.643 [http-nio-8888-exec-6] ListStudentController - ===== User dat114: Search Ajax Form =====
+[DEBUG] 2019-11-06 09:31:40.862 [http-nio-8888-exec-9] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:31:40.863 [http-nio-8888-exec-9] SearchController - ===== User dat114: Find student: e =====
+[DEBUG] 2019-11-06 09:33:45.353 [http-nio-8888-exec-2] ListStudentController - ===== User dat114: Search Ajax Form =====
+[DEBUG] 2019-11-06 09:33:48.479 [http-nio-8888-exec-5] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:33:48.479 [http-nio-8888-exec-5] SearchController - ===== User dat114: Have error when search with Ajax =====
+[DEBUG] 2019-11-06 09:33:53.425 [http-nio-8888-exec-6] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:33:53.425 [http-nio-8888-exec-6] SearchController - ===== User dat114: Find student: e =====
+[INFO ] 2019-11-06 09:37:12.794 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 4860 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-11-06 09:37:12.795 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-11-06 09:37:14.792 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 2.067 seconds (JVM running for 515.399)
+[DEBUG] 2019-11-06 09:37:21.653 [http-nio-8888-exec-1] ListStudentController - ===== User dat114: Search Ajax Form =====
+[DEBUG] 2019-11-06 09:37:25.437 [http-nio-8888-exec-4] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:37:25.438 [http-nio-8888-exec-4] SearchController - ===== User dat114: Find student: e =====
+[DEBUG] 2019-11-06 09:38:06.807 [http-nio-8888-exec-6] ListStudentController - ===== User dat114: Search Ajax Form =====
+[DEBUG] 2019-11-06 09:38:11.755 [http-nio-8888-exec-8] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:11.755 [http-nio-8888-exec-8] SearchController - ===== User dat114: Find student: e =====
+[DEBUG] 2019-11-06 09:38:13.768 [http-nio-8888-exec-10] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:14.352 [http-nio-8888-exec-1] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:14.542 [http-nio-8888-exec-2] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:14.754 [http-nio-8888-exec-3] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:14.944 [http-nio-8888-exec-4] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:15.138 [http-nio-8888-exec-5] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:16.767 [http-nio-8888-exec-6] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:16.984 [http-nio-8888-exec-9] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:17.203 [http-nio-8888-exec-8] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:17.376 [http-nio-8888-exec-10] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:17.571 [http-nio-8888-exec-1] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:38:17.759 [http-nio-8888-exec-2] SearchController - ===== Search with Ajax =====
+[INFO ] 2019-11-06 09:39:09.706 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 4860 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-11-06 09:39:09.707 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-11-06 09:39:11.619 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 1.986 seconds (JVM running for 632.226)
+[DEBUG] 2019-11-06 09:39:38.037 [http-nio-8888-exec-1] ListStudentController - ===== User dat114: Search Ajax Form =====
+[DEBUG] 2019-11-06 09:39:43.318 [http-nio-8888-exec-4] SearchController - ===== User dat114: Search with Ajax =====
+[DEBUG] 2019-11-06 09:39:43.318 [http-nio-8888-exec-4] SearchController - ===== User dat114: Find student: e =====
+[DEBUG] 2019-11-06 09:39:45.050 [http-nio-8888-exec-5] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:39:45.329 [http-nio-8888-exec-6] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:39:45.478 [http-nio-8888-exec-7] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:39:45.643 [http-nio-8888-exec-8] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:39:45.807 [http-nio-8888-exec-9] SearchController - ===== Search with Ajax =====
+[DEBUG] 2019-11-06 09:39:45.966 [http-nio-8888-exec-10] SearchController - ===== Search with Ajax =====
+[INFO ] 2019-11-06 09:40:59.991 [restartedMain] SpringMySQLJpaApplication - Starting SpringMySQLJpaApplication on DESKTOP-H7QHO50 with PID 4860 (E:\TrainningJava\JavaTraining\SpringBoot\target\classes started by DELL in E:\TrainningJava\JavaTraining\SpringBoot)
+[INFO ] 2019-11-06 09:40:59.992 [restartedMain] SpringMySQLJpaApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-11-06 09:41:02.156 [restartedMain] SpringMySQLJpaApplication - Started SpringMySQLJpaApplication in 2.226 seconds (JVM running for 742.763)

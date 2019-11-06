@@ -61,7 +61,7 @@ public class LoginController {
 	public String logInPost2(Model model, HttpServletRequest request, HttpSession session) {
 		String currentUserName = SecurityContextHolder.getContext().getAuthentication().getName();
 		User checkUser = userService.findByusername(currentUserName);
-		// Check user in database if null return login fail
+		// Check user in database to login and create session if null return login fail
 		if (checkUser != null) {
 			session.setAttribute("user", checkUser.toMap());
 			logger.debug("===== Login with username: " + currentUserName + " =====");

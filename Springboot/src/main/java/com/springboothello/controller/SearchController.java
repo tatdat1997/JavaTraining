@@ -38,7 +38,7 @@ import java.util.stream.Collectors;
 
 @RestController
 public class SearchController {
-
+	
 	private static final Logger logger = LogManager.getLogger(SearchController.class);
 
 	StudentService studentService;
@@ -94,6 +94,7 @@ public class SearchController {
 			} else {
 				totalPage = (int) (studentService.countByName(search.getStudentName()) / 10) + 1;
 			}
+			
 			result.setMsg("success");
 			result.setTotalPage(totalPage);
 			result.setTotalStudent(studentService.countByName(search.getStudentName()));
@@ -104,7 +105,10 @@ public class SearchController {
 		return ResponseEntity.ok(result);
 
 	}
-
+	/*
+	 * Get studentName from session and find student by studentName and pagination 
+	 * Then return result to searchAjax form
+	 */
 	@GetMapping("/api/search/page/{page}")
 	public ResponseEntity<?> getSearchAjax(@PathVariable("page") int page, HttpSession http) {
 		// Create log

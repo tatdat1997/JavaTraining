@@ -20,7 +20,7 @@ import com.springboothello.entity.User;
 import com.springboothello.form.RegisterForm;
 import com.springboothello.service.UserService;
 
-/*
+/**
  * Copyright (C) 2015 by GMO Runsystem Company
  *
  * Create UserController class
@@ -38,10 +38,14 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
-
+	/**
+	 * Go to page register and create new RegisterForm
+	 * @param model
+	 * @return Page register
+	 */
 	@GetMapping("/register")
 	public String register(Model model) {
-		// Create log
+		// Create log 
 		if (logger.isDebugEnabled()) {
 			logger.debug("===== Go to page Create new user =====");
 		}
@@ -49,6 +53,15 @@ public class UserController {
 		return "Register";
 	}
 
+	/**
+	 * Get value from RegisterForm and check valid then save user
+	 * @param registerForm
+	 * @param result
+	 * @param model
+	 * @param request
+	 * @return 
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/registerUser", method = RequestMethod.POST, headers = "Content-Type=multipart/form-data")
 	public String registerUser(@Valid RegisterForm registerForm, BindingResult result, Model model,
 			HttpServletRequest request) throws Exception{
@@ -66,6 +79,7 @@ public class UserController {
 			String password = registerForm.getPassword();
 			String passwordConfirm = registerForm.getPasswordConfirm();
 			User checkuser = userService.findByusername(username);
+			// Check user name exist in database
 			if (checkuser != null) {
 				if (logger.isDebugEnabled()) {
 					logger.debug("===== User : " + registerForm.getUserName() + " is exist =====");
@@ -73,6 +87,7 @@ public class UserController {
 				model.addAttribute("msgError", "Account name is exist!");
 				return "Register";
 			} else {
+				// Check Password and Confirm Password
 				if (password.equals(passwordConfirm)) {
 					PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 					String hashedPassword = passwordEncoder.encode(password);

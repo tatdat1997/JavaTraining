@@ -43,7 +43,13 @@ public class StudentManagerController {
 
 	@Autowired
 	private StudentService studentService;
-
+	
+	/**
+	 *  Get view and create Form Student 
+	 * @param model
+	 * @param http
+	 * @return View NewStudent
+	 */
 	@RequestMapping(value = "/newStudent")
 	public String newFormStudent(Model model, HttpSession http) {
 		// Create log
@@ -54,7 +60,16 @@ public class StudentManagerController {
 		model.addAttribute("studentForm", new StudentForm());
 		return "NewStudent";
 	}
-
+	/**
+	 * 		Save student, get value form student form and check valid, 
+	 * 	return message when create success or have error
+	 * @param studentForm
+	 * @param result
+	 * @param model
+	 * @param http
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/saveStudent", method = RequestMethod.POST)
 	public String newStudent(@Valid StudentForm studentForm, BindingResult result, Model model, HttpSession http)
 			throws Exception {
@@ -62,6 +77,7 @@ public class StudentManagerController {
 		if (logger.isDebugEnabled()) {
 			logger.debug("===== Create new student =====");
 		}
+		// If have error return error
 		if (result.hasErrors()) {
 			if (logger.isDebugEnabled()) {
 				logger.debug("===== Have error when create new student =====");
@@ -96,7 +112,12 @@ public class StudentManagerController {
 		}
 
 	}
-
+	/**
+	 * Show get student by student_id and show info for user edit.
+	 * @param id
+	 * @param model
+	 * @return info student
+	 */
 	@RequestMapping(value = "/infoStudent/id/{id}", method = RequestMethod.GET)
 	public String editStudent(@PathVariable("id") String id, Model model) {
 		// Find student by info_id to edit
@@ -116,6 +137,16 @@ public class StudentManagerController {
 	/*
 	 * Find student by info_id then get info Student then update into StudentInfo
 	 * and student
+	 */
+	/**
+	 * Get info student and update info student by student_id
+	 * @param id
+	 * @param studentForm
+	 * @param result
+	 * @param model
+	 * @param http
+	 * @return
+	 * @throws Exception
 	 */
 	@RequestMapping(value = "/updateStudent/id/{id}", method = RequestMethod.POST)
 	public String updateStudent(@PathVariable("id") String id, @Valid StudentForm studentForm, BindingResult result,
@@ -142,9 +173,12 @@ public class StudentManagerController {
 		return "redirect:/infoStudent/id/" + id;
 	}
 
-	/*
-	 * Delete StudentInfo by InfoId then delete Student by Student_id get in
-	 * StudentInfo
+	/**
+	 * Delete StudentInfo by InfoId then delete Student by Student_id get in StudentInfo 
+	 * @param id
+	 * @param model
+	 * @param http
+	 * @return
 	 */
 	@RequestMapping(value = "/deleteStudent/id/{id}", method = RequestMethod.GET)
 	public String deleteStudent(@PathVariable("id") String id, Model model, HttpSession http) {

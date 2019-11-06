@@ -53,8 +53,8 @@ public class ListStudentController {
 	}
 
 	/*
-	 * Go to page load all student. Page show all student and pagination
-	 * 10 student/page
+	 * Go to page load all student. Page show all student and pagination 10
+	 * student/page
 	 */
 	@RequestMapping(value = "listStudent/page/{pageNumber}", method = RequestMethod.GET)
 	public String inDexPage(Model model, @PathVariable("pageNumber") int pageNumber, HttpSession http) {
@@ -81,11 +81,16 @@ public class ListStudentController {
 			pageable = PageRequest.of(size - 1, 10);
 		}
 		int count = 0;
+		/**
+		 * Show in pagination page 1->5 after page 5 show 6->10 ...
+		 */
+		// If have session count and current page > 10. count = session("count") else count = 1
 		if (http.getAttribute("count") != null && pageNumber < 10) {
 			count = (int) http.getAttribute("count");
 		} else {
 			count = 1;
 		}
+		// If current page > 6 and != 1 and mod 5 =1 count++
 		if ((pageNumber % 5 == 1) && (pageNumber != 6) && (pageNumber != 1)) {
 			count += 1;
 		}
