@@ -2,13 +2,18 @@
 DECLARE 
    n number := &n; 
    x number := 1;
-   lt number := 1;
+   gthua number := 1;
 BEGIN 
-   WHILE x <= n LOOP 
-      lt := lt * x; 
-      x := x + 1; 
+  IF (x = 0) THEN
+    dbms_output.put_line(n||'! = 1');
+  ELSIF (x < 0) THEN
+    dbms_output.put_line('Giai thua khong the la so am');
+  ELSE
+   FOR x in 1 .. n LOOP
+      gthua := gthua * x; 
    END LOOP; 
-   dbms_output.put_line(n||'! = '||lt);
+    dbms_output.put_line(n||'! = '|| gthua);
+  END IF;
 END;
 
 --Bài t?p 2: Xây d?ng kh?i l?nh xu?t b?ng c?u ch??ng th? n
@@ -42,8 +47,33 @@ BEGIN
   END IF;
 END;
 
---Bài t?p 4: Xây d?ng kh?i l?nh gi?i ph??ng trình b?c nh?t
+--Bài t?p 4: Xây khoi lenh giai he phuong trinh hai an
 
+DECLARE
+  x FLOAT;
+  y FLOAT;
+  a FLOAT := &a;
+  b FLOAT := &b;
+  c FLOAT := &c;
+  d FLOAT := &d;
+  e FLOAT := &e;
+  f FLOAT := &f;
+BEGIN
+  IF ((a = 0 and b = 0 and c != 0) and (d = 0 and e = 0 and f != 0)) THEN
+    dbms_output.put_line('Phuong trinh so nghiem');
+    ELSIF ((a = 0 and b = 0 and c = 0) and (d = 0 and e = 0 and f = 0)) THEN 
+      dbms_output.put_line('Phuong trinh vo so nghiem');
+    ELSE 
+      x := (f - e*c/b)/(d - e*a/b);
+      y := c/b - (a/b)*x;
+      dbms_output.put_line('He phuong trinh hai an:');
+      dbms_output.put_line(a||'x + '||b||'y = '||c);
+      dbms_output.put_line(d||'x + '||e||'y = '||f);
+      dbms_output.put_line('Co nghiem:');
+      dbms_output.put_line('x = '||x);
+      dbms_output.put_line('y = '||y);
+  END IF;
+END;
 
 
 --Bài t?p 5: Xây d?ng kh?i l?nh nh?p 3 c?nh tam giác A,B,C. Cho bi?t tam giác có 
@@ -60,17 +90,19 @@ BEGIN
         dbms_output.put_line('Day la tam giac deu.');
       ELSIF ((A = B) OR (A = C) OR (B = C)) THEN
         dbms_output.put_line('Day la tam giac can.');
-      ELSIF ((A*A + B*B = C*C) OR (A*A + C*C = B*B) OR (C*C + B*B = A*A)) THEN
---          IF ((A = B) OR (A = C) OR (B = C)) THEN
---             dbms_output.put_line('Day la tam giac vuong can.');
---          ELSE
+      ELSIF ((A**2 + B**2 = C**2) OR (A**2 + C**2 = B**2) OR (C**2 + B**2 = A**2)) THEN
+          IF ((A = B) OR (A = C) OR (B = C)) THEN
+             dbms_output.put_line('Day la tam giac vuong can.');
+          ELSE
             dbms_output.put_line('Day la tam giac vuong.');
---          END IF;
+          END IF;
       END IF;    
   ELSE
     dbms_output.put_line('Day la khong tam giac.');
   END IF;
 END;
+
+
 
 --Bài t?p 6: Xây d?ng kh?i l?nh nh?p ngày, tháng, n?m. Cho bi?t ngày, tháng, n?m có h?p l? không?
 
@@ -81,12 +113,23 @@ DECLARE
   str_date varchar2(20);  
   v_date date;
 BEGIN
-  IF ((str_mon > 12) or (str_mon < 1)) THEN
-    dbms_output.put_line('Thang khong hop le');
-    ELSIF (str_mon in (1, 3, 5, 7, 8, 10, 12) AND ((str_day >31) or (str_day<0))) 
-      THEN dbms_output.put_line('Ngay khong hop le');
+  IF ((str_day <= 0) or (str_mon <= 0) or (str_year <= 1941)) THEN
+    dbms_output.put_line('Ngay thang nam khong hop le');
+    ELSIF ((str_day > 31) or (str_mon > 12) or (str_year > 3000)) THEN
+      dbms_output.put_line('Ngay thang nam khong hop le');
+    ELSIF (str_mon in (1, 3, 5, 7, 8, 10, 12) AND (str_day <= 31)) THEN
+      dbms_output.put_line('Ngay thang nam hop le');
+    ELSIF (str_mon in (4, 6, 9, 11) AND (str_day <= 30)) THEN
+      dbms_output.put_line('Ngay thang nam hop le');
+    ELSIF ((str_mon = 2) AND (str_day >= 30)) THEN
+      dbms_output.put_line('Ngay thang nam khong hop le 1');
+    ELSIF ((str_mon = 2) AND (MOD(str_year, 400) = 0) AND (str_day <= 29)) THEN
+      dbms_output.put_line('Nam nay la nam nhuan. Ngay hop le');
+    ELSIF ( (str_mon = 2) AND ((MOD(str_year, 4) = 0)) AND (MOD(str_year, 100) != 0)) THEN
+      dbms_output.put_line('Nam nay la nam nhuan. Ngay hop le');
+    ELSIF ((str_mon = 2) AND ((MOD(str_year, 4) != 0)) AND (str_day <= 28)) THEN 
+      dbms_output.put_line('Nam nay khong la nam nhuan. Ngay hop le');
+    ELSE
+      dbms_output.put_line('Ngay thang nam khong hop le');
   END IF;
-  str_date := str_day||'-'||str_mon||'-'||str_year;
-  dbms_output.put_line(v_date);
-  
 END;
