@@ -1,4 +1,4 @@
--- Bài t?p 1: Xây d?ng kh?i l?nh khi nh?p mã khoa thì s? hi?n th? nh?ng h?c sinh c?a khoa ?ó.
+-- Bï¿½i t?p 1: Xï¿½y d?ng kh?i l?nh khi nh?p mï¿½ khoa thï¿½ s? hi?n th? nh?ng h?c sinh c?a khoa ?ï¿½.
 DECLARE
   CURSOR FACULTY_CUR(p_faculty_id FACULTY.ID%TYPE)
   IS
@@ -22,7 +22,7 @@ BEGIN
     END LOOP;
   END LOOP;
 END;
--- Bài t?p 2: Xây d?ng kh?i l?nh li?t kê nh?ng môn h?c c?a t?ng h?c sinh theo h?c.
+-- Bï¿½i t?p 2: Xï¿½y d?ng kh?i l?nh li?t kï¿½ nh?ng mï¿½n h?c c?a t?ng h?c sinh theo h?c.
 DECLARE
   CURSOR STUDENT_CUR
   IS
@@ -34,19 +34,19 @@ DECLARE
     INNER JOIN SCORE sc
     ON sc.SUBJECTS_ID   = sub.ID
     WHERE sc.STUDENT_ID = p_student_id;
-  -- Khai báo m?t ki?u ROWTYPE d?a trên Cursor v?a t?o.
+  -- Khai bï¿½o m?t ki?u ROWTYPE d?a trï¿½n Cursor v?a t?o.
   v_student STUDENT_CUR%Rowtype;
   v_subject SUBJECT_CUR%Rowtype;
 BEGIN
-  -- M? Cursor (Truy?n các giá tr? tham s? vào).
+  -- M? Cursor (Truy?n cï¿½c giï¿½ tr? tham s? vï¿½o).
   OPEN STUDENT_CUR;
   LOOP
     FETCH STUDENT_CUR INTO v_student;
     EXIT
   WHEN STUDENT_CUR%Notfound;
-    Dbms_Output.Put_Line(STUDENT_CUR%rowcount || '-H? tên ??y ??: ' || v_student.first_name || ' ' || v_student.last_name);
-    Dbms_Output.Put_Line('Môn theo h?c:');
-    -- M? Cursor (Truy?n các giá tr? tham s? vào).
+    Dbms_Output.Put_Line(STUDENT_CUR%rowcount || '-H? tï¿½n ??y ??: ' || v_student.first_name || ' ' || v_student.last_name);
+    Dbms_Output.Put_Line('Mï¿½n theo h?c:');
+    -- M? Cursor (Truy?n cï¿½c giï¿½ tr? tham s? vï¿½o).
     OPEN SUBJECT_CUR(v_student.id);
     LOOP
       FETCH SUBJECT_CUR INTO v_subject;
@@ -54,13 +54,13 @@ BEGIN
     WHEN SUBJECT_CUR%Notfound;
       Dbms_Output.Put_Line(' ' || v_subject.name);
     END LOOP;
-    -- ?óng Cursor.
+    -- ?ï¿½ng Cursor.
     CLOSE SUBJECT_CUR;
   END LOOP;
-  -- ?óng Cursor.
+  -- ?ï¿½ng Cursor.
   CLOSE STUDENT_CUR;
 END;
--- Bài t?p 3: Xây d?ng kh?i l?nh th?c hi?n xóa thông tin nh?ng h?c sinh(Student, SCORE) thu?c khoa nh?p vào
+-- Bï¿½i t?p 3: Xï¿½y d?ng kh?i l?nh th?c hi?n xï¿½a thï¿½ng tin nh?ng h?c sinh(Student, SCORE) thu?c khoa nh?p vï¿½o
 DECLARE
   CURSOR STUDENT_CUR(p_stu_fac_id STUDENT.FACULTY_ID%TYPE)
   IS
@@ -77,7 +77,7 @@ BEGIN
   END LOOP;
   DELETE FROM STUDENT WHERE FACULTY_ID = id_faculty;
 END;
---Bài t?p 4: Xây d?ng kh?i l?nh th?c hi?n c?p nh?t l?i ?i?m c?ng thêm 2 ?i?m cho nh?ng môn h?c có mã s? 2
+--Bï¿½i t?p 4: Xï¿½y d?ng kh?i l?nh th?c hi?n c?p nh?t l?i ?i?m c?ng thï¿½m 2 ?i?m cho nh?ng mï¿½n h?c cï¿½ mï¿½ s? 2
 DECLARE
   CURSOR SCORE_CUR(p_sub_id SCORE.SUBJECTS_ID%TYPE)
   IS
@@ -97,3 +97,38 @@ BEGIN
 END;
 
   
+--  
+DECLARE
+  CURSOR AV_SCORE_CUR(v_student_id STUDENT.ID%TYPE)
+    IS
+    SELECT sc.SCORE sco, sc.SUBJECTS_ID, sc.STUDENT_ID
+    FROM SCORE sc
+    WHERE sc.STUDENT_ID = v_student_id;
+  CURSOR AV_SUBJECTS(subjects_id SUBJECTS.ID%TYPE)
+    IS
+    SELECT sub.CREDIT_NUM credit
+    FROM SUBJECTS sub
+    WHERE sub.ID = subjects_id;
+  v_score AV_SCORE_CUR%Rowtype;
+  av_score AV_SUBJECTS%Rowtype;
+  total_score NUMBER;
+  total_credit NUMBER;
+  av FLOAT;
+BEGIN
+  total_score := 0; 
+  total_credit := 0; 
+  av := 0;
+  FOR v_score IN AV_SCORE_CUR(4)
+  LOOP
+    FOR av_score IN AV_SUBJECTS(v_score.SUBJECTS_ID)
+    LOOP
+      total_score := total_score + av_score.credit * v_score.sco;
+      total_credit := total_credit + av_score.credit;
+      Dbms_Output.Put_Line('Mon hoc: ' ||v_score.SUBJECTS_ID);
+      Dbms_Output.Put_Line('Tin chi: ' ||av_score.credit);
+      Dbms_Output.Put_Line('Diem so: ' ||v_score.sco);
+    END LOOP;
+  END LOOP;
+  av := total_score/total_credit;
+  Dbms_Output.Put_Line('Trung binh mon hoc: ' ||av);
+END;

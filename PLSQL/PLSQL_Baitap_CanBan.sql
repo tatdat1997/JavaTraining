@@ -1,4 +1,4 @@
---Bài t?p 1: Xây d?ng kh?i l?nh tính n giai th?a
+--Bï¿½i t?p 1: Xï¿½y d?ng kh?i l?nh tï¿½nh n giai th?a
 DECLARE 
    n number := &n; 
    x number := 1;
@@ -16,7 +16,7 @@ BEGIN
   END IF;
 END;
 
---Bài t?p 2: Xây d?ng kh?i l?nh xu?t b?ng c?u ch??ng th? n
+--Bï¿½i t?p 2: Xï¿½y d?ng kh?i l?nh xu?t b?ng c?u ch??ng th? n
 
 DECLARE 
   n number := &n; 
@@ -29,7 +29,7 @@ BEGIN
   END LOOP; 
 END;
 
---Bài t?p 3: Xây d?ng kh?i l?nh gi?i ph??ng trình b?c nh?t Ax + B = 0
+--Bï¿½i t?p 3: Xï¿½y d?ng kh?i l?nh gi?i ph??ng trï¿½nh b?c nh?t Ax + B = 0
 
 DECLARE
   x FLOAT;
@@ -47,7 +47,7 @@ BEGIN
   END IF;
 END;
 
---Bài t?p 4: Xây khoi lenh giai he phuong trinh hai an
+--Bï¿½i t?p 4: Xï¿½y khoi lenh giai he phuong trinh hai an
 
 DECLARE
   x FLOAT;
@@ -76,8 +76,8 @@ BEGIN
 END;
 
 
---Bài t?p 5: Xây d?ng kh?i l?nh nh?p 3 c?nh tam giác A,B,C. Cho bi?t tam giác có 
---h?p l? không? N?u có cho bi?t lo?i tam giác: ??u, cân, vuông, vuông cân, th??ng.
+--Bï¿½i t?p 5: Xï¿½y d?ng kh?i l?nh nh?p 3 c?nh tam giï¿½c A,B,C. Cho bi?t tam giï¿½c cï¿½ 
+--h?p l? khï¿½ng? N?u cï¿½ cho bi?t lo?i tam giï¿½c: ??u, cï¿½n, vuï¿½ng, vuï¿½ng cï¿½n, th??ng.
 
 DECLARE
   A FLOAT := &A;
@@ -104,7 +104,7 @@ END;
 
 
 
---Bài t?p 6: Xây d?ng kh?i l?nh nh?p ngày, tháng, n?m. Cho bi?t ngày, tháng, n?m có h?p l? không?
+--Bï¿½i t?p 6: Xï¿½y d?ng kh?i l?nh nh?p ngï¿½y, thï¿½ng, n?m. Cho bi?t ngï¿½y, thï¿½ng, n?m cï¿½ h?p l? khï¿½ng?
 
 DECLARE
   str_day INTEGER := &str_day;
@@ -132,4 +132,35 @@ BEGIN
     ELSE
       dbms_output.put_line('Ngay thang nam khong hop le');
   END IF;
+END;
+
+--Bai tap 7
+
+DECLARE
+  A FLOAT := &A;
+  B FLOAT := &B;
+  C FLOAT := &C;
+BEGIN
+  CASE
+    WHEN ((A + B > C) and (A + C > B) and (B + C > A)) 
+    THEN
+      BEGIN
+        CASE
+          WHEN ((A = B) and (A = C)) 
+            THEN dbms_output.put_line('Day la tam giac deu.');
+          WHEN ((A = B) OR (A = C) OR (B = C)) 
+            THEN 
+              BEGIN
+                CASE
+                  WHEN (A**2 + B**2 = C**2) OR (A**2 + C**2 = B**2) OR (C**2 + B**2 = A**2) 
+                    THEN  dbms_output.put_line('Day la tam giac vuong can.');
+                  ELSE  dbms_output.put_line('Day la tam giac can.'); 
+                END CASE;
+              END;
+          WHEN (A**2 + B**2 = C**2) OR (A**2 + C**2 = B**2) OR (C**2 + B**2 = A**2) 
+            THEN  dbms_output.put_line('Day la tam giac vuong can.');
+        END CASE;
+      END;
+    else dbms_output.put_line('Day la khong tam giac.');
+  END CASE;
 END;

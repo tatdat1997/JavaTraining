@@ -67,7 +67,7 @@ BEGIN
   FROM STUDENT
   WHERE ID = i_student_id;
   V_RESULT :=  V_LAST_NAME ||' '|| V_FIRST_NAME;
-  Dbms_Output.Put_Line('Student id '|| i_student_id ||' name = ' || V_RESULT);
+  Dbms_Output.Put  _Line('Student id '|| i_student_id ||' name = ' || V_RESULT);
 EXCEPTION
 WHEN No_Data_Found THEN
   -- Ghi ra màn hình Console.
@@ -93,7 +93,7 @@ AS
 BEGIN
   UPDATE SCORE 
   SET SCORE.SCORE = SCORE.SCORE+1
-  WHERE STUDENT_ID = (
+  WHERE STUDENT_ID IN (
     SELECT stu.ID 
     FROM STUDENT stu
     WHERE stu.ADDRESS = I_ADDRESS
@@ -117,7 +117,6 @@ I_SEX := '&I_SEX';
 I_FACULTY_NAME  := &I_FACULTY_NAME;
   PLUS_SCORE(I_ADDRESS,I_SEX,I_FACULTY_NAME);
 END;
-
 
 
 

@@ -17,45 +17,117 @@ END;
 
 --------------------------------------------------------------------------------
 --Bai tap 3
+
 CREATE OR REPLACE TRIGGER TRIG_AFTER_INST_STUDENT_UPDATE_FACULTY
-BEFORE INSERT ON STUDENT
-FOR EACH ROW 
-DECLARE
-  counter number;
-BEGIN
-  counter := 0;
-  SELECT COUNT(*) 
-  INTO counter 
-  FROM STUDENT ST
-  WHERE ST.FACULTY_ID = :NEW.FACULTY_ID;
-  UPDATE FACULTY
-    SET QUALITY = counter+1
-    WHERE ID = :NEW.FACULTY_ID;
-  Dbms_Output.Put_Line('Insert student success ');
-END;
+FOR INSERT ON STUDENT
+COMPOUND TRIGGER
+  v_faculty_id STUDENT.FACULTY_ID%TYPE;
+  counter NUMBER :=0;
+AFTER EACH ROW IS
+  BEGIN
+    v_faculty_id := :NEW.FACULTY_ID;
+END AFTER EACH ROW;
+AFTER STATEMENT IS
+  BEGIN
+    SELECT COUNT(*) 
+    INTO counter 
+    FROM STUDENT 
+    WHERE FACULTY_ID = v_faculty_id;
+    UPDATE FACULTY
+      SET QUALITY = counter
+      WHERE ID = v_faculty_id;  
+END AFTER STATEMENT;
+END TRIG_AFTER_INST_STUDENT_UPDATE_FACULTY;
+
 --------------------------------------------------------------------------------
---Bai 4: Trigger hien thi diem vaf diem trung binh
 
 CREATE OR REPLACE TRIGGER TRIG_AFTER_INST_SCORE
-BEFORE INSERT OR UPDATE ON SCORE
-FOR EACH ROW 
-DECLARE
-  average FLOAT;
-  total FLOAT;
-BEGIN
-  average := 0;
-  SELECT SUM(Sc.SCORE), COUNT(Sc.SCORE) 
-  INTO average, total
-  FROM SCORE Sc
-  WHERE Sc.STUDENT_ID = :NEW.STUDENT_ID;
+FOR INSERT OR UPDATE ON SCORE
+COMPOUND TRIGGER
+  v_student_id SCORE.STUDENT_ID%TYPE;
+  v_subject_id SCORE.SUBJECTS_ID%TYPE;
+  total_score NUMBER :=0;
+  total_credit NUMBER :=0;
+AFTER EACH ROW IS
+  BEGIN
+    v_student_id := :NEW.STUDENT_ID;
+END AFTER EACH ROW;
+AFTER STATEMENT IS
+  BEGIN
+    DECLARE
+    CURSOR AV_SCORE_CUR(v_student_id STUDENT.ID%TYPE)
+      IS
+      SELECT sc.SCORE sco, sc.SUBJECTS_ID, sc.STUDENT_ID
+      FROM SCORE sc
+      WHERE sc.STUDENT_ID = v_student_id;
+    CURSOR AV_SUBJECTS(subjects_id SUBJECTS.ID%TYPE)
+      IS
+      SELECT sub.CREDIT_NUM credit
+      FROM SUBJECTS sub
+      WHERE sub.ID = subjects_id;
+    v_score AV_SCORE_CUR%Rowtype;
+    av_score AV_SUBJECTS%Rowtype;
+    av FLOAT;
+  BEGIN
+  FOR v_score IN AV_SCORE_CUR(v_student_id)
+    LOOP
+    FOR av_score IN AV_SUBJECTS(v_score.SUBJECTS_ID)
+    LOOP
+      total_score := total_score + av_score.credit * v_score.sco;
+      total_credit := total_credit + av_score.credit;
+    END LOOP;
+  END LOOP;
+  Dbms_Output.Put_Line('Tong diem: ' ||total_score);
+  Dbms_Output.Put_Line('Tong tin chi: ' ||total_credit);
+  av := total_score/total_credit;
+  Dbms_Output.Put_Line('Trung binh mon hoc: ' ||av);
+  END;
+END AFTER STATEMENT;
+END TRIG_AFTER_INST_SCORE;
 
-    average := average + :NEW.SCORE;
-    total := total + 1;
-    average := average / total;
-    Dbms_Output.Put_Line('Student has an average is  '||average);
-
-END;
-
+CREATE OR REPLACE TRIGGER TRIG_AFTER_DELETE_SCORE
+FOR DELETE ON SCORE
+COMPOUND TRIGGER
+  v_student_id SCORE.STUDENT_ID%TYPE;
+  v_subject_id SCORE.SUBJECTS_ID%TYPE;
+  total_score NUMBER :=0;
+  total_credit NUMBER :=0;
+AFTER EACH ROW IS
+  BEGIN
+    v_student_id := :OLD.STUDENT_ID;
+END AFTER EACH ROW;
+AFTER STATEMENT IS
+  BEGIN
+    DECLARE
+    CURSOR AV_SCORE_CUR(v_student_id STUDENT.ID%TYPE)
+      IS
+      SELECT sc.SCORE sco, sc.SUBJECTS_ID, sc.STUDENT_ID
+      FROM SCORE sc
+      WHERE sc.STUDENT_ID = v_student_id;
+    CURSOR AV_SUBJECTS(subjects_id SUBJECTS.ID%TYPE)
+      IS
+      SELECT sub.CREDIT_NUM credit
+      FROM SUBJECTS sub
+      WHERE sub.ID = subjects_id;
+    v_score AV_SCORE_CUR%Rowtype;
+    av_score AV_SUBJECTS%Rowtype;
+    av FLOAT;
+  BEGIN
+  FOR v_score IN AV_SCORE_CUR(v_student_id)
+    LOOP
+    FOR av_score IN AV_SUBJECTS(v_score.SUBJECTS_ID)
+    LOOP
+      total_score := total_score + av_score.credit * v_score.sco;
+      total_credit := total_credit + av_score.credit;
+    END LOOP;
+  END LOOP;
+  Dbms_Output.Put_Line('Tong diem: ' ||total_score);
+  Dbms_Output.Put_Line('Tong tin chi: ' ||total_credit);
+  av := total_score/total_credit;
+  Dbms_Output.Put_Line('Trung binh mon hoc: ' ||av);
+  END;
+END AFTER STATEMENT;
+END TRIG_AFTER_DELETE_SCORE;
 --------------------------------------------------------------------------------
 --Bai 5: Trigger khong duoc hoc qua 3 mon
 
@@ -70,11 +142,10 @@ BEGIN
   INTO max_subject 
   FROM SCORE Sc
   WHERE Sc.STUDENT_ID = :NEW.STUDENT_ID;
-  if max_subject > 3 then
+  if max_subject >= 3 then
     raise_application_error(-20000, 'Student can not study more than 3 subject!'); 
   end if;
 END;
 
-
-
-
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
