@@ -67,7 +67,7 @@ BEGIN
   FROM STUDENT
   WHERE ID = i_student_id;
   V_RESULT :=  V_LAST_NAME ||' '|| V_FIRST_NAME;
-  Dbms_Output.Put  _Line('Student id '|| i_student_id ||' name = ' || V_RESULT);
+  Dbms_Output.Put_Line('Student id '|| i_student_id ||' name = ' || V_RESULT);
 EXCEPTION
 WHEN No_Data_Found THEN
   -- Ghi ra màn hình Console.
@@ -87,8 +87,7 @@ END;
 CREATE OR REPLACE PROCEDURE PLUS_SCORE(
     I_ADDRESS IN STUDENT.ADDRESS%TYPE,
     I_SEX IN STUDENT.SEX%TYPE,
-    I_FACULTY_NAME IN FACULTY.ID%TYPE
-    )
+    I_FACULTY_NAME IN FACULTY.ID%TYPE)
 AS
 BEGIN
   UPDATE SCORE 

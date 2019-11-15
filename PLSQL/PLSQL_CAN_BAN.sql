@@ -1,12 +1,11 @@
 --B�i t?p 1: X�y d?ng kh?i l?nh t�nh n giai th?a
 DECLARE 
    n number := &n; 
-   x number := 1;
    gthua number := 1;
 BEGIN 
-  IF (x = 0) THEN
+  IF (n = 0) THEN
     dbms_output.put_line(n||'! = 1');
-  ELSIF (x < 0) THEN
+  ELSIF (n < 0) THEN
     dbms_output.put_line('Giai thua khong the la so am');
   ELSE
    FOR x in 1 .. n LOOP
@@ -20,8 +19,6 @@ END;
 
 DECLARE 
   n number := &n; 
-  x number := 1;
-  lt number := 1;
 BEGIN 
   dbms_output.put_line('B?ng c?u ch??ng '||n||':');
   FOR x in 1 .. 10 LOOP 
@@ -47,31 +44,38 @@ BEGIN
   END IF;
 END;
 
---B�i t?p 4: X�y khoi lenh giai he phuong trinh hai an
+--B�i t?p 4: X�y khoi lenh giai phuong trinh bac hai
 
 DECLARE
-  x FLOAT;
-  y FLOAT;
+  x1 FLOAT;
+  X2 FLOAT;
+  delta FLOAT;
   a FLOAT := &a;
   b FLOAT := &b;
   c FLOAT := &c;
-  d FLOAT := &d;
-  e FLOAT := &e;
-  f FLOAT := &f;
 BEGIN
-  IF ((a = 0 and b = 0 and c != 0) and (d = 0 and e = 0 and f != 0)) THEN
-    dbms_output.put_line('Phuong trinh so nghiem');
-    ELSIF ((a = 0 and b = 0 and c = 0) and (d = 0 and e = 0 and f = 0)) THEN 
-      dbms_output.put_line('Phuong trinh vo so nghiem');
-    ELSE 
-      x := (f - e*c/b)/(d - e*a/b);
-      y := c/b - (a/b)*x;
-      dbms_output.put_line('He phuong trinh hai an:');
-      dbms_output.put_line(a||'x + '||b||'y = '||c);
-      dbms_output.put_line(d||'x + '||e||'y = '||f);
-      dbms_output.put_line('Co nghiem:');
-      dbms_output.put_line('x = '||x);
-      dbms_output.put_line('y = '||y);
+  IF(a = 0) THEN
+    IF (b = 0) THEN
+      IF (c = 0) THEN 
+        dbms_output.put_line('Phuong trinh vo so nghiem');
+      ELSE
+        dbms_output.put_line('Phuong trinh vo nghiem');
+      END IF;
+    ELSE
+      dbms_output.put_line('Phuong trinh co nghiem  x = '|| -c/b);
+    END IF;
+  ELSE
+    delta := b**2 - 4 * (a * c);
+    IF (delta < 0) THEN
+      dbms_output.put_line('Phuong trinh vo nghiem');
+    ELSIF (delta = 0) THEN
+      dbms_output.put_line('Phuong trinh co nghiem kep x1 = x2 = '||(-b / (2 * a)));
+    ELSE
+      x1 := (-b + SQRT( delta )) / (2 * a);
+      x2 := (-b - SQRT( delta )) / (2 * a);
+      dbms_output.put_line('Phuong trinh co nghiem x1 = '||x1);
+      dbms_output.put_line('Phuong trinh co nghiem x2 = '||x2);
+    END IF;
   END IF;
 END;
 
@@ -140,27 +144,28 @@ DECLARE
   A FLOAT := &A;
   B FLOAT := &B;
   C FLOAT := &C;
+  FLAT NUMBER :=-1;
 BEGIN
-  CASE
-    WHEN ((A + B > C) and (A + C > B) and (B + C > A)) 
-    THEN
-      BEGIN
-        CASE
-          WHEN ((A = B) and (A = C)) 
-            THEN dbms_output.put_line('Day la tam giac deu.');
-          WHEN ((A = B) OR (A = C) OR (B = C)) 
-            THEN 
-              BEGIN
-                CASE
-                  WHEN (A**2 + B**2 = C**2) OR (A**2 + C**2 = B**2) OR (C**2 + B**2 = A**2) 
-                    THEN  dbms_output.put_line('Day la tam giac vuong can.');
-                  ELSE  dbms_output.put_line('Day la tam giac can.'); 
-                END CASE;
-              END;
-          WHEN (A**2 + B**2 = C**2) OR (A**2 + C**2 = B**2) OR (C**2 + B**2 = A**2) 
-            THEN  dbms_output.put_line('Day la tam giac vuong can.');
-        END CASE;
-      END;
-    else dbms_output.put_line('Day la khong tam giac.');
+  IF ((A + B > C) and (A + C > B) and (B + C > A)) THEN
+      FLAT := 1;
+      IF ((A = B) and (A = C)) THEN
+        FLAT := 2;       
+      ELSIF ((A = B) OR (A = C) OR (B = C)) THEN
+        FLAT := 3;       
+      ELSIF ((A**2 + B**2 = C**2) OR (A**2 + C**2 = B**2) OR (C**2 + B**2 = A**2)) THEN
+          IF ((A = B) OR (A = C) OR (B = C)) THEN
+            FLAT := 4;            
+          ELSE
+            FLAT := 5;
+          END IF;
+      END IF;    
+  END IF;
+  CASE FLAT 
+    WHEN 1 THEN dbms_output.put_line('Day la mot tam giac.');
+    WHEN 2 THEN dbms_output.put_line('Day la tam giac deu.');
+    WHEN 3 THEN dbms_output.put_line('Day la tam giac can.'); 
+    WHEN 4 THEN dbms_output.put_line('Day la tam giac vuong can.');
+    WHEN 5 THEN dbms_output.put_line('Day la tam giac vuong.');
+    ELSE dbms_output.put_line('Day khong la tam giac.');
   END CASE;
 END;
