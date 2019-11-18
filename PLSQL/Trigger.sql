@@ -93,54 +93,11 @@ AFTER STATEMENT IS
 END AFTER STATEMENT;
 END TRIG_AFTER_INST_SCORE;
 
---CREATE OR REPLACE TRIGGER TRIG_AFTER_DELETE_SCORE
---FOR DELETE ON SCORE
---COMPOUND TRIGGER
---  v_student_id SCORE.STUDENT_ID%TYPE;
---  v_subject_id SCORE.SUBJECTS_ID%TYPE;
---  total_score NUMBER :=0;
---  total_credit NUMBER :=0;
---AFTER EACH ROW IS
---  BEGIN
---    v_student_id := :OLD.STUDENT_ID;
---END AFTER EACH ROW;
---AFTER STATEMENT IS
---  BEGIN
---    DECLARE
---    CURSOR AV_SCORE_CUR(v_student_id STUDENT.ID%TYPE)
---      IS
---      SELECT sc.SCORE sco, sc.SUBJECTS_ID, sc.STUDENT_ID
---      FROM SCORE sc
---      WHERE sc.STUDENT_ID = v_student_id;
---    CURSOR AV_SUBJECTS(subjects_id SUBJECTS.ID%TYPE)
---      IS
---      SELECT sub.CREDIT_NUM credit
---      FROM SUBJECTS sub
---      WHERE sub.ID = subjects_id;
---    v_score AV_SCORE_CUR%Rowtype;
---    av_score AV_SUBJECTS%Rowtype;
---    av FLOAT;
---  BEGIN
---  FOR v_score IN AV_SCORE_CUR(v_student_id)
---    LOOP
---    FOR av_score IN AV_SUBJECTS(v_score.SUBJECTS_ID)
---    LOOP
---      total_score := total_score + av_score.credit * v_score.sco;
---      total_credit := total_credit + av_score.credit;
---    END LOOP;
---  END LOOP;
---  Dbms_Output.Put_Line('Tong diem: ' ||total_score);
---  Dbms_Output.Put_Line('Tong tin chi: ' ||total_credit);
---  av := total_score/total_credit;
---  Dbms_Output.Put_Line('Trung binh mon hoc: ' ||av);
---  END;
---END AFTER STATEMENT;
---END TRIG_AFTER_DELETE_SCORE;
 
-UPDATE SCORE SET SCORE.SCORE = 10 WHERE STUDENT_ID = 7 and SUBJECTS_ID = 1;
+UPDATE SCORE SET SCORE.SCORE = 10 WHERE STUDENT_ID = 7 and SUBJECTS_ID = 3;
 DELETE FROM SCORE t WHERE STUDENT_ID = 7 and SUBJECTS_ID = 1;
 SELECT * FROM SCORE;
-INSERT INTO "SCORE" (STUDENT_ID, SUBJECTS_ID, SCORE, TEST_TIME) VALUES ('7', '2', '8', '30');
+INSERT INTO "SCORE" (STUDENT_ID, SUBJECTS_ID, SCORE, TEST_TIME) VALUES ('7', '1', '8', '30');
 
 --------------------------------------------------------------------------------
 --Bai 5: Trigger khong duoc hoc qua 3 mon

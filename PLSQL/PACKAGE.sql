@@ -37,6 +37,7 @@ CREATE OR REPLACE PACKAGE Pkg_STUDENT AS
   FUNCTION PRINT_STUDENT_NAME(S_STUDENT_ID STUDENT.ID%Type)
 
   Return VARCHAR2;
+  
 End Pkg_STUDENT;
 
 CREATE OR REPLACE PACKAGE BODY Pkg_STUDENT AS
@@ -64,6 +65,8 @@ CREATE OR REPLACE PACKAGE BODY Pkg_STUDENT AS
     Dbms_Output.Put_Line('Student name: ' ||S_NAME);
     RETURN S_NAME;
   END;
+  
+  
 End Pkg_STUDENT;
 --------------------------------------------------------------------------------
 --Bài tập 3 - 4: Tạo package có  hàm print_student_name và print_max_score in ra 
@@ -120,3 +123,18 @@ END;
 --------------------------------
 
 
+CREATE OR REPLACE PACKAGE Pkg_FACULTY AS
+  FUNCTION COUNT_STUDENT_BY_FACULTY(S_FACULTY_ID STUDENT.FACULTY_ID%Type)
+  
+  RETURN NUMBER;
+End Pkg_FACULTY;
+
+CREATE OR REPLACE PACKAGE BODY Pkg_FACULTY AS
+  FUNCTION COUNT_STUDENT_BY_FACULTY(S_FACULTY_ID STUDENT.FACULTY_ID%Type)
+  RETURN NUMBER AS
+  V_TOTAL NUMBER;
+    BEGIN
+      SELECT COUNT(*) INTO V_TOTAL FROM STUDENT WHERE FACULTY_ID = S_FACULTY_ID;
+      RETURN V_TOTAL; 
+    END;  
+End Pkg_FACULTY;

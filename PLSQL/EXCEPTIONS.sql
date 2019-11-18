@@ -38,38 +38,33 @@ DECLARE
   V_NUMBER NUMBER := 0;
   ex_error EXCEPTION;
 BEGIN 
-   SELECT COUNT(*) INTO V_NUMBER FROM STUDENT;
-   IF V_NUMBER > 10 THEN 
-      RAISE ex_error;
-   ELSE
-    DBMS_OUTPUT.PUT_LINE('TỔNG SỐ HỌC SINH THEO HỌC LÀ: ');
-    DBMS_OUTPUT.PUT_LINE (V_NUMBER);
-   END IF;
+  SELECT COUNT(*) INTO V_NUMBER FROM STUDENT;
+  DBMS_OUTPUT.PUT_LINE('TỔNG SỐ HỌC SINH THEO HỌC LÀ: ');
+  DBMS_OUTPUT.PUT_LINE (V_NUMBER);
+  IF V_NUMBER > 10 THEN 
+    RAISE ex_error;
+  END IF;
 EXCEPTION 
-   WHEN ex_error THEN 
-      dbms_output.put_line('Student can not more than 10!');  
+  WHEN ex_error THEN 
+    dbms_output.put_line('TỔNG SỐ HỌC SINH THEO HỌC VƯỢT QUÁ 10');  
 END; 
 
 --------------------------------------------------------------------------------
 -- Bài tập 4: Tạo exception ném ra lỗi khi xuất hiện điểm nhỏ nhất nhỏ hơn 5
 
 DECLARE
-  CURSOR SCORE_CUR
-  IS
-    SELECT MIN(SCORE) MIN_SCORE FROM SCORE;
+  MIN_SCORE FLOAT := 0;
   ex_error EXCEPTION;
 BEGIN 
-  FOR v_score IN SCORE_CUR
-    LOOP
-      IF v_score.MIN_SCORE < 5 THEN 
-        RAISE ex_error;
-      ELSE
-        DBMS_OUTPUT.PUT_LINE (v_score.MIN_SCORE);
+  SELECT MIN(SCORE) INTO MIN_SCORE FROM SCORE;
+  DBMS_OUTPUT.PUT_LINE('ĐIỂM NHỎ NHẤT HIỆN TẠI : ');
+  DBMS_OUTPUT.PUT_LINE (MIN_SCORE);  
+      IF MIN_SCORE < 5 THEN 
+        RAISE ex_error;      
       END IF;
-    END LOOP;
   EXCEPTION 
     WHEN ex_error THEN
-      DBMS_OUTPUT.PUT_LINE ('Min score less than 5!');
+      DBMS_OUTPUT.PUT_LINE('ĐIỂM NHỎ NHẤT NHỎ HƠN 5 !!!');
 END; 
 
 --------------------------------------------------------------------------------

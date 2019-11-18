@@ -169,3 +169,23 @@ BEGIN
     ELSE dbms_output.put_line('Day khong la tam giac.');
   END CASE;
 END;
+
+DECLARE
+  A NUMBER := 123;
+  B NUMBER := 987;
+BEGIN
+--  FOR X in 100 .. 1000 LOOP
+--    IF (MOD(X,111) = 0) THEN
+--      dbms_output.put_line(X||' ');
+--    END IF;
+--  END LOOP;
+--  dbms_output.put_line(A||' '||B);
+--  FOR X in 1 .. 6 LOOP
+--    A := A + 111;
+--    B := B - 111;
+--    dbms_output.put_line(A||' '||B);
+--  END LOOP; 
+  dbms_output.put_line(DBMS_RANDOM.VALUE(1,90));
+
+END;
+
