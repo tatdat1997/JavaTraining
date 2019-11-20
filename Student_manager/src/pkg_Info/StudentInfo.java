@@ -14,7 +14,7 @@ import java.util.Date;
  * @author DatNT
  *
  */
-public class StudentInfo extends HumanInfo{
+public class StudentInfo extends HumanInfo implements Comparable<StudentInfo>{
 	private Integer studentId;
 	private Double avegareScore;	
 	private static DecimalFormat df2 = new DecimalFormat("#.00");
@@ -75,5 +75,10 @@ public class StudentInfo extends HumanInfo{
 		String info = "Info_Id: " + this.infoId + ", Student_ID: " + this.studentId+ ", Avegare score: " 
 		+ df2.format(score) +  ", Day of birth: " + format.format(this.dateOfBirth)+", Address: " + this.address;
 		System.out.println(info);
+	}
+	@Override
+	public int compareTo(StudentInfo studentInfo) {
+		// TODO Auto-generated method stub
+		return this.getAverageScore().compareTo(studentInfo.getAverageScore());
 	}
 }

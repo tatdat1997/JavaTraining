@@ -5,6 +5,9 @@ FOR EACH ROW
 BEGIN
   Dbms_Output.Put_Line('Insert student success: Student name '|| :NEW.LAST_NAME|| ' '|| :NEW.FIRST_NAME);
 END;
+INSERT INTO "STUDENT" (ID, FIRST_NAME, LAST_NAME, SEX, DOB, ADDRESS, FACULTY_ID) VALUES ('34', N'H', N'Nguyễn', N'female', TO_TIMESTAMP('1996-11-06 10:36:34.743000000', 'YYYY-MM-DD HH24:MI:SS.FF'), N'Hậu Giang', '1');
+
+SELECT * FROM STUDENT
 --------------------------------------------------------------------------------
 --Bai tap 2: Rang buoc khi xoa 1 hoc sinh
 

@@ -26,11 +26,11 @@ public class StudentInfoDAO{
 	/*
 	 * Load list student from file list student
 	 */
-	public static List<StudentInfo> loadStudent(String link) {
+	public static HashMap<Integer,StudentInfo> loadStudent(String link) {
 		String linkFile = link;
         BufferedReader br = null;
         String line = "";
-		List<StudentInfo> studentList = new ArrayList<StudentInfo>();
+		HashMap<Integer, StudentInfo> studentMap = new HashMap<Integer, StudentInfo>();
 		try {
         	br = new BufferedReader(new FileReader(linkFile));
             while ((line = br.readLine()) != null) {
@@ -39,8 +39,8 @@ public class StudentInfoDAO{
                 //Create new StudentInfo
                 StudentInfo student1 = new StudentInfo(Integer.parseInt(info[0]), Integer.parseInt(info[1]),
                 						info[2], Double.parseDouble(info[3]), info[4]);
-                //Add new StudentInfo in List Student
-                studentList.add(student1);
+                //Add new StudentInfo in HashMap studentMap with key is student_id and value is StudentInfo
+                studentMap.put(Integer.parseInt(info[1]), student1);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -55,7 +55,38 @@ public class StudentInfoDAO{
                 }
             }
         }
-		return studentList;
+		return studentMap;
+	}
+	public static TreeSet<StudentInfo> loadByGPA(String link) {
+		String linkFile = link;
+        BufferedReader br = null;
+        String line = "";
+		TreeSet<StudentInfo> studentTree = new TreeSet<StudentInfo>();
+		try {
+        	br = new BufferedReader(new FileReader(linkFile));
+            while ((line = br.readLine()) != null) {
+                //Split at | to get info
+                String[] info = line.split("\\|");
+                //Create new StudentInfo
+                StudentInfo student1 = new StudentInfo(Integer.parseInt(info[0]), Integer.parseInt(info[1]),
+                						info[2], Double.parseDouble(info[3]), info[4]);
+                //Add new StudentInfo in HashMap studentMap with key is student_id and value is StudentInfo
+                studentTree.add(student1);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+        	if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+		return studentTree;
 	}
 	/*
 	 * Save student in file list student
@@ -73,5 +104,6 @@ public class StudentInfoDAO{
 		    //Exception handling left as an exercise for the reader
 		}
 	}
+	
 }
 
