@@ -15,6 +15,10 @@ import java.util.Date;
  *
  */
 public class StudentInfo extends HumanInfo implements Comparable<StudentInfo>{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer studentId;
 	private Double avegareScore;	
 	private static DecimalFormat df2 = new DecimalFormat("#.00");

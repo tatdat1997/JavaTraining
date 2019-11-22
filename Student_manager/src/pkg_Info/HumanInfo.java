@@ -1,5 +1,6 @@
 package pkg_Info;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -14,7 +15,11 @@ import java.util.Date;
  *
  */
 
-public class HumanInfo {
+public class HumanInfo implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	Integer infoId;
 	String address;
 	Date dateOfBirth;

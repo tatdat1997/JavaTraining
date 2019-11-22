@@ -1,6 +1,8 @@
 package new_Package;
 
 
+import java.util.Locale;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 import pkg_Info.HumanInfo;
 import pkg_Info.StudentInfo;
@@ -17,21 +19,57 @@ public class Main {
 	String link ="E:\\TrainningJava\\JavaTraining\\Student_manager\\StudentInfoDAO.txt";
 	StudentInfoManager fst = new StudentInfoManager();
 	Scanner scanner = new Scanner(System.in);
-    System.out.println("======== Quản lý thông tin sinh viên ========");
-    System.out.println("=     1. Tạo mới sinh viên.                 =");
-    System.out.println("=     2. Sửa thông tin sinh viên theo ID.   =");
-    System.out.println("=     3. Xóa sinh viên theo ID_SV           =");
-    System.out.println("=     4. Sắp xếp theo GPA.                  =");
-    System.out.println("=     5. Sắp xếp theo Student ID.           =");
-    System.out.println("=     6. Xem danh sách sinh viên.           =");
-    System.out.println("=     7. Xuất file CSV.                     =");
-    System.out.println("=     0. Thoát                              =");
-    System.out.println("=============================================");
+	Locale localeEn = null;
+    System.out.println("======  Ngôn ngữ - Language  ======");
+    System.out.println("=           1. English.           =");
+    System.out.println("=           2. Việt Nam.          =");
+    System.out.println("=           0. Thoát/Exit.        =");
+    System.out.println("===================================");
+    String c;
+    Boolean stop = true;
+    do {
+    	try {
+    		System.out.println("Vui lòng chọn ngôn ngữ! - Plaese select language:");
+        c = scanner.nextLine();
+	    switch (c) { 
+	        case "1":
+	        	localeEn = new Locale("en");
+	        	stop = false;
+				break;
+	        case "2":
+	        	localeEn = new Locale("vi");
+	        	stop = false;
+				break;
+	        case "0":
+	        	stop = false;
+				break;
+			default:
+				System.out.println("Vui lòng chọn ngôn ngữ! - Plaese select language!");
+				break;
+			}
+    	} catch (Exception e) {
+    		System.out.println("Có lỗi trong qúa trình xử lý!?! Vui lòng nhập số từ 0 - 9!");
+    		scanner.nextLine();
+    	}
+	} while (stop);
+    ResourceBundle labels = ResourceBundle.getBundle("messages", localeEn);
+    System.out.println(labels.getString("case_title"));
+    System.out.println(labels.getString("case_1"));
+    System.out.println(labels.getString("case_2"));
+    System.out.println(labels.getString("case_3"));
+    System.out.println(labels.getString("case_4"));
+    System.out.println(labels.getString("case_5"));
+    System.out.println(labels.getString("case_6"));
+    System.out.println(labels.getString("case_7"));
+    System.out.println(labels.getString("case_8"));
+    System.out.println(labels.getString("case_9"));
+    System.out.println(labels.getString("case_0"));
+    System.out.println("============================================");
     Integer num;
     Boolean end = true;
     do {
     	try {
-    	System.out.println("Mời bạn chọn thao tác (0-7):");
+    	System.out.println(labels.getString("msg1"));
         num = scanner.nextInt();
 	    switch (num) { 
 	        case 1:
@@ -53,17 +91,23 @@ public class Main {
 				fst.showStudent(link);
 				break;
 			case 7:
-				fst.printCSV("CSV_DEMO.TXT", "E:\\TrainningJava\\JavaTraining\\Student_manager");
+				fst.printCSV("E:\\TrainningJava\\JavaTraining\\Student_manager\\CSV_DEMO.CSV",link);
+				break;
+			case 8:
+				fst.printStudentInfo("E:\\TrainningJava\\JavaTraining\\Student_manager\\Ob1_Student.TXT", link);
+				break;
+			case 9:
+				fst.readStudentInfo("E:\\TrainningJava\\JavaTraining\\Student_manager\\Ob1_Student.TXT");
 				break;
 			case 0:
 				end = false;
 				break;	
 			default:
-				System.out.println("Vui lòng nhập số từ 0 - 6!");
+				System.out.println(labels.getString("msg2"));
 				break;
 			}
     	} catch (Exception e) {
-    		System.out.println("Có lỗi trong qúa trình xử lý!?! Vui lòng nhập số từ 0 - 6!");
+    		System.out.println(labels.getString("error1"));
     		scanner.nextLine();
     	}
 	} while (end);
