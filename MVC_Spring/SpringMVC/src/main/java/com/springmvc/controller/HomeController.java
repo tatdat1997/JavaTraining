@@ -8,10 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 	@RequestMapping("/hello")
 	public String hello(Model model) {
-
 		model.addAttribute("greeting", "Hello Spring MVC");
-
 		return "Hello";
-
 	}
+	
 }
