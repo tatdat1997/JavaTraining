@@ -57,11 +57,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" th:text ="${session.user} ? 'Welcome, '+${session.user.Username} : ''"></a>
+            </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger active" href="/hello">Home</a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/login">Login</a>
+              <a class="nav-link js-scroll-trigger" 
+              th:text ="${session.user} ? 'Logout' : 'Login'"
+              th:href="${session.user} ? '/logout' : '/login'">Login</a>
             </li>
           </ul>
         </div>

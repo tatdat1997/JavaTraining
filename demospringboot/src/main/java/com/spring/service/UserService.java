@@ -1,5 +1,12 @@
 package com.spring.service;
 
-public interface UserService {
+import org.springframework.stereotype.Component;
 
+import com.spring.model.User;
+
+@Component
+public interface UserService {
+	User findByusername(String username);
+	
+	public void save(User user);
 }
