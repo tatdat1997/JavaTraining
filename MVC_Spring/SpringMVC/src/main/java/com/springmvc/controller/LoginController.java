@@ -12,6 +12,10 @@ public class LoginController {
 		model.addAttribute("greeting", "Hello Spring MVC 2");
 		return "Login";
 	}
+	@RequestMapping("/editUsers")
+	public String editUsers() {
+		return "editUsers";
+	}
 	@RequestMapping("/user")
 	  public String userInfo(Model model,
 	          @RequestParam(value = "name", defaultValue = "Guest") String name) {

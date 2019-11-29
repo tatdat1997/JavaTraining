@@ -28,7 +28,7 @@ public interface StudentService {
 
 	Student findBystudentId(Long studentId);
 
-	List<Student> findBystudentName(String studentName);
+	List<Student> findByName(String studentName);
 
 	Student findBystudentCode(String studentCode);
 

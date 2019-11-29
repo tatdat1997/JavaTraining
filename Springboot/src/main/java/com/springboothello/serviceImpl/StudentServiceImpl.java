@@ -52,7 +52,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public List<Student> findBystudentName(String studentName) {
+	public List<Student> findByName(String studentName) {
 		// TODO Auto-generated method stub
 		List<Student> result = studentRepo.findBystudentName("%" + studentName + "%");
 		return result;
