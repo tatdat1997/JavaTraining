@@ -18,22 +18,25 @@ public class StudentServiceImpl implements StudentService{
 	@Autowired
 	StudentRepository studentRepository;
 	
+	@Autowired
+	StudentService StudentService;
+	
 	@Override
-	public void save(Student student) {
+	public void saveStudent(Student student) {
 		// TODO Auto-generated method stub
 		studentRepository.save(student);
 	}
 
 	@Override
-	public List<Student> findStudent(String studentName) {
+	public List<Student> findBystudentName(String studentName) {
 		// TODO Auto-generated method stub
-		return studentRepository.findBystudentName(studentName);
+		return studentRepository.findByStudentNameContaining(studentName);
 	}
 
 	@Override
-	public List<Student> findAllStudentNameByASC() {
+	public Student findByStudentId(int studentId) {
 		// TODO Auto-generated method stub
-		return studentRepository.findAllByAsc();
+		return studentRepository.findByStudentId(Long.valueOf(studentId));
 	}
 
 }

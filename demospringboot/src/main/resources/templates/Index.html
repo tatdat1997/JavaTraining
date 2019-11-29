@@ -61,7 +61,9 @@
               <a class="nav-link js-scroll-trigger" th:text ="${session.user} ? 'Welcome, '+${session.user.Username} : ''"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="/hello">Home</a>
+              <a class="nav-link js-scroll-trigger" 
+              th:text ="${session.user} ? 'Menu' : 'Register'"
+              th:href="${session.user} ? '/student' : '/register'">Login</a>
             </li>
 			<li class="nav-item">
               <a class="nav-link js-scroll-trigger" 

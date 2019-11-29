@@ -14,4 +14,5 @@ public interface StudentInfoRepository extends CrudRepository<StudentInfo, Seria
 	StudentInfo findByinfoId(Long info_id);
 
 	List<StudentInfo> findAll();
+	
 }

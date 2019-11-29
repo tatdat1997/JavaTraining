@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!-- Student -->
+	<query name="HQL_GET_ALL_STUDENT">from Student ORDER BY student_id ASC</query>
+	<query name="HQL_GET_ALL_STUDENT_BY_NAME">
+		<![CDATA[FROM Student WHERE student_name LIKE %:name%]]>
+	</query>
+	<query name="HQL_GET_ALL_STUDENT_BY_ASC">
+		<![CDATA[FROM Student ORDER BY student_id ASC]]>
+	</query>
+	<!-- User -->
+	<query name="HQL_GET_USER_BY_NAME">
+		<![CDATA[from User where username = :uname]]>
+	</query>
+	
+</hibernate-mapping>

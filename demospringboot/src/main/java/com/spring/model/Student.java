@@ -59,11 +59,17 @@ public class Student {
 		this.studentCode = studentCode;
 	}
 
-	public Student(String studentName, String studentCode, StudentInfo studentInfo) {
+	public Student(String studentName, String studentCode) {
 		super();
 		this.studentName = studentName;
 		this.studentCode = studentCode;
-		this.studentInfo = studentInfo;
+	}
+	
+	public Student(Long studentId, String studentName, String studentCode) {
+		super();
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.studentCode = studentCode;
 	}
 
 	public Student() {

@@ -20,7 +20,7 @@ public class StudentInfoSeviceImpl implements StudentInfoService{
 	
 	
 	@Override
-	public void save(StudentInfo student) {
+	public void saveStudentInfo(StudentInfo student) {
 		// TODO Auto-generated method stub
 		StudentInfoRepository.save(student);
 	}
@@ -31,5 +31,16 @@ public class StudentInfoSeviceImpl implements StudentInfoService{
 		// TODO Auto-generated method stub
 		return StudentInfoRepository.findAll();
 	}
+
+
+	@Override
+	public void deleteStudentByInfoID(Long id) {
+		// TODO Auto-generated method stub
+		StudentInfo a = StudentInfoRepository.findByinfoId(id);
+		StudentInfoRepository.delete(a);
+	}
+
+
+
 
 }

@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Login V16</title>
+<title>List Student</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -51,10 +51,12 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav text-uppercase ml-auto">
-					<li class="nav-item"><a class="nav-link js-scroll-trigger"
-						href="/">Home</a></li>
 					<li class="nav-item"><a
-						class="nav-link js-scroll-trigger active" href="/login">Login</a></li>
+						class="nav-link js-scroll-trigger active">Menu</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						href="/newStudent">New student</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						href="/logout">Logout</a></li>
 				</ul>
 			</div>
 		</div>
@@ -63,8 +65,9 @@
 		<div class="container-login100"
 			style="background-image: url('/images/bg-01.jpg');">
 			<div class="p-t-0 p-b-50">
-				<span class="login100-form-title p-b-10"> Account Login </span>
-				<table class="table table-striped table-bordered text-center" style="background-color:#fff; color:#000;">
+				<span class="login100-form-title p-b-10"> List Student </span>
+				<table class="table table-striped table-bordered text-center"
+					style="background-color: #fff; color: #000;">
 					<tr>
 						<th class="text-center">No</th>
 						<th class="text-center">Code</th>
@@ -74,19 +77,18 @@
 						<th class="text-center">Score</th>
 						<th class="text-center">Edit</th>
 					</tr>
-	 				<tr th:each="student, state  : ${ListStudent}">
+					<tr th:each="student, state  : ${ListStudent}">
 						<td th:text="${state.count}"></td>
 						<td th:text="${student.Student.StudentCode}"></td>
 						<td th:text="${student.Student.StudentName}"></td>
 						<td th:text="${student.Address}"></td>
 						<td th:text="${student.AverageScore}"></td>
-						<td
-							th:text="${student.DateOfBirthFormat}"></td>
+						<td th:text="${student.DateOfBirthFormat}"></td>
 						<td>
-							<form
-								th:action="@{/deleteStudent/id/{id}(id=${student.InfoId})}"
+							<form th:action="@{/deleteStudent/id/{id}(id=${student.InfoId})}"
 								onsubmit="return submitForm(this);">
-								<a th:href="@{/infoStudent/id/{id}(id=${student.Student.StudentId})}"
+								<a
+									th:href="@{/infoStudent/id/{id}(id=${student.Student.StudentId})}"
 									class="btn btn-primary">Edit</a>
 								<button class="btn btn-danger">Delete</button>
 							</form>

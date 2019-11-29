@@ -9,8 +9,12 @@ import com.spring.model.StudentInfo;
 @Component
 public interface StudentInfoService {
 	
-	public void save(StudentInfo student);
+	public void saveStudentInfo(StudentInfo student);
+	
+	public void deleteStudentByInfoID(Long id);
 	
 	List<StudentInfo> findAll();
+	
+	
 
 }

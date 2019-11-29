@@ -9,9 +9,10 @@ import com.spring.model.Student;
 @Component
 public interface StudentService {
 
-	public void save(Student student);
+	public void saveStudent(Student student);
 	
-	List<Student> findStudent(String studentName);
+	List<Student> findBystudentName(String studentName);
 	
-	List<Student> findAllStudentNameByASC();
+	Student findByStudentId(int studentId);
+	
 }

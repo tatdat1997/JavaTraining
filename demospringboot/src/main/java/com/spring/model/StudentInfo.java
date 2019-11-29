@@ -109,6 +109,26 @@ public class StudentInfo {
 			e.printStackTrace();
 		}
 	}
+	
+	public StudentInfo(Long infoId, Student student, String address, Double averageScore, String dateOfBirth) {
+		super();
+		this.infoId = infoId;
+		this.student = student;
+		this.address = address;
+		this.averageScore = averageScore;
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			java.util.Date birthDay = format.parse(dateOfBirth);
+			this.dateOfBirth = birthDay;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
+	public String print() {
+		return this.student.getStudentId() + " | " + this.student.getStudentCode() + " | "
+				+ this.student.getStudentName() + " | " + this.infoId + " | " + this.address + " | "
+				+ this.averageScore;
+	}
 
 }
