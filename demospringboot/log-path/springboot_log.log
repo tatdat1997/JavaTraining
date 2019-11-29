@@ -1320,3 +1320,11 @@
 [INFO ] 2019-11-28 17:46:39.592 [restartedMain] DemospringbootApplication - No active profile set, falling back to default profiles: default
 [INFO ] 2019-11-28 17:46:40.370 [restartedMain] DemospringbootApplication - Started DemospringbootApplication in 0.824 seconds (JVM running for 7755.991)
 [DEBUG] 2019-11-28 17:47:14.188 [http-nio-9000-exec-9] StudentController - ===== Create new student: 1501S =====
+[INFO ] 2019-11-29 09:57:20.777 [restartedMain] DemospringbootApplication - Starting DemospringbootApplication on DESKTOP-H7QHO50 with PID 11280 (E:\TrainningJava\JavaTraining\demospringboot\target\classes started by DELL in E:\TrainningJava\JavaTraining\demospringboot)
+[DEBUG] 2019-11-29 09:57:20.806 [restartedMain] DemospringbootApplication - Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+[INFO ] 2019-11-29 09:57:20.807 [restartedMain] DemospringbootApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-11-29 09:57:33.442 [restartedMain] DemospringbootApplication - Started DemospringbootApplication in 13.185 seconds (JVM running for 15.613)
+[INFO ] 2019-11-29 09:58:15.574 [restartedMain] DemospringbootApplication - Starting DemospringbootApplication on DESKTOP-H7QHO50 with PID 11280 (E:\TrainningJava\JavaTraining\demospringboot\target\classes started by DELL in E:\TrainningJava\JavaTraining\demospringboot)
+[DEBUG] 2019-11-29 09:58:15.576 [restartedMain] DemospringbootApplication - Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+[INFO ] 2019-11-29 09:58:15.576 [restartedMain] DemospringbootApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-11-29 09:58:16.551 [restartedMain] DemospringbootApplication - Started DemospringbootApplication in 1.047 seconds (JVM running for 58.722)
